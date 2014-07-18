@@ -1,1 +1,16 @@
-@charset 'utf-8';
+@charset "utf-8";
+
+@import "compass/layout.scss";
+@import "foundation/scss/normalize";
+@import "foundation/scss/foundation";
+
+@import "layout";
+
+.media-type--print {
+  .course       { margin-bottom: 10em; }
+  .course--day3 { margin-bottom: 10em; }
+  .course--day4 { padding-top: 3em; }
+  .program      { padding-top: 3em; }
+}
+
+.teacher--picture { width: 10em ; }
