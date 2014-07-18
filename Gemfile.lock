@@ -129,3 +129,4 @@ DEPENDENCIES
   middleman-livereload (~> 3.3.4)
   middleman-slim (~> 0.1.2)
   slim (~> 2.0.3)
+  thor (~> 0.19.1)

@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+$: << File.join(__dir__, '..', 'lib')
+
+require 'thor'
+require 'courses'
+
+class CoursesCLI < Thor
+
+  desc "generate COURSE_NAME [BASE_URL]", "Generate a course PDF"
+  def generate(course_name, base_url=nil)
+    base_url      ||= 'http://localhost:4567'
+    pdf_directory   = File.join(__dir__, '..')
+    generator       = Courses::Generator.new(course_name, base_url, pdf_directory)
+
+    generator.process
+  end
+end
+
+CoursesCLI.start(ARGV)
