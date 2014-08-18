@@ -1,0 +1,6 @@
+ruby_advanced:
+  01-basics:            'Les bases'
+  02-rails-structures:  'Structurer son application'
+  03-testing:           'Testing'
+  04-legacy-code:       'Legacy code'
+  05-search-engine:     'Moteur de recherche'

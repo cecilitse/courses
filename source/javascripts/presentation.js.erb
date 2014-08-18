@@ -1,0 +1,14 @@
+//= require jquery/dist/jquery
+//= require reveal.js/lib/js/head.min
+//= require reveal.js/js/reveal
+
+Reveal.initialize({
+  history: true,
+  dependencies: [
+    {
+      src:        "<%= asset_path(:js, 'reveal_plugins.js') %>",
+      condition:  function() { return true },
+      callback:   function() { hljs.initHighlightingOnLoad(); }
+    }
+  ]
+});
