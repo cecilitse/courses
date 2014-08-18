@@ -1,10 +1,10 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "compass/layout.scss";
-@import "foundation/scss/normalize";
-@import "foundation/scss/foundation";
+@import 'compass/layout.scss';
+@import 'foundation/scss/normalize';
+@import 'foundation/scss/foundation';
 
-@import "layout";
+@import 'layout';
 
 .media-type--print {
   .course       { margin-bottom: 10em; }
