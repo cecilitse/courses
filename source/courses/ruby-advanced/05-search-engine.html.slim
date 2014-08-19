@@ -1,0 +1,248 @@
+---
+title:  Formation Ruby on Rails Avancé - Moteur de recherche
+layout: presentation
+---
+
+| # Moteur de recherche
+  ## Jour 5
+
+  ---
+
+  ## Topics
+
+  * Installation
+  * Configuration
+  * Gems disponibles
+  * Manipulation
+  * Faire cohabiter deux moteurs de recherche
+
+  ---
+
+  ## Cas d'étude
+
+  ### Elasticsearch
+
+  http://www.elasticsearch.org/
+
+  ---
+
+  ## Installation
+
+  --
+
+  ## Installation
+
+  1. [Télécharger l'archive sur le site](http://www.elasticsearch.org/download/)
+  2. Décompresser l'archive
+  3. Démarrer le moteur de recherche
+    ```
+    $ bin/elasticsearch
+    ```
+  4. Vérifier qu'il tourne : http://localhost:9200
+
+  ---
+
+  ## Configuration
+
+  --
+
+  ## Configuration
+
+  * Fichier principal : `config/elasticsearch.yml`
+  * Format YAML
+  * Permet de configurer les différents modules d'Elasticsearch
+
+  [Documentation détaillée](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup-configuration.html)
+
+  ---
+
+  ## Les Gems
+
+  --
+
+  ## Les Gems
+
+  * [Searchkick](https://github.com/ankane/searchkick/)
+  * [Elasticsearch Rails](https://github.com/elasticsearch/elasticsearch-rails/) (officielle)
+
+  ---
+
+  ## Manipulation
+
+  --
+
+  ## Manipulation
+
+  ### Déclarer un index (simple)
+
+  #### Searchkick
+
+  ```
+  class Artist < ActiveRecord::Base
+    searchkick
+  end
+  ```
+
+  #### Elasticsearch Rails
+
+  ```
+  require 'elasticsearch/model'
+
+  class Artist < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
+  end
+  ```
+
+  --
+
+  ## Manipulation
+
+  ### Déclarer un index (avancé)
+
+  #### Searchkick
+
+  ```
+  class Artist < ActiveRecord::Base
+    searchkick mappings: {
+      artist: {
+        properties: {
+          first_name: { type: 'string', analyzer: 'english' },
+          full_name:  { type: 'string', analyzer: 'english' },
+          last_name:  { type: 'string', analyzer: 'english' }
+        }
+      }
+    }
+
+    def search_data
+      as_json(only: 'first_name', 'full_name', 'last_name')
+      # or
+      {
+        first_name: first_name,
+        full_name:  "\#{first_name} \#{last_name}",
+        last_name:  last_name
+      }
+    end
+  end
+  ```
+
+  --
+
+  ## Manipulation
+
+  ### Déclarer un index (avancé)
+
+  #### Elasticsearch Rails
+
+  ```
+  class Artist < ActiveRecord::Base
+    mappings dynamic: 'false' do
+      indexes :first_name,  type: 'string', analyzer: 'english'
+      indexes :full_name,   type: 'string', analyzer: 'english'
+      indexes :last_name,   type: 'string', analyzer: 'english'
+    end
+
+    def as_indexed_json(options={})
+      as_json(only: 'first_name', 'full_name', 'last_name')
+      # or
+      {
+        first_name: first_name,
+        full_name:  "\#{first_name} \#{last_name}",
+        last_name:  last_name
+      }
+    end
+  end
+  ```
+
+  --
+
+  ## Manipulation
+
+  ### Indexer
+
+  #### Searchkick
+
+  ```
+  Artist.reindex
+  ```
+
+  #### Elasticsearch Rails
+
+  ```
+  Artist.import
+  ```
+
+  --
+
+  ## Manipulation
+
+  ### Faire une recherche (simple)
+
+  #### Searchkick
+
+  ```
+  artists = Artist.search('Mikael Akerfeldt')
+  ```
+
+  #### Elasticsearch Rails
+
+  ```
+  artists = Artist.search('Mikael Akerfeldt').records
+  ```
+
+  --
+
+  ## Manipulation
+
+  ### Faire une recherche (avancée)
+
+  #### Searchkick
+
+  ```
+  Artist.search query: { match: { full_name: 'Mikael Akerfeldt' }}
+  # or better
+  Artist.search '*', where: { full_name: 'Mikael Akerfeldt' }
+  ```
+
+  #### Elasticsearch Rails
+
+  ```
+  artists = Artist.search query: { match: { full_name: 'Mikael Akerfeldt' }}
+  ```
+
+  [Documentation détaillée](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html)
+
+  --
+
+  ## Manipulation
+
+  ### Faceting
+
+  #### Searchkick
+
+  ```
+  artists = Artists.search 'Mikael Akerfeldt', facets: [:band]
+  p artists.facets
+  ```
+
+  #### Elasticsearch Rails
+
+  Il n'y a plus de gestion de facettes depuins le passage de `tire` à `elasticsearch-rails`
+
+  Il vous faudra utiliser directement le [DSL d'Elasticsearch](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-facets.html)
+
+  ---
+
+  ## Faire cohabiter deux moteurs de recherche
+
+  --
+
+  ## Faire cohabiter deux moteurs de recherche
+
+  Il n'y a **aucune documentation disponible** concernant cette problématique.
+
+  Sachez dores et déjà que vous vous aventurez sur un **terrain glissant**.
+
+  ---
+
+  ## Happy Hacking!
