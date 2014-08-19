@@ -58,4 +58,6 @@ Open a web browser and go to `http://localhost:4567/`. That's it!
 
 ## License
 
-Courses is released under two licenses: GPL License for sources and Creative Commons Attribution-ShareAlike License for content.
+Courses is released under two licenses: 
+* GPL License for sources
+* Creative Commons Attribution-ShareAlike License for content
