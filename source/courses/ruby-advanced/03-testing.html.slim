@@ -69,7 +69,6 @@ layout: presentation
   ```
   require 'spec_helper'
 
-
   describe Artist do
     subject(:artist) do
       Artist.new(first_name: 'Mikael', last_name: 'Akerfeldt', band: band)
@@ -96,7 +95,7 @@ layout: presentation
   ```
   require 'rails_helper'
 
-  describe Artist do
+  describe Artist, type: 'model' do
     subject(:artist) do
       Artist.new(first_name: 'Mikael', last_name: 'Akerfeldt', band: band)
     end
