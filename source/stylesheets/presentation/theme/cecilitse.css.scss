@@ -1,0 +1,17 @@
+@import 'reveal.js/css/theme/template/mixins';
+@import 'reveal.js/css/theme/template/settings';
+
+@import '_settings';
+
+$backgroundColor: white;
+$linkColor:       $link-color;
+$linkColorHover:  lighten($linkColor, 10%);
+$mainColor:       #333;
+$headingColor:    $mainColor;
+
+@import 'reveal.js/css/theme/template/theme';
+
+.backgrounds {
+  background-image: url($background-image);
+  opacity: 0.4;
+}
