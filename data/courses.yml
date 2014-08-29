@@ -1,6 +1,6 @@
 ruby_advanced:
-  link: ruby-advanced
-  title: Ruby on Rails Avancé
+  link:     ruby-advanced
+  title:    Ruby on Rails Avancé
   subtitle: Qualité, tests et architectures avancées
   audience: |
     Cette formation s'adresse aux développeurs Web ayant déjà une expérience

@@ -1,10 +1,7 @@
 ---
+code:             ruby_advanced
 layout:           program
-page_title:       Formation Ruby on Rails - Qualité, tests et architectures avancées
 meta_description: 'Formation Ruby on Rails avancé : un accent sur la qualité, les tests et les architectures avancées.'
-canonical:        /programs/ruby-advanced.html
-title:            Formation Ruby on Rails
-subtitle:         Qualité, tests et architectures avancées
 ---
 
 div class="media-type--#{media_type}"
@@ -15,7 +12,7 @@ div class="media-type--#{media_type}"
     div class="row"
       div class="small-12 columns"
         h3 Audience
-        p = data.courses.ruby_advanced.audience
+        p = data.courses[current_page.data.code].audience
     div class="row"
       div class="small-12 columns"
         h3 Format

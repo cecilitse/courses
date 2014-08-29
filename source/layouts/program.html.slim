@@ -1,13 +1,18 @@
 doctype html
 html lang="fr"
   head
-    title = "#{current_page.data.page_title} - Cécile Veneziani"
+    title
+      - if current_page.data.code
+        = "Formation #{data.courses[current_page.data.code].title} - #{data.courses[current_page.data.code].subtitle} - Cécile Veneziani"
+      - else
+        = "#{current_page.data.title} - Cécile Veneziani"
+
     meta charset="utf-8"
     meta content='width=device-width, initial-scale=1.0' name='viewport'
     meta content="#{current_page.data.meta_description}" name="description"
 
-    - if current_page.data.canonical
-      link rel="canonical" href="#{current_page.data.canonical}"
+    - if current_page.data.code
+      link rel="canonical" href="/programs/#{data.courses[current_page.data.code].link}.html"
 
     == favicon_tag        'favicon.ico'
     = stylesheet_link_tag 'program'
@@ -17,9 +22,14 @@ html lang="fr"
       div class="row"
         div class="small-12 columns"
           h1
-            = current_page.data.title
-            - if current_page.data.subtitle
-            small = current_page.data.subtitle
+            - if current_page.data.code
+              = "Formation #{data.courses[current_page.data.code].title}"
+              - if data.courses[current_page.data.code].subtitle
+                small = data.courses[current_page.data.code].subtitle
+            - else
+              = current_page.data.title
+              - if current_page.data.subtitle
+                small = current_page.data.subtitle
     main
       = yield
 
