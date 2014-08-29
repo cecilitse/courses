@@ -3,3 +3,8 @@
 @import 'reveal.js/css/reveal';
 @import 'reveal.js/lib/css/zenburn';
 @import 'presentation/theme/cecilitse';
+
+.presentation--course-title {
+  @extend h2;
+  list-style-type: none;
+}
