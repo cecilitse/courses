@@ -1,0 +1,7 @@
+Host: courses.cecilitse.org
+
+User-agent: *
+Disallow: /presentations/
+Disallow: /programs/print/
+
+Sitemap: http://courses.cecilitse.org/sitemap.xml
