@@ -62,7 +62,11 @@ html lang="fr"
         div class="small-12 medium-4 columns footer--contact--details"
           ul class="no-bullet"
             li
-              a href="#" class="j-contact"
+              - if course_print_page?
+                a href="mailto:#{data.settings.email}"
+                  = data.settings.email
+              - else
+                a href="#" class="j-contact"
             li
               a href="http://cecilitse.org/fr/" http://cecilitse.org/fr/
       div class="banner"

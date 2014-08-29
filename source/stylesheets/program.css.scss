@@ -8,13 +8,7 @@
 @import 'foundation/scss/foundation';
 
 @import 'program/_layout';
-
-.media-type--print {
-  .course       { margin-bottom: 10em; }
-  .course--day3 { margin-bottom: 10em; }
-  .course--day4 { padding-top: 3em; }
-  .program      { padding-top: 3em; }
-}
+@import 'program/_print';
 
 .program--more-details {
   @include button($button-tny);
