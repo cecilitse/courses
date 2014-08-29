@@ -11,7 +11,7 @@ section
         h2  = course['title']
         h3  = course['subtitle']
         p   = course['audience']
-        = link_to 'Voir le programme', "#{course['link']}.html", class: 'program--more-details'
+        = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'program--more-details'
     div class="large-4 small-12 columns"
       h2 Sur mesure
       p Aucune formation ne vous correspond ?
