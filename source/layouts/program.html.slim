@@ -2,17 +2,18 @@ doctype html
 html lang="fr"
   head
     title
-      - if current_page.data.code
-        = "Formation #{data.courses[current_page.data.code].title} - #{data.courses[current_page.data.code].subtitle} - Cécile Veneziani"
+      - if current_course?
+        =' "Formation #{current_course_data.title} - #{current_course_data.subtitle}"
       - else
-        = "#{current_page.data.title} - Cécile Veneziani"
+        =' current_page.data.title
+      '- Cécile Veneziani
 
     meta charset="utf-8"
-    meta content='width=device-width, initial-scale=1.0' name='viewport'
-    meta content="#{current_page.data.meta_description}" name="description"
+    meta name="viewport"    content="width=device-width, initial-scale=1.0"
+    meta name="description" content="#{current_page.data.meta_description}"
 
-    - if current_page.data.code
-      link rel="canonical" href="/programs/#{data.courses[current_page.data.code].link}.html"
+    - if current_course?
+      link rel="canonical" href="/programs/#{current_course_data.link}.html"
 
     == favicon_tag        'favicon.ico'
     = stylesheet_link_tag 'program'
@@ -22,10 +23,10 @@ html lang="fr"
       div class="row"
         div class="small-12 columns"
           h1
-            - if current_page.data.code
-              = "Formation #{data.courses[current_page.data.code].title}"
-              - if data.courses[current_page.data.code].subtitle
-                small = data.courses[current_page.data.code].subtitle
+            - if current_course?
+              = "Formation #{current_course_data.title}"
+              - if current_course_data.subtitle
+                small = current_course_data.subtitle
             - else
               = current_page.data.title
               - if current_page.data.subtitle
