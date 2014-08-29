@@ -1,0 +1,14 @@
+---
+layout:     program
+page_title: Programmes
+title:      Programmes
+---
+
+section
+  div class="row"
+    div class="large-12 columns"
+      - data.courses.each do |_code, course|
+        h2  = course['title']
+        h3  = course['subtitle']
+        p   = course['audience']
+        = link_to 'Voir le programme', "#{course['link']}.html", class: 'program--more-details'

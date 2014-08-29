@@ -1,7 +1,7 @@
 doctype html
 html lang="fr"
   head
-    title = "#{current_page.data.title} - Cécile Veneziani"
+    title = "#{current_page.data.page_title} - Cécile Veneziani"
     meta charset="utf-8"
     meta content='width=device-width, initial-scale=1.0' name='viewport'
     meta content="#{current_page.data.meta_description}" name="description"
@@ -13,6 +13,13 @@ html lang="fr"
     = stylesheet_link_tag 'program'
 
   body class=page_classes
+    header
+      div class="row"
+        div class="small-12 columns"
+          h1
+            = current_page.data.title
+            - if current_page.data.subtitle
+            small = current_page.data.subtitle
     main
       = yield
 

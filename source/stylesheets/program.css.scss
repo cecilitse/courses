@@ -16,6 +16,12 @@
   .program      { padding-top: 3em; }
 }
 
+.program--more-details {
+  @include button($button-tny);
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
 .teacher {
   a {
     color: $body-font-color;
