@@ -1,16 +1,30 @@
 @charset 'utf-8';
 
+@import '_settings';
+@import 'program/_settings';
+
 @import 'compass/layout.scss';
 @import 'foundation/scss/normalize';
 @import 'foundation/scss/foundation';
 
-@import 'layout';
+@import 'program/_layout';
 
 .media-type--print {
   .course       { margin-bottom: 10em; }
   .course--day3 { margin-bottom: 10em; }
   .course--day4 { padding-top: 3em; }
   .program      { padding-top: 3em; }
+}
+
+.teacher {
+  a {
+    color: $body-font-color;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .teacher--picture { width: 10em ; }

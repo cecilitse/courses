@@ -8,7 +8,7 @@ module Courses
     def initialize(course_name, base_url, pdf_directory)
       @course_name    = course_name
       @pdf_directory  = pdf_directory
-      @template_url   = "#{base_url}/courses/print/#{course_name}.html"
+      @template_url   = "#{base_url}/programs/print/#{course_name}.html"
     end
 
     def process

@@ -6,7 +6,7 @@ Reveal.initialize({
   history: true,
   dependencies: [
     {
-      src:        "<%= asset_path(:js, 'reveal_plugins.js') %>",
+      src:        "<%= asset_path(:js, 'presentation/reveal_plugins.js') %>",
       condition:  function() { return true },
       callback:   function() { hljs.initHighlightingOnLoad(); }
     }
