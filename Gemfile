@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'slim', '~> 2.0.3'
-gem 'thor', '~> 0.19.1'
+gem 'builder',  '~> 3.2.2'
+gem 'slim',     '~> 2.0.3'
+gem 'thor',     '~> 0.19.1'
 
 gem 'middleman',            '~> 3.3.3'
 gem 'middleman-bower',      '~> 1.0.2'
