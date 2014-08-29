@@ -6,9 +6,19 @@ title:            Programmes de formation
 
 section
   div class="row"
-    div class="large-12 columns"
+    div class="large-8 small-12 columns"
       - data.courses.each do |_code, course|
         h2  = course['title']
         h3  = course['subtitle']
         p   = course['audience']
         = link_to 'Voir le programme', "#{course['link']}.html", class: 'program--more-details'
+    div class="large-4 small-12 columns"
+      h2 Sur mesure
+      p Aucune formation ne vous correspond ?
+      ul
+        li Ruby / Ruby on Rails
+        li Git / GitHub
+        li Workflows de développement
+        li Méthodes agiles
+      p N'hésitez pas à me contacter. Nous définirons ensemble vos objectifs afin d'établir un programme adéquat.
+      = link_to 'CONTACTEZ-MOI', '#', class: 'button tiny j-contact'
