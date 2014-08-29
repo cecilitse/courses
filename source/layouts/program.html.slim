@@ -9,8 +9,11 @@ html lang="fr"
       '- Cécile Veneziani
 
     meta charset="utf-8"
-    meta name="viewport"    content="width=device-width, initial-scale=1.0"
     meta name="description" content="#{current_page.data.meta_description}"
+    meta name="viewport"    content="width=device-width, initial-scale=1.0"
+
+    - if course_print_page?
+      meta name="robots" content="noindex,nofollow"
 
     - if current_course?
       link rel="canonical" href="/programs/#{current_course_data.link}.html"
