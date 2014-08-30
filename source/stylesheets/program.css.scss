@@ -16,7 +16,15 @@
   text-transform: uppercase;
 }
 
-.teacher {
+.teacher--contact {
+  font-size: 0.75em;
+
+  a     { color: $body-font-color; }
+  ul, p { font-size: 1em; }
+  li    { margin-left: 0; }
+}
+
+.teacher--description {
   a {
     color: $body-font-color;
     text-decoration: underline;

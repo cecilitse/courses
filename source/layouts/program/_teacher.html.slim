@@ -1,0 +1,33 @@
+section class="teacher"
+  div class="row"
+    div class="small-12 columns"
+      hr
+      h2 Intervenant
+  div class="row teacher--description"
+    div class="small-8 columns"
+      h3 Cécile Veneziani
+      p
+        'Développeur Ruby on Rails avec 5 ans d'expérience dans l'e-commerce. Passionnée par les méthodes agiles et la qualité de code. Egalement prof au
+        a href="http://lewagon.org/" Wagon
+        '.
+    div class="small-4 columns text-right"
+      img alt="Cecile Veneziani, Intervenant Formations Ruby on Rails" src="/images/avatar.png" height="144" width="144" class="teacher--picture"
+  div class="row"
+    div class="small-12 columns"
+      hr
+  div class="row teacher--contact"
+    div class="small-12 medium-8 columns"
+      ul class="no-bullet"
+        li Cecilitse / Grands Ensemble
+        li SCOP SA - SIRET 488 458 969 00059
+        li Organisme de formation 31 62 02007 62
+    div class="small-12 medium-4 columns footer--contact--details"
+      ul class="no-bullet"
+        li
+          - if course_print_page?
+            a href="mailto:#{data.settings.email}"
+              = data.settings.email
+          - else
+            a href="#" class="j-contact"
+        li
+          a href="http://cecilitse.org/fr/" http://cecilitse.org/fr/

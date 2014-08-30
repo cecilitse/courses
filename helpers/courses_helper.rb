@@ -1,10 +1,10 @@
 module CoursesHelper
   def current_course?
-    !current_page.data.code.nil?
+    !current_page_code.nil?
   end
 
   def current_course_data
-    data.courses[current_page.data.code]
+    data.courses[current_page_code]
   end
 
   def course_print_page?

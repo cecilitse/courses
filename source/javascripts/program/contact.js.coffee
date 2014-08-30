@@ -1,4 +1,4 @@
-window.onload = ->
+contact = ->
   mail =
     a: 'Y29udGFjdA==' # contact
     b: 'Y2VjaWxpdHNl' # cecilitse
@@ -11,3 +11,8 @@ window.onload = ->
     if contactButton.innerHTML.length == 0
       contactButton.innerHTML = address
     contactButton.setAttribute "href", "mailto:" + address
+
+$ ->
+  contact()
+
+

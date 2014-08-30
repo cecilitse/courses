@@ -16,16 +16,19 @@
 header {
   background-image: url($background-image);
   background-position: 0% 20%;
-  margin-bottom: 2em;
+  background-size: cover;
   min-height: 250px;
 
   h1 {
+    box-sizing: border-box;
+    color: $title-color;
     font-size: 3em;
-    color: white;
-    margin-top: 1.5em;
+    font-weight: 500;
+    margin-top: 1em;
+    text-shadow: 1px 1px 5px $body-font-color;
 
     small {
-      color: white;
+      color: $title-color;
       display: block;
     }
   }
@@ -35,15 +38,15 @@ footer {
   .banner {
     background-image: url($background-image);
     background-position: right 62%;
+    background-size: cover;
     min-height: 50px;
   }
 
-  a   { color: $body-font-color; }
-  ul  { font-size: 0.75em; }
 }
 
 main {
   font-size: 0.9em;
+  margin-top: 1em;
 
   h1, h2, h3, h4  { font-weight: bold; }
   h2              { font-size: 2.3125em; }

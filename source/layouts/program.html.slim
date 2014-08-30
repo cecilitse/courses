@@ -1,13 +1,7 @@
 doctype html
 html lang="fr"
   head
-    title
-      - if current_course?
-        =' "Formation #{current_course_data.title} - #{current_course_data.subtitle}"
-      - else
-        =' current_page.data.title
-      '- Cécile Veneziani
-
+    title = [current_page_title, current_page_subtitle, 'Cécile Veneziani'].compact.join(' - ')
     meta charset="utf-8"
     meta name="description" content="#{current_page.data.meta_description}"
     meta name="viewport"    content="width=device-width, initial-scale=1.0"
@@ -22,55 +16,9 @@ html lang="fr"
     = stylesheet_link_tag 'program'
 
   body class=page_classes
-    header
-      div class="row"
-        div class="small-12 columns"
-          h1
-            - if current_course?
-              = "Formation #{current_course_data.title}"
-              - if current_course_data.subtitle
-                small = current_course_data.subtitle
-            - else
-              = current_page.data.title
-              - if current_page.data.subtitle
-                small = current_page.data.subtitle
+    = partial 'layouts/program/header'
     main
       = yield
-
-      section class="teacher"
-        div class="row"
-          div class="small-12 columns"
-            hr
-            h2 Intervenant
-        div class="row"
-          div class="small-8 columns"
-            h3 Cécile Veneziani
-            p
-              'Développeur Ruby on Rails avec 5 ans d'expérience dans l'e-commerce. Passionnée par les méthodes agiles et la qualité de code. Egalement prof au
-              a href="http://lewagon.org/" Wagon
-              '.
-          div class="small-4 columns text-right"
-            img src="/images/avatar.png" class="teacher--picture"
-        div class="row"
-          div class="small-12 columns"
-            hr
-
-    footer
-      div class="row"
-        div class="small-12 medium-8 columns"
-          ul class="no-bullet"
-            li Cecilitse / Grands Ensemble
-            li SCOP SA - SIRET 488 458 969 00059
-            li Organisme de formation 31 62 02007 62
-        div class="small-12 medium-4 columns footer--contact--details"
-          ul class="no-bullet"
-            li
-              - if course_print_page?
-                a href="mailto:#{data.settings.email}"
-                  = data.settings.email
-              - else
-                a href="#" class="j-contact"
-            li
-              a href="http://cecilitse.org/fr/" http://cecilitse.org/fr/
-      div class="banner"
-    = javascript_include_tag 'contact'
+      = partial 'layouts/program/teacher'
+    = partial 'layouts/program/footer'
+    = javascript_include_tag 'program'
