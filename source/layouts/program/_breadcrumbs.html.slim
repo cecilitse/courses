@@ -1,0 +1,9 @@
+- if current_page.data.breadcrumbs
+  div class="row"
+    div class="small-12 columns"
+      nav class="breadcrumbs"
+        - current_page.data.breadcrumbs.each do |breadcrumb|
+          a href=data.breadcrumbs[breadcrumb]['link']
+            = data.breadcrumbs[breadcrumb]['title']
+        a class="current" href="#"
+          = current_page_title

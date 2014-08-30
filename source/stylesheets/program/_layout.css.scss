@@ -65,5 +65,12 @@ main {
   li  { margin-left:    1em; }
   p   { margin-bottom:  1em; }
 
+  .breadcrumbs {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0;
+  }
+
   .button { text-transform: uppercase; }
 }
