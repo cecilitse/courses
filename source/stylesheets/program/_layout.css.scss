@@ -52,6 +52,14 @@ footer {
     min-height: 50px;
   }
 
+  .footer--license {
+    text-align: right;
+
+    p {
+      font-size: 0.7em;
+      margin: 0.2em 0;
+    }
+  }
 }
 
 main {
