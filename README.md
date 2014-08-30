@@ -1,6 +1,10 @@
-# Courses
+# Courses website
 
-Courses helps you generate course documents.
+http://courses.cecilitse.org/
+
+Made with [Foundation](http://foundation.zurb.com/) & [Middleman](http://middlemanapp.com/)
+
+This project also generates PDF course documents.
 
 ## Getting Started
 
@@ -40,13 +44,13 @@ Generate a course PDF:
 $ bin/courses generate COURSE_NAME [BASE_URL]
 ```
 
-This generates a PDF at the root directory of Courses which filename will be based on course name.
+This generates a PDF at the root directory of Courses. Filename is based on the course name.
 
 ## Preview
 
 Before generating a course PDF, you can have a preview of the document in a web browser.
 
-Open a web browser and go to `http://localhost:4567/`. That's it!
+Open a web browser and go to `http://localhost:4567/programs/COURSE_NAME.html`. That's it!
 
 ## Contributing
 
