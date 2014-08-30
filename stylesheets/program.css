@@ -7104,6 +7104,2038 @@ th.hide-for-touch {
   /* line 404, /home/zora/dev/cecilitse/courses/bower_components/foundation/scss/foundation/components/_visibility.scss */
   th.show-for-print {
     display: table-cell !important; } }
+/*!
+ *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/fonts/fontawesome-webfont.eot?v=4.1.0");
+  src: url("/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 4, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_core.scss */
+.fa, header .home-icon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+/* line 7, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_larger.scss */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+/* line 12, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_larger.scss */
+.fa-2x {
+  font-size: 2em; }
+
+/* line 13, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_larger.scss */
+.fa-3x {
+  font-size: 3em; }
+
+/* line 14, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_larger.scss */
+.fa-4x {
+  font-size: 4em; }
+
+/* line 15, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_larger.scss */
+.fa-5x {
+  font-size: 5em; }
+
+/* line 5, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_fixed-width.scss */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none; }
+  /* line 10, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_list.scss */
+  .fa-ul > li {
+    position: relative; }
+
+/* line 12, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center; }
+  /* line 18, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_list.scss */
+  .fa-li.fa-lg {
+    left: -1.85714em; }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em; }
+
+/* line 12, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-right {
+  float: right; }
+
+/* line 13, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-left {
+  float: left; }
+
+/* line 16, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-left, header .pull-left.home-icon {
+  margin-right: .3em; }
+/* line 17, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-right, header .pull-right.home-icon {
+  margin-left: .3em; }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+.fa-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
+
+@-moz-keyframes spin {
+  /* line 14, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  /* line 15, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  100% {
+    -moz-transform: rotate(359deg); } }
+
+@-webkit-keyframes spin {
+  /* line 18, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 19, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spin {
+  /* line 22, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  0% {
+    -o-transform: rotate(0deg); }
+
+  /* line 23, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  100% {
+    -o-transform: rotate(359deg); } }
+
+@keyframes spin {
+  /* line 26, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 30, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_spinning.scss */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+/* line 7, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/* line 8, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+/* line 10, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+/* line 11, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+/* line 14, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+/* line 20, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit; }
+
+/* line 21, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em; }
+
+/* line 22, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-inverse {
+  color: white; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 5, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glass:before {
+  content: "\f000"; }
+
+/* line 6, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-music:before {
+  content: "\f001"; }
+
+/* line 7, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search:before {
+  content: "\f002"; }
+
+/* line 8, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-o:before {
+  content: "\f003"; }
+
+/* line 9, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart:before {
+  content: "\f004"; }
+
+/* line 10, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star:before {
+  content: "\f005"; }
+
+/* line 11, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-o:before {
+  content: "\f006"; }
+
+/* line 12, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user:before {
+  content: "\f007"; }
+
+/* line 13, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-film:before {
+  content: "\f008"; }
+
+/* line 14, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-large:before {
+  content: "\f009"; }
+
+/* line 15, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th:before {
+  content: "\f00a"; }
+
+/* line 16, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-list:before {
+  content: "\f00b"; }
+
+/* line 17, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check:before {
+  content: "\f00c"; }
+
+/* line 18, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times:before {
+  content: "\f00d"; }
+
+/* line 19, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-plus:before {
+  content: "\f00e"; }
+
+/* line 20, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-minus:before {
+  content: "\f010"; }
+
+/* line 21, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-power-off:before {
+  content: "\f011"; }
+
+/* line 22, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signal:before {
+  content: "\f012"; }
+
+/* line 24, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "\f013"; }
+
+/* line 25, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash-o:before {
+  content: "\f014"; }
+
+/* line 26, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-home:before, header .home-icon:before {
+  content: "\f015"; }
+
+/* line 27, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-o:before {
+  content: "\f016"; }
+
+/* line 28, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clock-o:before {
+  content: "\f017"; }
+
+/* line 29, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-road:before {
+  content: "\f018"; }
+
+/* line 30, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-download:before {
+  content: "\f019"; }
+
+/* line 31, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "\f01a"; }
+
+/* line 32, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "\f01b"; }
+
+/* line 33, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-inbox:before {
+  content: "\f01c"; }
+
+/* line 34, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle-o:before {
+  content: "\f01d"; }
+
+/* line 36, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "\f01e"; }
+
+/* line 37, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-refresh:before {
+  content: "\f021"; }
+
+/* line 38, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-alt:before {
+  content: "\f022"; }
+
+/* line 39, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lock:before {
+  content: "\f023"; }
+
+/* line 40, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag:before {
+  content: "\f024"; }
+
+/* line 41, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-headphones:before {
+  content: "\f025"; }
+
+/* line 42, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-off:before {
+  content: "\f026"; }
+
+/* line 43, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-down:before {
+  content: "\f027"; }
+
+/* line 44, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-up:before {
+  content: "\f028"; }
+
+/* line 45, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qrcode:before {
+  content: "\f029"; }
+
+/* line 46, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-barcode:before {
+  content: "\f02a"; }
+
+/* line 47, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tag:before {
+  content: "\f02b"; }
+
+/* line 48, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tags:before {
+  content: "\f02c"; }
+
+/* line 49, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-book:before {
+  content: "\f02d"; }
+
+/* line 50, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark:before {
+  content: "\f02e"; }
+
+/* line 51, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-print:before {
+  content: "\f02f"; }
+
+/* line 52, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera:before {
+  content: "\f030"; }
+
+/* line 53, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-font:before {
+  content: "\f031"; }
+
+/* line 54, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bold:before {
+  content: "\f032"; }
+
+/* line 55, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-italic:before {
+  content: "\f033"; }
+
+/* line 56, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-height:before {
+  content: "\f034"; }
+
+/* line 57, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-width:before {
+  content: "\f035"; }
+
+/* line 58, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-left:before {
+  content: "\f036"; }
+
+/* line 59, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-center:before {
+  content: "\f037"; }
+
+/* line 60, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-right:before {
+  content: "\f038"; }
+
+/* line 61, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-justify:before {
+  content: "\f039"; }
+
+/* line 62, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list:before {
+  content: "\f03a"; }
+
+/* line 64, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "\f03b"; }
+
+/* line 65, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-indent:before {
+  content: "\f03c"; }
+
+/* line 66, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-video-camera:before {
+  content: "\f03d"; }
+
+/* line 69, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "\f03e"; }
+
+/* line 70, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil:before {
+  content: "\f040"; }
+
+/* line 71, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-marker:before {
+  content: "\f041"; }
+
+/* line 72, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adjust:before {
+  content: "\f042"; }
+
+/* line 73, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tint:before {
+  content: "\f043"; }
+
+/* line 75, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "\f044"; }
+
+/* line 76, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square-o:before {
+  content: "\f045"; }
+
+/* line 77, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square-o:before {
+  content: "\f046"; }
+
+/* line 78, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows:before {
+  content: "\f047"; }
+
+/* line 79, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-backward:before {
+  content: "\f048"; }
+
+/* line 80, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-backward:before {
+  content: "\f049"; }
+
+/* line 81, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-backward:before {
+  content: "\f04a"; }
+
+/* line 82, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play:before {
+  content: "\f04b"; }
+
+/* line 83, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause:before {
+  content: "\f04c"; }
+
+/* line 84, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop:before {
+  content: "\f04d"; }
+
+/* line 85, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forward:before {
+  content: "\f04e"; }
+
+/* line 86, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-forward:before {
+  content: "\f050"; }
+
+/* line 87, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-forward:before {
+  content: "\f051"; }
+
+/* line 88, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eject:before {
+  content: "\f052"; }
+
+/* line 89, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-left:before {
+  content: "\f053"; }
+
+/* line 90, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-right:before {
+  content: "\f054"; }
+
+/* line 91, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-circle:before {
+  content: "\f055"; }
+
+/* line 92, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-circle:before {
+  content: "\f056"; }
+
+/* line 93, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle:before {
+  content: "\f057"; }
+
+/* line 94, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle:before {
+  content: "\f058"; }
+
+/* line 95, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle:before {
+  content: "\f059"; }
+
+/* line 96, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info-circle:before {
+  content: "\f05a"; }
+
+/* line 97, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crosshairs:before {
+  content: "\f05b"; }
+
+/* line 98, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle-o:before {
+  content: "\f05c"; }
+
+/* line 99, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle-o:before {
+  content: "\f05d"; }
+
+/* line 100, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ban:before {
+  content: "\f05e"; }
+
+/* line 101, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-left:before {
+  content: "\f060"; }
+
+/* line 102, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-right:before {
+  content: "\f061"; }
+
+/* line 103, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-up:before {
+  content: "\f062"; }
+
+/* line 104, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-down:before {
+  content: "\f063"; }
+
+/* line 106, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "\f064"; }
+
+/* line 107, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expand:before {
+  content: "\f065"; }
+
+/* line 108, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compress:before {
+  content: "\f066"; }
+
+/* line 109, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus:before {
+  content: "\f067"; }
+
+/* line 110, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus:before {
+  content: "\f068"; }
+
+/* line 111, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asterisk:before {
+  content: "\f069"; }
+
+/* line 112, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "\f06a"; }
+
+/* line 113, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gift:before {
+  content: "\f06b"; }
+
+/* line 114, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leaf:before {
+  content: "\f06c"; }
+
+/* line 115, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire:before {
+  content: "\f06d"; }
+
+/* line 116, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye:before {
+  content: "\f06e"; }
+
+/* line 117, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye-slash:before {
+  content: "\f070"; }
+
+/* line 119, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "\f071"; }
+
+/* line 120, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plane:before {
+  content: "\f072"; }
+
+/* line 121, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar:before {
+  content: "\f073"; }
+
+/* line 122, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-random:before {
+  content: "\f074"; }
+
+/* line 123, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment:before {
+  content: "\f075"; }
+
+/* line 124, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magnet:before {
+  content: "\f076"; }
+
+/* line 125, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-up:before {
+  content: "\f077"; }
+
+/* line 126, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-down:before {
+  content: "\f078"; }
+
+/* line 127, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-retweet:before {
+  content: "\f079"; }
+
+/* line 128, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-cart:before {
+  content: "\f07a"; }
+
+/* line 129, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder:before {
+  content: "\f07b"; }
+
+/* line 130, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open:before {
+  content: "\f07c"; }
+
+/* line 131, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-v:before {
+  content: "\f07d"; }
+
+/* line 132, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-h:before {
+  content: "\f07e"; }
+
+/* line 133, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bar-chart-o:before {
+  content: "\f080"; }
+
+/* line 134, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter-square:before {
+  content: "\f081"; }
+
+/* line 135, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-square:before {
+  content: "\f082"; }
+
+/* line 136, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera-retro:before {
+  content: "\f083"; }
+
+/* line 137, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-key:before {
+  content: "\f084"; }
+
+/* line 139, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "\f085"; }
+
+/* line 140, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments:before {
+  content: "\f086"; }
+
+/* line 141, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "\f087"; }
+
+/* line 142, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "\f088"; }
+
+/* line 143, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half:before {
+  content: "\f089"; }
+
+/* line 144, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart-o:before {
+  content: "\f08a"; }
+
+/* line 145, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-out:before {
+  content: "\f08b"; }
+
+/* line 146, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin-square:before {
+  content: "\f08c"; }
+
+/* line 147, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumb-tack:before {
+  content: "\f08d"; }
+
+/* line 148, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link:before {
+  content: "\f08e"; }
+
+/* line 149, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-in:before {
+  content: "\f090"; }
+
+/* line 150, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trophy:before {
+  content: "\f091"; }
+
+/* line 151, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-square:before {
+  content: "\f092"; }
+
+/* line 152, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-upload:before {
+  content: "\f093"; }
+
+/* line 153, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lemon-o:before {
+  content: "\f094"; }
+
+/* line 154, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone:before {
+  content: "\f095"; }
+
+/* line 155, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square-o:before {
+  content: "\f096"; }
+
+/* line 156, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark-o:before {
+  content: "\f097"; }
+
+/* line 157, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone-square:before {
+  content: "\f098"; }
+
+/* line 158, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter:before {
+  content: "\f099"; }
+
+/* line 159, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook:before {
+  content: "\f09a"; }
+
+/* line 160, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github:before {
+  content: "\f09b"; }
+
+/* line 161, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock:before {
+  content: "\f09c"; }
+
+/* line 162, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card:before {
+  content: "\f09d"; }
+
+/* line 163, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss:before {
+  content: "\f09e"; }
+
+/* line 164, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hdd-o:before {
+  content: "\f0a0"; }
+
+/* line 165, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullhorn:before {
+  content: "\f0a1"; }
+
+/* line 166, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell:before {
+  content: "\f0f3"; }
+
+/* line 167, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-certificate:before {
+  content: "\f0a3"; }
+
+/* line 168, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-right:before {
+  content: "\f0a4"; }
+
+/* line 169, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-left:before {
+  content: "\f0a5"; }
+
+/* line 170, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-up:before {
+  content: "\f0a6"; }
+
+/* line 171, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-down:before {
+  content: "\f0a7"; }
+
+/* line 172, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "\f0a8"; }
+
+/* line 173, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "\f0a9"; }
+
+/* line 174, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "\f0aa"; }
+
+/* line 175, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "\f0ab"; }
+
+/* line 176, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-globe:before {
+  content: "\f0ac"; }
+
+/* line 177, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wrench:before {
+  content: "\f0ad"; }
+
+/* line 178, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tasks:before {
+  content: "\f0ae"; }
+
+/* line 179, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-filter:before {
+  content: "\f0b0"; }
+
+/* line 180, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-briefcase:before {
+  content: "\f0b1"; }
+
+/* line 181, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-alt:before {
+  content: "\f0b2"; }
+
+/* line 183, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0"; }
+
+/* line 185, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1"; }
+
+/* line 186, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud:before {
+  content: "\f0c2"; }
+
+/* line 187, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flask:before {
+  content: "\f0c3"; }
+
+/* line 189, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "\f0c4"; }
+
+/* line 191, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5"; }
+
+/* line 192, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paperclip:before {
+  content: "\f0c6"; }
+
+/* line 194, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "\f0c7"; }
+
+/* line 195, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square:before {
+  content: "\f0c8"; }
+
+/* line 198, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "\f0c9"; }
+
+/* line 199, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ul:before {
+  content: "\f0ca"; }
+
+/* line 200, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ol:before {
+  content: "\f0cb"; }
+
+/* line 201, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-strikethrough:before {
+  content: "\f0cc"; }
+
+/* line 202, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-underline:before {
+  content: "\f0cd"; }
+
+/* line 203, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-table:before {
+  content: "\f0ce"; }
+
+/* line 204, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magic:before {
+  content: "\f0d0"; }
+
+/* line 205, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-truck:before {
+  content: "\f0d1"; }
+
+/* line 206, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest:before {
+  content: "\f0d2"; }
+
+/* line 207, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-square:before {
+  content: "\f0d3"; }
+
+/* line 208, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus-square:before {
+  content: "\f0d4"; }
+
+/* line 209, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus:before {
+  content: "\f0d5"; }
+
+/* line 210, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-money:before {
+  content: "\f0d6"; }
+
+/* line 211, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-down:before {
+  content: "\f0d7"; }
+
+/* line 212, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-up:before {
+  content: "\f0d8"; }
+
+/* line 213, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-left:before {
+  content: "\f0d9"; }
+
+/* line 214, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-right:before {
+  content: "\f0da"; }
+
+/* line 215, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-columns:before {
+  content: "\f0db"; }
+
+/* line 217, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "\f0dc"; }
+
+/* line 219, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "\f0dd"; }
+
+/* line 221, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "\f0de"; }
+
+/* line 222, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope:before {
+  content: "\f0e0"; }
+
+/* line 223, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin:before {
+  content: "\f0e1"; }
+
+/* line 225, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2"; }
+
+/* line 227, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "\f0e3"; }
+
+/* line 229, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4"; }
+
+/* line 230, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment-o:before {
+  content: "\f0e5"; }
+
+/* line 231, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments-o:before {
+  content: "\f0e6"; }
+
+/* line 233, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "\f0e7"; }
+
+/* line 234, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sitemap:before {
+  content: "\f0e8"; }
+
+/* line 235, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-umbrella:before {
+  content: "\f0e9"; }
+
+/* line 237, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "\f0ea"; }
+
+/* line 238, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "\f0eb"; }
+
+/* line 239, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exchange:before {
+  content: "\f0ec"; }
+
+/* line 240, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-download:before {
+  content: "\f0ed"; }
+
+/* line 241, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-upload:before {
+  content: "\f0ee"; }
+
+/* line 242, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-md:before {
+  content: "\f0f0"; }
+
+/* line 243, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stethoscope:before {
+  content: "\f0f1"; }
+
+/* line 244, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-suitcase:before {
+  content: "\f0f2"; }
+
+/* line 245, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-o:before {
+  content: "\f0a2"; }
+
+/* line 246, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-coffee:before {
+  content: "\f0f4"; }
+
+/* line 247, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cutlery:before {
+  content: "\f0f5"; }
+
+/* line 248, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text-o:before {
+  content: "\f0f6"; }
+
+/* line 249, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building-o:before {
+  content: "\f0f7"; }
+
+/* line 250, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hospital-o:before {
+  content: "\f0f8"; }
+
+/* line 251, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ambulance:before {
+  content: "\f0f9"; }
+
+/* line 252, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medkit:before {
+  content: "\f0fa"; }
+
+/* line 253, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fighter-jet:before {
+  content: "\f0fb"; }
+
+/* line 254, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-beer:before {
+  content: "\f0fc"; }
+
+/* line 255, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-h-square:before {
+  content: "\f0fd"; }
+
+/* line 256, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square:before {
+  content: "\f0fe"; }
+
+/* line 257, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-left:before {
+  content: "\f100"; }
+
+/* line 258, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-right:before {
+  content: "\f101"; }
+
+/* line 259, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-up:before {
+  content: "\f102"; }
+
+/* line 260, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-down:before {
+  content: "\f103"; }
+
+/* line 261, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-left:before {
+  content: "\f104"; }
+
+/* line 262, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-right:before {
+  content: "\f105"; }
+
+/* line 263, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-up:before {
+  content: "\f106"; }
+
+/* line 264, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-down:before {
+  content: "\f107"; }
+
+/* line 265, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-desktop:before {
+  content: "\f108"; }
+
+/* line 266, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-laptop:before {
+  content: "\f109"; }
+
+/* line 267, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tablet:before {
+  content: "\f10a"; }
+
+/* line 269, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "\f10b"; }
+
+/* line 270, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o:before {
+  content: "\f10c"; }
+
+/* line 271, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-left:before {
+  content: "\f10d"; }
+
+/* line 272, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-right:before {
+  content: "\f10e"; }
+
+/* line 273, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spinner:before {
+  content: "\f110"; }
+
+/* line 274, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle:before {
+  content: "\f111"; }
+
+/* line 276, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "\f112"; }
+
+/* line 277, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-alt:before {
+  content: "\f113"; }
+
+/* line 278, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-o:before {
+  content: "\f114"; }
+
+/* line 279, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open-o:before {
+  content: "\f115"; }
+
+/* line 280, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-smile-o:before {
+  content: "\f118"; }
+
+/* line 281, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-frown-o:before {
+  content: "\f119"; }
+
+/* line 282, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meh-o:before {
+  content: "\f11a"; }
+
+/* line 283, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gamepad:before {
+  content: "\f11b"; }
+
+/* line 284, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-keyboard-o:before {
+  content: "\f11c"; }
+
+/* line 285, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-o:before {
+  content: "\f11d"; }
+
+/* line 286, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-checkered:before {
+  content: "\f11e"; }
+
+/* line 287, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-terminal:before {
+  content: "\f120"; }
+
+/* line 288, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code:before {
+  content: "\f121"; }
+
+/* line 290, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "\f122"; }
+
+/* line 293, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "\f123"; }
+
+/* line 294, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-location-arrow:before {
+  content: "\f124"; }
+
+/* line 295, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crop:before {
+  content: "\f125"; }
+
+/* line 296, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code-fork:before {
+  content: "\f126"; }
+
+/* line 298, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "\f127"; }
+
+/* line 299, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question:before {
+  content: "\f128"; }
+
+/* line 300, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info:before {
+  content: "\f129"; }
+
+/* line 301, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation:before {
+  content: "\f12a"; }
+
+/* line 302, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-superscript:before {
+  content: "\f12b"; }
+
+/* line 303, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subscript:before {
+  content: "\f12c"; }
+
+/* line 304, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eraser:before {
+  content: "\f12d"; }
+
+/* line 305, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "\f12e"; }
+
+/* line 306, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone:before {
+  content: "\f130"; }
+
+/* line 307, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone-slash:before {
+  content: "\f131"; }
+
+/* line 308, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shield:before {
+  content: "\f132"; }
+
+/* line 309, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-o:before {
+  content: "\f133"; }
+
+/* line 310, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "\f134"; }
+
+/* line 311, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rocket:before {
+  content: "\f135"; }
+
+/* line 312, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-maxcdn:before {
+  content: "\f136"; }
+
+/* line 313, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "\f137"; }
+
+/* line 314, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "\f138"; }
+
+/* line 315, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "\f139"; }
+
+/* line 316, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "\f13a"; }
+
+/* line 317, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-html5:before {
+  content: "\f13b"; }
+
+/* line 318, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-css3:before {
+  content: "\f13c"; }
+
+/* line 319, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-anchor:before {
+  content: "\f13d"; }
+
+/* line 320, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock-alt:before {
+  content: "\f13e"; }
+
+/* line 321, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullseye:before {
+  content: "\f140"; }
+
+/* line 322, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "\f141"; }
+
+/* line 323, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "\f142"; }
+
+/* line 324, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss-square:before {
+  content: "\f143"; }
+
+/* line 325, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle:before {
+  content: "\f144"; }
+
+/* line 326, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ticket:before {
+  content: "\f145"; }
+
+/* line 327, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square:before {
+  content: "\f146"; }
+
+/* line 328, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square-o:before {
+  content: "\f147"; }
+
+/* line 329, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-up:before {
+  content: "\f148"; }
+
+/* line 330, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-down:before {
+  content: "\f149"; }
+
+/* line 331, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square:before {
+  content: "\f14a"; }
+
+/* line 332, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil-square:before {
+  content: "\f14b"; }
+
+/* line 333, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link-square:before {
+  content: "\f14c"; }
+
+/* line 334, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square:before {
+  content: "\f14d"; }
+
+/* line 335, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compass:before {
+  content: "\f14e"; }
+
+/* line 337, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "\f150"; }
+
+/* line 339, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "\f151"; }
+
+/* line 341, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "\f152"; }
+
+/* line 343, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "\f153"; }
+
+/* line 344, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gbp:before {
+  content: "\f154"; }
+
+/* line 346, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "\f155"; }
+
+/* line 348, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "\f156"; }
+
+/* line 352, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "\f157"; }
+
+/* line 355, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "\f158"; }
+
+/* line 357, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "\f159"; }
+
+/* line 359, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "\f15a"; }
+
+/* line 360, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file:before {
+  content: "\f15b"; }
+
+/* line 361, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text:before {
+  content: "\f15c"; }
+
+/* line 362, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "\f15d"; }
+
+/* line 363, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "\f15e"; }
+
+/* line 364, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "\f160"; }
+
+/* line 365, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "\f161"; }
+
+/* line 366, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "\f162"; }
+
+/* line 367, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "\f163"; }
+
+/* line 368, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-up:before {
+  content: "\f164"; }
+
+/* line 369, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-down:before {
+  content: "\f165"; }
+
+/* line 370, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-square:before {
+  content: "\f166"; }
+
+/* line 371, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube:before {
+  content: "\f167"; }
+
+/* line 372, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing:before {
+  content: "\f168"; }
+
+/* line 373, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing-square:before {
+  content: "\f169"; }
+
+/* line 374, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-play:before {
+  content: "\f16a"; }
+
+/* line 375, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dropbox:before {
+  content: "\f16b"; }
+
+/* line 376, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-overflow:before {
+  content: "\f16c"; }
+
+/* line 377, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-instagram:before {
+  content: "\f16d"; }
+
+/* line 378, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flickr:before {
+  content: "\f16e"; }
+
+/* line 379, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adn:before {
+  content: "\f170"; }
+
+/* line 380, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket:before {
+  content: "\f171"; }
+
+/* line 381, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "\f172"; }
+
+/* line 382, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr:before {
+  content: "\f173"; }
+
+/* line 383, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr-square:before {
+  content: "\f174"; }
+
+/* line 384, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "\f175"; }
+
+/* line 385, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "\f176"; }
+
+/* line 386, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "\f177"; }
+
+/* line 387, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "\f178"; }
+
+/* line 388, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-apple:before {
+  content: "\f179"; }
+
+/* line 389, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-windows:before {
+  content: "\f17a"; }
+
+/* line 390, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-android:before {
+  content: "\f17b"; }
+
+/* line 391, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linux:before {
+  content: "\f17c"; }
+
+/* line 392, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dribbble:before {
+  content: "\f17d"; }
+
+/* line 393, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skype:before {
+  content: "\f17e"; }
+
+/* line 394, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-foursquare:before {
+  content: "\f180"; }
+
+/* line 395, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trello:before {
+  content: "\f181"; }
+
+/* line 396, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-female:before {
+  content: "\f182"; }
+
+/* line 397, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-male:before {
+  content: "\f183"; }
+
+/* line 398, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gittip:before {
+  content: "\f184"; }
+
+/* line 399, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sun-o:before {
+  content: "\f185"; }
+
+/* line 400, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-moon-o:before {
+  content: "\f186"; }
+
+/* line 401, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-archive:before {
+  content: "\f187"; }
+
+/* line 402, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bug:before {
+  content: "\f188"; }
+
+/* line 403, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vk:before {
+  content: "\f189"; }
+
+/* line 404, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-weibo:before {
+  content: "\f18a"; }
+
+/* line 405, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-renren:before {
+  content: "\f18b"; }
+
+/* line 406, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pagelines:before {
+  content: "\f18c"; }
+
+/* line 407, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-exchange:before {
+  content: "\f18d"; }
+
+/* line 408, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e"; }
+
+/* line 409, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "\f190"; }
+
+/* line 411, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "\f191"; }
+
+/* line 412, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "\f192"; }
+
+/* line 413, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair:before {
+  content: "\f193"; }
+
+/* line 414, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo-square:before {
+  content: "\f194"; }
+
+/* line 416, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "\f195"; }
+
+/* line 417, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square-o:before {
+  content: "\f196"; }
+
+/* line 418, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-space-shuttle:before {
+  content: "\f197"; }
+
+/* line 419, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slack:before {
+  content: "\f198"; }
+
+/* line 420, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-square:before {
+  content: "\f199"; }
+
+/* line 421, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wordpress:before {
+  content: "\f19a"; }
+
+/* line 422, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-openid:before {
+  content: "\f19b"; }
+
+/* line 425, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "\f19c"; }
+
+/* line 427, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "\f19d"; }
+
+/* line 428, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yahoo:before {
+  content: "\f19e"; }
+
+/* line 429, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google:before {
+  content: "\f1a0"; }
+
+/* line 430, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit:before {
+  content: "\f1a1"; }
+
+/* line 431, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-square:before {
+  content: "\f1a2"; }
+
+/* line 432, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon-circle:before {
+  content: "\f1a3"; }
+
+/* line 433, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon:before {
+  content: "\f1a4"; }
+
+/* line 434, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-delicious:before {
+  content: "\f1a5"; }
+
+/* line 435, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-digg:before {
+  content: "\f1a6"; }
+
+/* line 437, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-square:before,
+.fa-pied-piper:before {
+  content: "\f1a7"; }
+
+/* line 438, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-alt:before {
+  content: "\f1a8"; }
+
+/* line 439, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drupal:before {
+  content: "\f1a9"; }
+
+/* line 440, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-joomla:before {
+  content: "\f1aa"; }
+
+/* line 441, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-language:before {
+  content: "\f1ab"; }
+
+/* line 442, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fax:before {
+  content: "\f1ac"; }
+
+/* line 443, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building:before {
+  content: "\f1ad"; }
+
+/* line 444, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-child:before {
+  content: "\f1ae"; }
+
+/* line 445, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paw:before {
+  content: "\f1b0"; }
+
+/* line 446, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spoon:before {
+  content: "\f1b1"; }
+
+/* line 447, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cube:before {
+  content: "\f1b2"; }
+
+/* line 448, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cubes:before {
+  content: "\f1b3"; }
+
+/* line 449, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance:before {
+  content: "\f1b4"; }
+
+/* line 450, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance-square:before {
+  content: "\f1b5"; }
+
+/* line 451, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam:before {
+  content: "\f1b6"; }
+
+/* line 452, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam-square:before {
+  content: "\f1b7"; }
+
+/* line 453, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-recycle:before {
+  content: "\f1b8"; }
+
+/* line 455, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "\f1b9"; }
+
+/* line 457, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "\f1ba"; }
+
+/* line 458, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tree:before {
+  content: "\f1bb"; }
+
+/* line 459, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spotify:before {
+  content: "\f1bc"; }
+
+/* line 460, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deviantart:before {
+  content: "\f1bd"; }
+
+/* line 461, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soundcloud:before {
+  content: "\f1be"; }
+
+/* line 462, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-database:before {
+  content: "\f1c0"; }
+
+/* line 463, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-pdf-o:before {
+  content: "\f1c1"; }
+
+/* line 464, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-word-o:before {
+  content: "\f1c2"; }
+
+/* line 465, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-excel-o:before {
+  content: "\f1c3"; }
+
+/* line 466, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-powerpoint-o:before {
+  content: "\f1c4"; }
+
+/* line 469, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "\f1c5"; }
+
+/* line 471, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "\f1c6"; }
+
+/* line 473, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "\f1c7"; }
+
+/* line 475, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "\f1c8"; }
+
+/* line 476, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-code-o:before {
+  content: "\f1c9"; }
+
+/* line 477, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vine:before {
+  content: "\f1ca"; }
+
+/* line 478, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codepen:before {
+  content: "\f1cb"; }
+
+/* line 479, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-jsfiddle:before {
+  content: "\f1cc"; }
+
+/* line 483, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-life-bouy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "\f1cd"; }
+
+/* line 484, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o-notch:before {
+  content: "\f1ce"; }
+
+/* line 486, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ra:before,
+.fa-rebel:before {
+  content: "\f1d0"; }
+
+/* line 488, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ge:before,
+.fa-empire:before {
+  content: "\f1d1"; }
+
+/* line 489, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git-square:before {
+  content: "\f1d2"; }
+
+/* line 490, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git:before {
+  content: "\f1d3"; }
+
+/* line 491, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hacker-news:before {
+  content: "\f1d4"; }
+
+/* line 492, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tencent-weibo:before {
+  content: "\f1d5"; }
+
+/* line 493, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qq:before {
+  content: "\f1d6"; }
+
+/* line 495, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "\f1d7"; }
+
+/* line 497, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "\f1d8"; }
+
+/* line 499, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "\f1d9"; }
+
+/* line 500, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-history:before {
+  content: "\f1da"; }
+
+/* line 501, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-thin:before {
+  content: "\f1db"; }
+
+/* line 502, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-header:before {
+  content: "\f1dc"; }
+
+/* line 503, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paragraph:before {
+  content: "\f1dd"; }
+
+/* line 504, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sliders:before {
+  content: "\f1de"; }
+
+/* line 505, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt:before {
+  content: "\f1e0"; }
+
+/* line 506, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt-square:before {
+  content: "\f1e1"; }
+
+/* line 507, /home/zora/.rvm/gems/ruby-2.1.2@cecilitse-courses/gems/font-awesome-middleman-4.1.1/app/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bomb:before {
+  content: "\f1e2"; }
+
 @page {
   size: A4;
   margin: 0; }
@@ -7121,96 +9153,122 @@ th.hide-for-touch {
 header {
   background-image: url("/images/background.jpg");
   background-position: 0% 20%;
-  margin-bottom: 2em;
+  background-size: cover;
   min-height: 250px; }
   /* line 22, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   header h1 {
-    font-size: 3em;
+    box-sizing: border-box;
     color: white;
-    margin-top: 1.5em; }
-    /* line 27, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+    font-size: 3em;
+    font-weight: 500;
+    margin-top: 1em;
+    text-shadow: 1px 1px 5px #333333; }
+    /* line 30, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
     header h1 small {
       color: white;
       display: block; }
+  /* line 36, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  header .home-icon {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 1em;
+    opacity: 0.7; }
 
-/* line 35, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+/* line 48, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
 footer .banner {
   background-image: url("/images/background.jpg");
   background-position: right 62%;
+  background-size: cover;
   min-height: 50px; }
-/* line 41, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
-footer a {
-  color: #333333; }
-/* line 42, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
-footer ul {
-  font-size: 0.75em; }
+/* line 55, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+footer .footer--license {
+  text-align: right; }
+  /* line 58, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  footer .footer--license p {
+    font-size: 0.7em;
+    margin: 0.2em 0; }
 
-/* line 45, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+/* line 65, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
 main {
-  font-size: 0.9em; }
-  /* line 48, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  font-size: 0.9em;
+  margin-top: 1em; }
+  /* line 69, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main h1, main h2, main h3, main h4 {
     font-weight: bold; }
-  /* line 49, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  /* line 70, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main h2 {
     font-size: 2.3125em; }
-  /* line 50, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  /* line 71, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main h3, main h4 {
     font-size: 1.6875em; }
-  /* line 52, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  /* line 73, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main li {
     margin-left: 1em; }
-  /* line 53, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  /* line 74, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main p {
     margin-bottom: 1em; }
-  /* line 55, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  /* line 76, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
+  main .breadcrumbs {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0; }
+  /* line 83, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_layout.css.scss */
   main .button {
     text-transform: uppercase; }
 
 /* line 2, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-10, .media-type--print .large-8, .media-type--print .large-6, .media-type--print .large-4, .media-type--print .large-2, .programs_print .large-10, .programs_print .large-8, .programs_print .large-6, .programs_print .large-4, .programs_print .large-2 {
+.programs_print .large-10, .programs_print .large-8, .programs_print .large-6, .programs_print .large-4, .programs_print .large-2 {
   position: relative; }
 /* line 3, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .medium-10, .media-type--print .medium-8, .media-type--print .medium-6, .media-type--print .medium-4, .media-type--print .medium-2, .programs_print .medium-10, .programs_print .medium-8, .programs_print .medium-6, .programs_print .medium-4, .programs_print .medium-2 {
+.programs_print .medium-10, .programs_print .medium-8, .programs_print .medium-6, .programs_print .medium-4, .programs_print .medium-2 {
   position: relative; }
 /* line 4, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .small-10, .media-type--print .small-8, .media-type--print .small-6, .media-type--print .small-4, .media-type--print .small-2, .programs_print .small-10, .programs_print .small-8, .programs_print .small-6, .programs_print .small-4, .programs_print .small-2 {
+.programs_print .small-10, .programs_print .small-8, .programs_print .small-6, .programs_print .small-4, .programs_print .small-2 {
   position: relative; }
 /* line 6, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-10, .media-type--print .medium-10, .media-type--print .small-10, .programs_print .large-10, .programs_print .medium-10, .programs_print .small-10 {
+.programs_print .large-10, .programs_print .medium-10, .programs_print .small-10 {
   width: 83.3333%; }
 /* line 7, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-8, .media-type--print .medium-8, .media-type--print .small-8, .programs_print .large-8, .programs_print .medium-8, .programs_print .small-8 {
+.programs_print .large-8, .programs_print .medium-8, .programs_print .small-8 {
   width: 66.6666%; }
 /* line 8, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-6, .media-type--print .medium-6, .media-type--print .small-6, .programs_print .large-6, .programs_print .medium-6, .programs_print .small-6 {
+.programs_print .large-6, .programs_print .medium-6, .programs_print .small-6 {
   width: 50%; }
 /* line 9, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-4, .media-type--print .medium-4, .media-type--print .small-4, .programs_print .large-4, .programs_print .medium-4, .programs_print .small-4 {
+.programs_print .large-4, .programs_print .medium-4, .programs_print .small-4 {
   width: 33.3333%; }
 /* line 10, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .large-2, .media-type--print .medium-2, .media-type--print .small-2, .programs_print .large-2, .programs_print .medium-2, .programs_print .small-2 {
+.programs_print .large-2, .programs_print .medium-2, .programs_print .small-2 {
   width: 16.6666%; }
 /* line 12, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .row, .programs_print .row {
+.programs_print .row {
   padding: 0 3em 1em 3em; }
-/* line 14, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .footer--contact--details, .programs_print .footer--contact--details {
-  text-align: right; }
-/* line 18, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .course, .programs_print .course {
-  margin-bottom: 10em; }
-/* line 19, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .course--day3, .programs_print .course--day3 {
-  margin-bottom: 10em; }
+/* line 15, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print header h1 {
+  margin-top: 2em; }
 /* line 20, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .course--day4, .programs_print .course--day4 {
+.programs_print .breadcrumbs,
+.programs_print .footer--license,
+.programs_print .home-icon {
+  display: none; }
+/* line 24, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print .footer--contact--details {
+  text-align: right; }
+/* line 26, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print .course {
+  margin-bottom: 10em; }
+/* line 27, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print .course--day3 {
+  margin-bottom: 10em; }
+/* line 28, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print .course--day4 {
   padding-top: 3em; }
-/* line 21, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
-.media-type--print .program, .programs_print .program {
+/* line 29, /home/zora/dev/cecilitse/courses/source/stylesheets/program/_print.css.scss */
+.programs_print .program {
   padding-top: 4em; }
 
-/* line 13, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+/* line 14, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
 .program--more-details {
   border-style: solid;
   border-width: 0px;
@@ -7243,13 +9301,26 @@ main {
     color: white; }
 
 /* line 20, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
-.teacher a {
+.teacher--contact {
+  font-size: 0.75em; }
+  /* line 23, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+  .teacher--contact a {
+    color: #333333; }
+  /* line 24, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+  .teacher--contact ul, .teacher--contact p {
+    font-size: 1em; }
+  /* line 25, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+  .teacher--contact li {
+    margin-left: 0; }
+
+/* line 29, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+.teacher--description a {
   color: #333333;
   text-decoration: underline; }
-  /* line 24, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
-  .teacher a:hover {
+  /* line 33, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+  .teacher--description a:hover {
     text-decoration: underline; }
 
-/* line 30, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
+/* line 39, /home/zora/dev/cecilitse/courses/source/stylesheets/program.css.scss */
 .teacher--picture {
   width: 10em; }

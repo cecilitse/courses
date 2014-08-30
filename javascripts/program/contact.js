@@ -1,5 +1,7 @@
 (function() {
-  window.onload = function() {
+  var contact;
+
+  contact = function() {
     var address, contactButton, contactButtons, mail, _i, _len, _results;
     mail = {
       a: 'Y29udGFjdA==',
@@ -18,5 +20,9 @@
     }
     return _results;
   };
+
+  $(function() {
+    return contact();
+  });
 
 }).call(this);

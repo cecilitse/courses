@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://courses.cecilitse.org/</loc>
-    <lastmod>2014-08-29T00:00:00+02:00</lastmod>
+    <lastmod>2014-08-30T00:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://courses.cecilitse.org/programs/</loc>
-    <lastmod>2014-08-29T00:00:00+02:00</lastmod>
+    <lastmod>2014-08-30T00:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://courses.cecilitse.org/programs/ruby-advanced.html</loc>
-    <lastmod>2014-08-29T00:00:00+02:00</lastmod>
+    <lastmod>2014-08-30T00:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
