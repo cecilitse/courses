@@ -12,7 +12,11 @@
   .row { padding: 0 3em 1em 3em; }
 
   header {
-    h1 { margin-top: 2em; }
+    h1 {
+      font-size: 2.7em;
+      font-weight: normal;
+      margin-top: 2em;
+    }
   }
 
   .breadcrumbs,
@@ -26,5 +30,5 @@
   .course       { margin-bottom: 10em; }
   .course--day3 { margin-bottom: 10em; }
   .course--day4 { padding-top: 3em; }
-  .program      { padding-top: 4em; }
+  .program      { padding-top: 5em; }
 }
