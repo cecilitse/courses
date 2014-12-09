@@ -1,0 +1,4 @@
+[submodule "build"]
+	path = build
+	url = git@github.com:cecilitse/courses.git
+	branch = gh-pages
