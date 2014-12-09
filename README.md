@@ -46,11 +46,31 @@ $ bin/courses generate COURSE_NAME [BASE_URL]
 
 This generates a PDF at the root directory of Courses. Filename is based on the course name.
 
-## Preview
+### Preview
 
 Before generating a course PDF, you can have a preview of the document in a web browser.
 
 Open a web browser and go to `http://localhost:4567/programs/COURSE_NAME.html`. That's it!
+
+### Deployment
+
+Filst time, initialize the submodule:
+
+```
+$ git submodule init
+```
+
+Build the application:
+
+```
+$ middleman build --no-clean
+```
+
+Deploy on GitHub pages:
+
+```
+$ middleman deploy
+```
 
 ## Contributing
 
