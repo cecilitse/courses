@@ -4,6 +4,29 @@
 @import 'reveal.js/lib/css/zenburn';
 @import 'presentation/theme/cecilitse';
 
+footer {
+  bottom: 0.10em;
+  position: absolute;
+  width: 100%;
+  z-index: 15;
+
+  .banner {
+    background-image: url($background-image);
+    background-position: right 62%;
+    background-size: cover;
+    min-height: 0.2em;
+  }
+
+  .footer--terms {
+    text-align: left;
+
+    p {
+      font-size: 0.30em;
+      margin: 0.2em 0.5em;
+    }
+  }
+}
+
 .presentation--course-title {
   @extend h2;
   list-style-type: none;
