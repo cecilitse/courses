@@ -8,6 +8,11 @@ This project also generates PDF course documents.
 
 ## Getting Started
 
+### Dependecies
+
+- Python & [virtualenvs](https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst)
+- NodeJS
+
 ### Installation
 
 Install WeasyPrint:
@@ -24,7 +29,7 @@ Install required gems:
 $ bundler install
 ```
 
-Install default bower components:
+Install default `bower_components`:
 
 ```sh
 $ bower install
@@ -82,6 +87,6 @@ $ middleman deploy
 
 ## License
 
-Courses is released under two licenses: 
+Courses is released under two licenses:
 * GPL License for sources
 * Creative Commons Attribution-ShareAlike License for content
