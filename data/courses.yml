@@ -1,16 +1,13 @@
 ruby_advanced:
-  link:     ruby-advanced
-  title:    Ruby on Rails Avancé
-  subtitle: Qualité, tests et architectures avancées
+  link:     git-github
+  title:    'Git & GitHub 101'
+  subtitle: Travail collaboratif avec git
   audience: |
-    Cette formation s’adresse aux développeurs Web ayant déjà une expérience
-    avec Ruby on Rails et qui désirent aller au delà du pattern MVC afin d’être
-    en mesure d’architecturer de complexes applications tout en portant une
-    grande importance à la qualité de leur production (méthodologies, code,
-    architectures, tests, etc.).
+    Les personnes travaillant avec un outil informatique, créents des fichiers,
+    sauvegardent des fichiers, éditent des fichiers… Tous les jours.
+    Comment travailler en même temps sur ces fichiers tout en conservant un historique ? avec git & GitHub.
+    Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu au designer, consultant seo ou rédacteur web.
   presentations:
-    01-basics:            'Les bases'
-    02-rails-structures:  'Structurer son application'
-    03-testing:           'Testing'
-    04-legacy-code:       'Legacy code'
-    05-search-engine:     'Moteur de recherche'
+    01-basics:     'Les bases'
+    02-git-hello:  'Bonjour git'
+    03-try-github: 'Essayer GitHub'
