@@ -5,13 +5,13 @@ section class="teacher"
       h2 Intervenant
   div class="row teacher--description"
     div class="small-8 columns"
-      h3 Cécile Veneziani
+      h3 = data.settings.name
       p
         'Développeur Ruby on Rails avec 5 ans d'expérience dans l'e-commerce. Passionnée par les méthodes agiles et la qualité de code. Egalement prof au
         a href="http://lewagon.org/" Wagon
         '.
     div class="small-4 columns text-right"
-      img alt="Cecile Veneziani, Intervenant Formations Ruby on Rails" src="/images/avatar.png" height="144" width="144" class="teacher--picture"
+      = image_tag 'avatar.png', class: 'teacher--picture'
   div class="row"
     div class="small-12 columns"
       hr
@@ -30,4 +30,4 @@ section class="teacher"
           - else
             a href="#" class="j-contact"
         li
-          a href="http://cecilitse.org/fr/" http://cecilitse.org/fr/
+          = link_to data.settings.website.name, data.settings.website.url
