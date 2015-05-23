@@ -1,15 +1,15 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import '_settings';
-@import 'program/_settings';
+@import "settings";
+@import "program/settings";
 
-@import 'compass/layout.scss';
-@import 'foundation/scss/normalize';
-@import 'foundation/scss/foundation';
-@import 'font-awesome';
+@import "compass/layout.scss";
+@import "foundation/scss/normalize";
+@import "foundation/scss/foundation";
+@import "font-awesome";
 
-@import 'program/_layout';
-@import 'program/_print';
+@import "program/layout";
+@import "program/print";
 
 .program--more-details {
   @include button($button-tny);
