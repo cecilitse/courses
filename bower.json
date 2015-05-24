@@ -4,8 +4,8 @@
   "authors": [
     "Cecilitse <contact@cecilitse.org>"
   ],
-  "license": "MIT",
-  "private": true,
+  "license": "GNU/GPL",
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,8 +1,9 @@
 activate :bower
+activate :livereload
 
-set :css_dir,     'stylesheets'
-set :images_dir,  'images'
-set :js_dir,      'javascripts'
+set :css_dir,    'assets/stylesheets'
+set :images_dir, 'assets/images'
+set :js_dir,     'assets/javascripts'
 
 ignore '*.tmpl.html.slim'
 
@@ -18,6 +19,11 @@ configure :build do
     config.sass_options = { debug_info:     false }
     config.sass_options = { line_comments:  false }
   end
+
+  activate :gzip
+  activate :minify_css
+  activate :minify_html, remove_input_attributes: false
+  activate :minify_javascript
 end
 
 data.courses.each do |_code, course|
