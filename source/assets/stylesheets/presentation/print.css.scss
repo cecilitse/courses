@@ -1,11 +1,14 @@
-@import 'reveal.js/css/theme/template/settings';
-@import 'reveal.js/css/print/pdf';
+@import "reveal.js/css/theme/template/settings";
+@import "reveal.js/css/print/pdf";
 
 body {
-  background-color: lighten($backgroundColor, 10%);
-  background-image: none;
+  background: none;
 }
 
-footer { bottom: 0; }
+footer {
+  bottom: 0;
+}
 
-.print-link { display: none; }
+.print-link {
+  display: none;
+}
