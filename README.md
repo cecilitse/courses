@@ -1,8 +1,6 @@
 # Courses website
 
-http://courses.cecilitse.org/
-
-Made with [Foundation](http://foundation.zurb.com/) & [Middleman](http://middlemanapp.com/)
+Made with [Foundation](http://foundation.zurb.com/), [Middleman](http://middlemanapp.com/) & [courses.cecilitse.org](http://courses.cecilitse.org/)
 
 This project also generates PDF course documents.
 
@@ -61,19 +59,19 @@ Open a web browser and go to `http://localhost:4567/programs/COURSE_NAME.html`. 
 
 Filst time, initialize the submodule:
 
-```
+```sh
 $ git submodule init
 ```
 
 Build the application:
 
-```
+```sh
 $ middleman build --no-clean
 ```
 
 Deploy on GitHub pages:
 
-```
+```sh
 $ middleman deploy
 ```
 
@@ -88,5 +86,5 @@ $ middleman deploy
 ## License
 
 Courses is released under two licenses:
-* GPL License for sources
+* [GNU/GPL](LICENSE) for sources
 * Creative Commons Attribution-ShareAlike License for content

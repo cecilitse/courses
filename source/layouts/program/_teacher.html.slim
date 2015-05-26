@@ -6,10 +6,11 @@ section class="teacher"
   div class="row teacher--description"
     div class="small-8 columns"
       h3 = data.settings.name
-      p
-        'Développeur Ruby on Rails avec 5 ans d'expérience dans l'e-commerce. Passionnée par les méthodes agiles et la qualité de code. Egalement prof au
-        a href="http://lewagon.org/" Wagon
-        '.
+      markdown:
+       Designer & développeur front-end, David accorde une attention particulière à la __qualité du code__, dans le but de créer des __produits évolutifs__.
+
+       Il partage ses [outils en opensource](http://github.com/flexbox) et ses [bonnes pratiques front-end](http://www.lewagon.org/lille) au wagon.
+
     div class="small-4 columns text-right"
       = image_tag 'avatar.png', class: 'teacher--picture'
   div class="row"
@@ -18,16 +19,21 @@ section class="teacher"
   div class="row teacher--contact"
     div class="small-12 medium-8 columns"
       ul class="no-bullet"
-        li Cecilitse / Grands Ensemble
-        li SCOP SA - SIRET 488 458 969 00059
-        li Organisme de formation 31 62 02007 62
+        li David Leuliette
+        li
+          strong> Activité
+          'Programmation informatique
+        li
+          strong> SIREN
+          '538202235
+        li
+          strong> SIRET
+          '53820223500015
+
+
     div class="small-12 medium-4 columns footer--contact--details"
       ul class="no-bullet"
         li
-          - if course_print_page?
-            a href="mailto:#{data.settings.email}"
-              = data.settings.email
-          - else
-            a href="#" class="j-contact"
+          = mail_to data.settings.email, data.settings.email
         li
           = link_to data.settings.website.name, data.settings.website.url

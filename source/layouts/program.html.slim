@@ -14,12 +14,12 @@ html lang="fr"
 
     == favicon_tag        'favicon.ico'
     = stylesheet_link_tag 'program'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:400,300,700|Ubuntu+Mono:400,700'
 
-  body class=page_classes
+  body class="#{page_classes}"
     = partial 'layouts/program/header'
     main
       = partial 'layouts/program/breadcrumbs'
       = yield
       = partial 'layouts/program/teacher'
     = partial 'layouts/program/footer'
-    = javascript_include_tag 'program'
