@@ -11,7 +11,6 @@ activate :deploy do |deploy|
   deploy.method       = :git
   deploy.branch       = 'gh-pages'
   deploy.build_before = false # always use --no-clean options
-  deploy.strategy     = :submodule
 end
 
 configure :build do
@@ -24,6 +23,11 @@ configure :build do
   activate :minify_css
   activate :minify_html, remove_input_attributes: false
   activate :minify_javascript
+
+  # assets for gh-pages
+  activate :relative_assets
+  set :relative_links, true
+
 end
 
 data.courses.each do |_code, course|
