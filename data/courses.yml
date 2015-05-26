@@ -10,5 +10,4 @@ git_github:
     Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu aux designers, consultants seo ou rédacteurs web.
   presentations:
     01-basics:     'Les bases'
-    02-git-hello:  'Bonjour git'
-    03-try-github: 'Essayer GitHub'
+    02-try-github: 'Essayer GitHub'
