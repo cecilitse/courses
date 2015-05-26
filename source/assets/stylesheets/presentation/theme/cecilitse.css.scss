@@ -3,7 +3,7 @@
 
 @import '_settings';
 
-$linkColor:       lighten($link-color, 20%);
+$linkColor:       lighten($primary-color, 20%);
 $linkColorHover:  lighten($linkColor, 10%);
 
 @mixin bodyBackground() {

@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "colors";
+
 @import "reveal.js/css/reveal";
 @import "reveal.js/lib/css/zenburn";
 @import "presentation/theme/cecilitse";
@@ -11,7 +13,6 @@ footer {
   z-index: 15;
 
   .banner {
-    background-image: url($background-image);
     background-position: right 62%;
     background-size: cover;
     min-height: 0.2em;

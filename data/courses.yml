@@ -1,12 +1,13 @@
-ruby_advanced:
+git_github:
   link:     git-github
   title:    'Git & GitHub 101'
-  subtitle: Travail collaboratif avec git
+  subtitle: Travail collaboratif entre plusieurs développeurs
   audience: |
     Les personnes travaillant avec un outil informatique, créents des fichiers,
-    sauvegardent des fichiers, éditent des fichiers… Tous les jours.
-    Comment travailler en même temps sur ces fichiers tout en conservant un historique ? avec git & GitHub.
-    Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu au designer, consultant seo ou rédacteur web.
+    sauvegardent des fichiers, éditent des fichiers…<br>
+    Tous les jours.<br>
+    Comment travailler en même temps sur ces fichiers, tout en conservant un historique ? Avec git & GitHub.
+    Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu aux designers, consultants seo ou rédacteurs web.
   presentations:
     01-basics:     'Les bases'
     02-git-hello:  'Bonjour git'

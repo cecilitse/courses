@@ -14,42 +14,27 @@
 }
 
 header {
-  background-image: url($background-image);
-  background-position: 0% 20%;
-  background-size: cover;
   min-height: 250px;
-
-  h1 {
-    box-sizing: border-box;
-    color: $title-color;
-    font-size: 3em;
-    font-weight: 500;
-    margin-top: 1em;
-    text-shadow: 1px 1px 5px $body-font-color;
-
-    small {
-      color: $title-color;
-      display: block;
-    }
-  }
+  padding-top: 50px;
+  background-color: $gray;
 
   .home-icon {
-    @extend .fa;
-    @extend .fa-home;
-
-    color: $title-color;
-    font-size: 1.5em;
-    margin-top: 1em;
+    font-size: 30px;
+    margin-top: 10px;
     opacity: 0.7;
+    float: left;
+    display: block;
+    margin-right: 20px;
+  }
+  small {
+    margin-left: 50px;
   }
 }
 
 footer {
   .banner {
-    background-image: url($background-image);
-    background-position: right 62%;
-    background-size: cover;
     min-height: 50px;
+    background-color: $gray;
   }
 
   .footer--license {
@@ -58,6 +43,7 @@ footer {
     p {
       font-size: 0.7em;
       margin: 0.2em 0;
+      padding: 10px 0;
     }
   }
 }
@@ -66,7 +52,7 @@ main {
   font-size: 0.9em;
   margin-top: 1em;
 
-  h1, h2, h3, h4  { font-weight: bold; }
+  h1, h2, h3, h4  { font-weight: $font-weight-bold; }
   h2              { font-size: 2.3125em; }
   h3, h4          { font-size: 1.6875em; }
 

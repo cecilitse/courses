@@ -1,10 +1,37 @@
-$body-font-color:   #333;
-$background-image:  image-path('background.jpg');
-$link-color:        #5E7B03;
-$title-color:       white;
+// c. Global
+
+$font-family-sans-serif: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+$font-family-monospace: 'Ubuntu Mono', 'Monaco', monospace;
+
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+$body-bg: $gray-light;
+$body-font-color: $gray-dark;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-light;
+
+
+
+// e. Typography
+
+$header-font-weight: $font-weight-light;
+
+$code-font-weight: $font-weight-bold;
+$code-background-color: transparent;
+
+$blockquote-border: 5px solid $secondary-color;
+$blockquote-cite-font-size: rem-calc(20);
+$blockquote-padding: rem-calc(20 40 20 40) !default;
+
+$text-shadow: rgba($black,.4) 0px 2px 0px;
+
+
 
 // reset colors of foundation
-$header-font-color:               $body-font-color;
+
+$header-font-color:               $black;
 $accordion-navigation-font-color: $body-font-color;
 $keystroke-font-color:            $body-font-color;
 $pagination-li-font-color:        $body-font-color;
