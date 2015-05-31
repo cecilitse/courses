@@ -1,0 +1,35 @@
+.reveal {
+  h1, h2, h3, h4 {
+    font-weight: $font-weight-light;
+  }
+
+  a {
+    padding: 0 2px;
+
+    &:hover {
+      background-color: $linkColorHover;
+      color: $white !important;
+    }
+  }
+
+  footer {
+    bottom: 0.10em;
+    position: absolute;
+    width: 100%;
+    z-index: 15;
+
+    .footer--terms {
+      text-align: left;
+
+      p {
+        font-size: 0.30em;
+        margin: 0.2em 0.5em;
+      }
+    }
+  }
+
+  .presentation--course-title {
+    @extend h3;
+    list-style-type: none;
+  }
+}

@@ -1,34 +1,12 @@
 @charset "utf-8";
 
 @import "colors";
+@import "custom-settings";
+@import "presentation/reveal-settings";
 
 @import "reveal.js/css/reveal";
 @import "reveal.js/lib/css/zenburn";
-@import "presentation/theme/cecilitse";
+@import "reveal.js/css/theme/template/mixins";
+@import "reveal.js/css/theme/template/theme";
 
-footer {
-  bottom: 0.10em;
-  position: absolute;
-  width: 100%;
-  z-index: 15;
-
-  .banner {
-    background-position: right 62%;
-    background-size: cover;
-    min-height: 0.2em;
-  }
-
-  .footer--terms {
-    text-align: left;
-
-    p {
-      font-size: 0.30em;
-      margin: 0.2em 0.5em;
-    }
-  }
-}
-
-.presentation--course-title {
-  @extend h2;
-  list-style-type: none;
-}
+@import "presentation/layout";
