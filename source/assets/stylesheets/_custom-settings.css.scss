@@ -7,7 +7,7 @@ $font-weight-light:  300;
 $font-weight-normal: 400;
 $font-weight-bold:   700;
 
-$body-bg: #FAFAFA;
+$body-bg: $gray-light;
 $body-font-color: $gray-dark;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-light;
@@ -25,7 +25,7 @@ $blockquote-border: 5px solid $secondary-color;
 $blockquote-cite-font-size: rem-calc(20);
 $blockquote-padding: rem-calc(20 40 20 40) !default;
 
-$text-shadow: rgba($black,.4) 0px 2px 0px;
+$text-shadow: rgba($black,0.4) 0px 2px 0px;
 
 
 

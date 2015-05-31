@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import "colors";
-@import "settings";
+@import "custom-settings";
 
 @import "compass/layout.scss";
 @import "foundation/scss/normalize";
@@ -10,9 +10,3 @@
 @import "program/layout";
 @import "program/print";
 @import "program/teacher";
-
-.program--more-details {
-  @include button($button-tny);
-  margin-bottom: 0;
-  text-transform: uppercase;
-}

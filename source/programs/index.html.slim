@@ -1,6 +1,6 @@
 ---
 layout:           program
-meta_description: Découvrez toutes mes formations Ruby et Ruby on Rails.
+meta_description: Découvrez toutes mes formations techniques et théoriques.
 title:            Programmes de formation
 breadcrumbs:      ['root']
 ---
@@ -12,7 +12,7 @@ section
         h2  = course['title']
         h3  = course['subtitle']
         p   = course['audience']
-        = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'program--more-details'
+        = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'button tiny'
     div class="large-4 small-12 columns"
       h2 Sur mesure
       p Aucune formation ne vous correspond ?
