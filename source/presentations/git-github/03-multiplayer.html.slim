@@ -1,0 +1,59 @@
+---
+title:    'Git & GitHub 101 - Les Bases'
+layout:   presentation
+noindex:  true
+---
+
+| # Workflow
+
+  ---
+
+  ## Topics
+
+  - Commandes (rappel)
+  - Branches (organisation)
+  - Revues de codes
+  - Deploiement
+
+  ---
+
+  ## Utiliser le terminal
+
+  --
+
+  ### Configurer git
+
+  ```sh
+  nano .gitconfig
+  ```
+  ```
+  [user]
+    name = David Leuliette
+    email = dleuliette@gmail.com
+  [mergetool]
+    keepBackup = true
+  [push]
+    default = current
+  [alias]
+    poule = pull --rebase
+    co = checkout
+    br = branch
+  [color]
+    ui = auto
+  ```
+
+  --
+
+  ### Nouveau projet
+
+  ```sh
+  git clone XXX
+  ```
+  ```sh
+  git init
+  ```
+
+
+  ---
+
+  ## Happy Hacking!
