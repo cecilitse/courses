@@ -24,10 +24,6 @@ configure :build do
   activate :minify_html, remove_input_attributes: false
   activate :minify_javascript
 
-  # assets for gh-pages
-  activate :relative_assets
-  set :relative_links, true
-
 end
 
 data.courses.each do |_code, course|

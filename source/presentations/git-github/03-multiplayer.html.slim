@@ -53,7 +53,140 @@ noindex:  true
   git init
   ```
 
+  --
+
+  > Quand tu sais pas ... fait un `status`
+  >
+  > – Ra's al Ghul
+
+  --
+
+  ### Rappel : les bases
+
+  ```sh
+  git status
+  ```
+
+  Lister les branches
+  ```sh
+  git branch
+  ```
+
+  Ajouter le tracking
+  ```sh
+  git add .
+  ```
+
+  Sauvegarde
+  ```sh
+  git commit -m "commentaire"
+  ```
+
+  Récupérer la dernière version
+  ```sh
+  git fetch origin
+  ```
+
+  --
+
+  ### Alias pour les ninjas
+
+  [Télécharger oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+  ```sh
+  git co -
+  git merge -
+  gss
+  ```
+
+  ---
+
+  ## Organisation des branches
+
+  --
+
+  Attention au paradoxe temporel
+
+  ![git-time-travel](/assets/images/git/past.jpg)
+
+  --
+
+  ### Nouvelle fonctionnalité
+
+  ```sh
+  git checkout -b feature/add-commenting
+  ```
+  ```sh
+  git flow feature start icons
+  ```
+
+  --
+
+  ### Travailler avec plusieurs branches
+
+  récupérer une branche distante
+  ```sh
+  git checkout -t origin/feature/update-reviews
+  ```
+
+  rename branch
+  ```sh
+  git branch -m feature/old-branch feature/new-branch
+  ```
+
+  delete branch
+  ```sh
+  git branch -d feature/merged-branch
+  ```
+
+  --
+
+  ### Sauvegarde & synchronisation
+
+  #### Mettre à jour le projet
+  ```sh
+  git stash
+  git pull --rebase
+  git stash pop
+  ```
+
+  #### Sauvegarde
+  ```sh
+  git commit -am ‘Update stuff'
+  ```
+
+  #### Partage
+  ```sh
+  git push
+  ```
+
+  --
+
+  ### Merge
+
+  ```sh
+  git co develop
+  git pull --rebase
+  git pull --no-ff origin branche
+  git push
+  ```
+
+  ---
+
+  ## Revue de code
+
+  --
+
+  ### Pull-request
+
+  --
+
+  ![pull-request-workflow](/assets/images/git/development-workflow.jpg)
 
   ---
 
   ## Happy Hacking!
+
+  & celebrate
+
+  [10 years of git](https://www.atlassian.com/git/articles/10-years-of-git/)
