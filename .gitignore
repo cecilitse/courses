@@ -1,2 +1,4 @@
 /.venv
 /bower_components
+/build
+*.pdf
