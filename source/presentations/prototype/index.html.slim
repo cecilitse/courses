@@ -1,0 +1,13 @@
+---
+title:    'Développement itératif - Programme'
+layout:   presentation
+noindex:  true
+---
+
+| # Prototypage & développement itératif
+  --
+
+h2 Programme
+ul
+  - data.courses.prototype.presentations.each do |link, name|
+    li = link_to name, "#{link}.html"

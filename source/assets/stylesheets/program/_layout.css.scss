@@ -1,4 +1,7 @@
-@page { size: A4; margin: 0 }
+@page {
+  size: A4;
+  margin: 0;
+}
 
 @media #{$small-only} {
   header h1 small {
@@ -29,6 +32,10 @@ header {
   small {
     margin-left: 50px;
   }
+}
+
+.m-program--content {
+  margin-bottom: 50px;
 }
 
 footer {

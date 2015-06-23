@@ -1,0 +1,201 @@
+---
+title:    'Développement itératif - Coder efficacement'
+layout:   presentation
+noindex:  true
+---
+
+| # Coder
+  <br>
+  # efficacement
+
+  ---
+
+  ## Topics
+
+  - Conventions de codes
+  - Développement par composants
+  - Revue de code
+  - Documentation
+
+  ---
+
+  ## Conventions
+
+  --
+
+  ## Éviter le mauvais code
+
+  ![bidonville](/assets/images/prototype/mumbay.jpg)
+
+  [Nicolas Crichton sur FlickR](https://www.flickr.com/photos/nicolas_crichton/2884308185/in/photolist-5oSQkt-8yJYAt-8yN3YE-8yN7HY-8yN6s5-8yN2hb-bsfxtb-brg9gJ-9V6QyJ-ogU5sx-7T5281-8ABsiq-5LMy6Z-bFHPwv-9V6SMG-8krUtx-8Aypbx-bEjjFS-5LMy8e-bFaM3a-9V4jMi-7YMQ25-dxb3ZM-8yN5fN-5LRMeh-noBfKo-prVT8Y-bF9CXZ-7LCBpg-g7D1Vo-5LRMcY-7RF9jR-rwebBB-7nUVE9-91j8gz-91j6Ba-5LMy2c-91j7Rc-sxLTzV-7XUsSV-8burDE-fM9FpU-9EWw7E-o4AjQM-81vBd5-5LMy3k-91neT1-8Am9sC-8Ai4g6-4CLHcm)
+
+  --
+
+  ```html
+  div.gray-button.button-big.btn-big #link {
+    color: #bada55;
+  }
+
+  section #form .button-big[type="submit"] {
+    color: hotpink !important;
+  }
+  ```
+  ```javascript
+  $('.class-1').data('select', 1)
+    .text('Select 1').hide();
+
+  $('.class-2').data('select', 2)
+    .text('Select 2').hide();
+
+  $('.class-3').data('field', 'indication')
+    .text('Select 3');
+
+  $('.class-4').data('field', 'indication')
+    .text('Select 4').show();
+  ```
+
+
+
+  --
+
+  - [HTML](http://codeguide.co/)
+  - [CSS](http://guidecss.fr/)
+  - [JavaScript](https://github.com/airbnb/javascript)
+
+  --
+
+  [.editorconfig](http://editorconfig.org/)
+
+  ---
+
+  ## Développement par composants
+
+  --
+
+  > La programmation orientée composant (POC) consiste à utiliser une approche modulaire de l’architecture d’un projet informatique, ce qui permet d’assurer au logiciel une meilleure lisibilité et une meilleure maintenance. Les développeurs, au lieu de créer un exécutable monolithique, se servent de briques réutilisables.
+
+  [Wikipedia](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_composant)
+
+  --
+
+  ### Pourquoi faire ?
+
+  - Partage des pouvoirs
+  - Faible dépendances
+  - Indépendamment
+  - Réutilisable
+
+  --
+
+  ### front-end
+
+  - Divers “parties” d’un site
+  - Penser en plugins jQuery
+
+  --
+
+  ### Avantages
+
+  - Indépendence du contexte
+  - Responsive design
+  - Meilleure répartition sein d’une équipe
+  - Développement plus rapide
+  - Mises à jour de code plus facile
+
+  --
+
+  ### Construire des composants
+
+  - Trouver le plus petit dénominateur commun
+  - Conserver un esprit de flexiblilité
+
+  --
+
+  ### Architecture
+
+  - Structure
+  - Apparence
+  - Fonctionnalité
+
+  --
+
+  ### [foundation-boilerplate](http://flexbox.github.io/foundation-boilerplate/)
+
+  ---
+
+  ## Revue de code
+
+  --
+
+  ### Attention au bus factor
+
+  ![bus factor](http://media0.giphy.com/media/V1lqxDPDRfn5S/giphy.gif)
+
+  [wikipedia](https://en.wikipedia.org/wiki/Bus_factor)
+
+  --
+
+  ### Pair programming & revue de code
+
+  - Effet canard en plastique
+  - Évite les bugs
+  - Partage des informations
+
+  ... Mais il y a des intéruptions
+
+  --
+
+  ### Pull request ?
+
+  [Exemple](https://github.com/zurb/foundation/pull/6113)
+
+  --
+
+  ### Les bénéfices
+
+  - Apprentissage
+  - Des tests de meilleures qualité
+  - Une meilleure écriture (Or in english)
+  - Évite les bugs
+  - Asynchrone
+  - Historique
+
+  --
+
+  ### Mais GitHub c’est trop cher
+
+  [Crew](https://github.com/crew-cr/Crew) code review tool for git projects
+
+  ---
+
+  ## Documentation
+
+  --
+
+  > Quand on a touché à ma prod sans documenter les actions réalisées
+
+  ![im-fine](http://i.imgur.com/12RRgxf.gif)
+
+  [lesjoiesdusysadmin](http://lesjoiesdusysadmin.tumblr.com/)
+
+  --
+
+  ### README
+
+  - Expliquer simplement le projet
+  - Donner des exemples de code (Comment utiliser la librairie)
+  - Documenter l’installation
+  - Utilisez des badges [Travis CI](https://travis-ci.org/) ou [code climate](https://codeclimate.com/)
+  <br>
+  Exemple d’un readme [codeless](https://github.com/flexbox/codeless/blob/master/README.md)
+
+  --
+
+  ### Éviter la duplication d’information
+
+  - [orientation](https://github.com/orientation/orientation)
+  - [Fonctionnalités](https://github.com/orientation/orientation/blob/master/doc/FEATURES.md)
+
+  ---
+
+  ## Happy Hacking!

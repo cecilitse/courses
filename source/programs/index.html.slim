@@ -6,17 +6,19 @@ breadcrumbs:      ['root']
 ---
 
 section
-  div class="row"
-    div class="large-8 small-12 columns"
+  .row
+    .small-12.large-8.columns
       - data.courses.each do |_code, course|
-        h2  = course['title']
-        h3  = course['subtitle']
-        p   = course['audience']
-        = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'button tiny'
-    div class="large-4 small-12 columns"
+        .m-program--content
+          h2  = course['title']
+          h3  = course['subtitle']
+          p   = course['audience']
+          = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'button tiny'
+
+    .small-12.large-4.columns
       h2 Sur mesure
       p Aucune formation ne vous correspond ?
-      ul class="square"
+      ul.square
         li HTML / CSS / JavaScript
         li Ruby on Rails
         li Git / GitHub

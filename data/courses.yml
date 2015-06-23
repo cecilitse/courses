@@ -15,11 +15,10 @@ git_github:
 prototype:
   link:     prototype
   title:    'Concevoir un produit par itération'
-  subtitle: Réussir un développement évolutif avec une organisation productive
+  subtitle: 'Développement évolutif et de qualité, avec une organisation productive'
   audience: |
     Designer & développeurs souhaitant travailler ensemble avec des applications web.
-    Le but est de favoriser la collaboration rapide avec les membres de l’équipe.
+    Le but est de favoriser la collaboration rapide & le partage d’informations avec les autres membres de l’équipe.
   presentations:
-    01-convention:   'Conventions'
-    02-organisation: 'Organisation'
-    03-dev:          'Développement'
+    01-organisation: 'Organisation'
+    02-development:  'Développement'
