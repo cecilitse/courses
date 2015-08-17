@@ -13,7 +13,10 @@ section
           h2  = course['title']
           h3  = course['subtitle']
           p   = course['audience']
-          = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'button tiny'
+          - if course['talk'] === true
+            = link_to 'Voir le talk', "/presentations/#{course['link']}", class: 'button tiny'
+          - else
+            = link_to 'Voir le programme', "/programs/#{course['link']}.html", class: 'button tiny'
 
     .small-12.large-4.columns
       h2 Sur mesure
