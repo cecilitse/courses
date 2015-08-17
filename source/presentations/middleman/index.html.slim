@@ -1,0 +1,220 @@
+---
+title:    'Craft everything with Middleman'
+layout:   presentation
+noindex:  true
+---
+
+| ## Craft __everything__ <br>with Middleman
+
+  <small>#RubyCampBE</small>
+
+  <small>August 2015</small>
+
+
+  --
+
+  …_everything_ ?
+
+  --
+
+  …even a space rocket ?
+
+  ![Space rocket](/assets/images/middleman/space-rocket.gif)
+
+  --
+
+  ## Who am i ?
+
+  David Leuliette <small>aka</small> [@_flexbox](https://twitter.com/_flexbox)
+
+  ![Ruby designer](/assets/images/avatar.png)
+
+  - responsive designer
+  - front-end developer
+  - opensource evangelist
+
+  --
+
+  ### Science driven developement
+
+  1. Inquiry
+  2. Hypothesis
+  3. Experiment
+  4. Analysis
+
+  --
+
+  ### Things Science cares about
+
+  - __me__: nope
+  - __you__: nope
+  - __truth__: yep
+
+
+  --
+
+  # __reality__ <br><small>where ideas come to die</small>
+
+  --
+
+  ## Who are you ?
+
+  <small>How Middleman could help to ship faster</small>
+  ---
+
+  ## Websites
+
+  --
+
+  ### Person website
+
+  [![Jump start middleman](/assets/images/middleman/jump-start-middleman.png)](https://twitter.com/JakeYeaton/status/629732721355583488)
+
+  --
+
+  Middleman is a [static website generator](https://middlemanapp.com/)
+
+  --
+
+  # DEMO TIME
+
+  $ middleman init space-rocket
+
+  --
+
+  ### Landing page company
+
+  --
+
+  ### Events
+
+  Ruby group http://ruby-nord.org/
+
+  --
+
+  ### Blogs
+
+  Blog made by devs with markdown
+
+  http://www.alpine-lab.com/blog/
+
+  <br>
+  <small>_Protip_: Use the [middleman-syntax gem](https://github.com/middleman/middleman-syntax)</small>
+
+  --
+
+  ### DRY
+
+  --
+
+  #### [helpers](https://middlemanapp.com/basics/helper_methods/)
+
+  ```ruby
+    = image_tag lorem.image('300x400'), alt: 'seo matter'
+  ```
+  ```html
+    <img src="http://placehold.it/300x400" alt="seo matter">
+  ```
+  --
+
+  Bonus:
+
+  ![Middleman custom helper](/assets/images/middleman/custom-helpers.png)
+
+
+  yaml datas
+  sitemap generators
+
+  ---
+
+  ## SPA
+
+  --
+
+  ### Simple Page Application
+
+  --
+
+  ## Bower to the rescue
+
+  http://bower.io/
+  ![Space rocket](/assets/images/middleman/bower-logo.png)
+
+  --
+
+  Complex form validation with AngularJS
+
+  https://www.planete-oui.fr/Souscription/#/
+
+  --
+
+  There are some crazy guys
+
+  https://github.com/jbhatab/middleman-backbone-react-template
+
+  - backbone
+  - react
+  - slim
+  - bootstrap
+
+  --
+
+  # DEMO TIME
+
+  $ middleman init space-rocket --template=codeless
+
+  ---
+
+  ## Styleguides
+
+  --
+
+  Remember the space rocket
+
+  [NASA Graphics Standards Manual](https://www.flickr.com/photos/thisisdisplay/sets/72157627467855309/)
+
+  --
+
+  The __most important starting point__ for any project<br>
+  _is a set of guidelines_.
+
+  --
+
+  The __most important starting point__ for any project<br>
+  <del>_is a set of guidelines_</del>.
+
+  --
+
+  __Making bridges__ between designers & developers
+
+  --
+
+  Ultra usefull for your front-end dev
+
+  helps him produce a style guide for your website
+  Bonus : easier to upgrade to a rails app (with codeless)
+
+  ### Ready 2 Rails
+
+  - [coleless](https://github.com/flexbox/codeless)
+
+  Stylesheets, fonts, images, and JavaScript files go in the `/source/assets/` directory.
+  Vendor stylesheets and JavaScripts should go in each of their `/bower_components/` directories.
+
+      codeless/
+      ├── bower_components/
+      │    └── ...
+      ├── source/
+      │   ├── assets/
+      |   |    ├── stylesheets/application.scss
+      |   |    └── javascripts/application.js.coffee
+      │   └── ...
+
+
+  ---
+
+  ## Happy Hacking!
+
+  <br>
+  [@_flexbox](https://twitter.com/_flexbox) _feedback_,<br>
+  _rebuttals_ & _bitcoins_
