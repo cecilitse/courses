@@ -12,6 +12,27 @@
     }
   }
 
+  .presentation--course-title {
+    @extend h3;
+    list-style-type: none;
+  }
+
+
+  section img {
+    margin: 15px 0px;
+    background: none;
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 150ms linear;
+  }
+
+  a:hover img {
+    background: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+  }
+
+
+
   footer {
     bottom: 0.10em;
     position: absolute;
@@ -26,10 +47,5 @@
         margin: 0.2em 0.5em;
       }
     }
-  }
-
-  .presentation--course-title {
-    @extend h3;
-    list-style-type: none;
   }
 }
