@@ -10,7 +10,7 @@ ignore '*.tmpl.html.slim'
 activate :deploy do |deploy|
   deploy.method       = :git
   deploy.branch       = 'gh-pages'
-  deploy.build_before = false # always use --no-clean options
+  deploy.build_before = true # always use --no-clean options
 end
 
 configure :build do

@@ -1,3 +1,10 @@
+middleman:
+  link:     middleman
+  title:    'Craft everything with Middleman'
+  talk:     true
+  subtitle: 'Lightning talk for RubyCamp BE 2015'
+  audience: |
+    Everyone who code with Ruby and Ruby on Rails. If you are a front-end dev who wants to quickly jump into Ruby ? This talk is for you !
 styleguide:
   link:     styleguide
   title:    'Un guide qui a du style !'
@@ -32,11 +39,3 @@ prototype:
   presentations:
     01-organisation: 'Organisation'
     02-development:  'Développement'
-middleman:
-  link:     middleman
-  title:    'Craft everything with Middleman'
-  subtitle: 'Lightning talk for RubyCamp BE 2015'
-  audience: |
-    Everyone who code with Ruby and Ruby on Rails. If you are a front-end dev who want to quickly jump into Ruby ? This talk is for you !
-  presentations:
-    01-talk: 'Lightning Talk'
