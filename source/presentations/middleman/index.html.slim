@@ -23,15 +23,25 @@ noindex:  true
 
   --
 
-  ## Who am i ?
+  ## Topics
 
-  David Leuliette <small>aka</small> [@_flexbox](https://twitter.com/_flexbox)
+  - Websites
+  - Single Page Application
+  - Styleguide
+
+  --
+
+  ## Who am I ?
 
   ![Ruby designer](/assets/images/avatar.png)
 
-  - responsive designer
-  - front-end developer
-  - opensource evangelist
+  David Leuliette <small>aka</small> [@_flexbox](https://twitter.com/_flexbox)
+
+  Consultant front-end developer
+
+  --
+
+  ![Aperture science](/assets/images/middleman/aperture-science.png)
 
   --
 
@@ -50,7 +60,6 @@ noindex:  true
   - __you__: nope
   - __truth__: yep
 
-
   --
 
   # __reality__ <br><small>where ideas come to die</small>
@@ -59,7 +68,8 @@ noindex:  true
 
   ## Who are you ?
 
-  <small>How Middleman could help to ship faster</small>
+  <small>How Middleman could help us to ship faster</small>
+
   ---
 
   ## Websites
@@ -72,96 +82,156 @@ noindex:  true
 
   --
 
-  Middleman is a [static website generator](https://middlemanapp.com/)
+  Middleman is a __static website generator__
+
+  [![middleman landing page](/assets/images/middleman/middleman-homepage.png)](https://middlemanapp.com/)
 
   --
 
   # DEMO TIME
 
+  ~~~shell
   $ middleman init space-rocket
-
-  --
-
-  ### Landing page company
+  ~~~
 
   --
 
   ### Events
 
-  Ruby group http://ruby-nord.org/
+  Single page for Ruby group http://ruby-nord.org/
+
+  ![Ruby nord event](/assets/images/middleman/ruby-nord.png)
+
+  --
+
+  ### Landing page company
+
+  [![mailchimp landing page](/assets/images/middleman/mailchimp-landing.png)](http://mailchimp.com/)
 
   --
 
   ### Blogs
 
-  Blog made by devs with markdown
+  Blog made by devs with `.markdown`
 
-  http://www.alpine-lab.com/blog/
+  <small>_Protip: use the [gem middleman-syntax](https://github.com/middleman/middleman-syntax)_</small>
+
+  [![Alpine lab blog](/assets/images/middleman/alpine-blog.png)](http://www.alpine-lab.com/blog/)
+
+  --
+
+  ### ♥ DRY
+
+  gems & helpers
+
+  --
+
+  ### [helpers](https://middlemanapp.com/basics/helper_methods/)
+
+  - Link Helpers `link_to`
+  - Output Helpers `content_for(:javascript)`
+  - Asset Helpers `stylesheet_link_tag`
 
   <br>
-  <small>_Protip_: Use the [middleman-syntax gem](https://github.com/middleman/middleman-syntax)</small>
-
-  --
-
-  ### DRY
-
-  --
-
-  #### [helpers](https://middlemanapp.com/basics/helper_methods/)
-
   ```ruby
     = image_tag lorem.image('300x400'), alt: 'seo matter'
   ```
+  Produces:
   ```html
     <img src="http://placehold.it/300x400" alt="seo matter">
   ```
   --
 
-  Bonus:
+  ##### Bonus:
+
+  Custom helpers
 
   ![Middleman custom helper](/assets/images/middleman/custom-helpers.png)
 
 
-  yaml datas
-  sitemap generators
+  --
+
+  ##### Bonus:
+
+  `.yml` datas
+
+  ![Middleman custom helper](/assets/images/middleman/data-yml.png)
+
+  ~~~haml
+  ul
+    - data.mentors.each_with_index do |mentor|
+      li
+        strong
+          = link_to mentor.name, mentor.url
+        - if mentor['image'].present?
+          = image_tag mentor.image
+        p
+          = mentor.description
+  ~~~
+
+  --
+
+  ##### Extentions:
+
+  [![Middleman extentions](/assets/images/middleman/middleman-extentions.png)](https://directory.middlemanapp.com/#/extensions/all)
 
   ---
 
-  ## SPA
+  ## Single Page Application
 
   --
 
   ### Simple Page Application
 
-  --
-
-  ## Bower to the rescue
-
-  http://bower.io/
-  ![Space rocket](/assets/images/middleman/bower-logo.png)
+  - Datavisualisation
+  - Fetch data from Rest API
+  - Mobile application
+  - …
 
   --
 
-  Complex form validation with AngularJS
+  ### Bower to the rescue
 
-  https://www.planete-oui.fr/Souscription/#/
-
-  --
-
-  There are some crazy guys
-
-  https://github.com/jbhatab/middleman-backbone-react-template
-
-  - backbone
-  - react
-  - slim
-  - bootstrap
+  [![Space rocket](/assets/images/middleman/bower-logo.png)](http://bower.io/)
 
   --
 
   # DEMO TIME
 
+  ~~~shell
   $ middleman init space-rocket --template=codeless
+  ~~~
+
+  --
+
+  ### Complex form validation with Angular
+
+  [![A huge form with angular](/assets/images/middleman/planete-oui.png)](https://www.planete-oui.fr/Souscription/#/)
+
+  --
+
+  ### Data on JSON
+
+  [![Simple sorting application with angularjs](/assets/images/middleman/angular-sport.gif)](http://samuelbourdon.com/demos/mudgular/)
+
+  --
+
+  ### There are some crazy guys
+
+  [middleman-backbone-react-template](https://github.com/jbhatab/middleman-backbone-react-template)
+
+  - backbone
+  - bootstrap
+  - react
+  - slim
+
+  ![Modern workflow for webapp](/assets/images/middleman/single-page-app.png)
+
+  --
+
+  ### Deal with large application<br>based on angular & rails ?
+
+  → Ask [@apneadiving](https://github.com/apneadiving) :)
 
   ---
 
@@ -171,7 +241,74 @@ noindex:  true
 
   Remember the space rocket
 
-  [NASA Graphics Standards Manual](https://www.flickr.com/photos/thisisdisplay/sets/72157627467855309/)
+  ![Space rocket launch](/assets/images/middleman/space-rocket.jpg)
+
+  --
+
+  Conventions & common language
+
+  ![The nasa styleguide](/assets/images/middleman/nasa-styleguide.png)
+
+  --
+
+  ### Why ?
+
+  You need __styleguide__ & __documentation__
+
+  --
+
+  _When a new coworker wonder<br>if there is a doc for the project_
+
+  ![Documentation](/assets/images/middleman/documentation.gif)
+
+  --
+
+  ### Benefits of maintaining a front-end styleguide
+
+  - Easier to test
+  - Better workflow
+  - Shared vocabulary _(Modal, popin or dialog)_
+  - Useful reference _(Documentation)_
+
+  --
+
+  ### gov.uk forms sandbox
+
+  [![gov.uk forms](/assets/images/middleman/styleguide-forms.png)](http://govuk-elements.herokuapp.com/#guide-forms)
+
+  --
+
+  Middleman is __ultra usefull__ for your front-end dev
+
+  - gh-pages
+  - Slim & markdown (HTML)
+  - Sass (CSS)
+  - CoffeeScript (JavaScript)
+
+  --
+
+  ##### Bonus:
+
+  Easier to upgrade to a rails app (with [codeless](https://github.com/flexbox/codeless))
+
+  Stylesheets, fonts, images, and JavaScript files go in the `/source/assets/` directory.
+
+  Vendor stylesheets and JavaScripts should go in each of their `/bower_components/` directories.
+
+      codeless/
+      ├── bower_components/
+      │    └── ...
+      ├── source/
+      │   ├── assets/
+      |   |    ├── stylesheets/application.scss
+      |   |    └── javascripts/application.js.coffee
+      |   └── ...
+
+  --
+
+  # DEMO TIME
+
+  _1 min ghost button_
 
   --
 
@@ -189,27 +326,31 @@ noindex:  true
 
   --
 
-  Ultra usefull for your front-end dev
+  ### Start your styleguide today
 
-  helps him produce a style guide for your website
-  Bonus : easier to upgrade to a rails app (with codeless)
+  <small>&</small>
 
-  ### Ready 2 Rails
+  #### Test with __real world devices__
 
-  - [coleless](https://github.com/flexbox/codeless)
+  --
 
-  Stylesheets, fonts, images, and JavaScript files go in the `/source/assets/` directory.
-  Vendor stylesheets and JavaScripts should go in each of their `/bower_components/` directories.
+  <small>Last story</small>
 
-      codeless/
-      ├── bower_components/
-      │    └── ...
-      ├── source/
-      │   ├── assets/
-      |   |    ├── stylesheets/application.scss
-      |   |    └── javascripts/application.js.coffee
-      │   └── ...
+  ## Mission to mars: climate orbiter
 
+  September 1999
+
+  ![mars](/assets/images/prototype/mars.jpg)
+
+  --
+
+  ### A system issue
+
+  - Metric system
+  - Imperial system
+
+  <br>
+  Cost: 120 000 000 €
 
   ---
 
@@ -218,3 +359,7 @@ noindex:  true
   <br>
   [@_flexbox](https://twitter.com/_flexbox) _feedback_,<br>
   _rebuttals_ & _bitcoins_
+  <br>
+  <br>
+
+  <small>#RubyCampBE</small>
