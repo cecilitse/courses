@@ -1,0 +1,7 @@
+.button {
+  text-shadow: none;
+  transition: text-shadow 150ms ease-in-out;
+  &:hover {
+    text-shadow: 0px 1px 1px rgba($black, 0.2);
+  }
+}

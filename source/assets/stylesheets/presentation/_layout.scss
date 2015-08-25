@@ -34,6 +34,14 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
   }
 
+  code {
+    font-family: $font-family-monospace;
+    color: $secondary-color;
+  }
+
+  pre code {
+    color: $white;
+  }
 
 
   footer {
