@@ -9,3 +9,5 @@ h1 Présentations
 ul
   - data.courses.each do |_code, course|
     li class="presentation--course-title" = link_to course['title'], course['link']
+  li class="presentation--course-title"
+    = link_to 'Talks', 'talks'
