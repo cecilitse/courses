@@ -4,9 +4,8 @@ layout:   presentation
 noindex:  true
 ---
 
-| # Talks
-  --
+h1 Talks
 
-h2 All
 ul
-  li = link_to 'Reform', 'reform.html'
+  - data.talks.each do |_code, talk|
+    li class="presentation--course-title" = link_to talk['title'], "#{talk['link']}.html"
