@@ -148,9 +148,9 @@ This will produce the following params
 require 'rails_helper'
 
 RSpec.describe ArtistForm do
-  subject(:form)  { ArtistForm.new(address) }
+  subject(:form)  { ArtistForm.new(artist) }
 
-  let(:address)   { Artist.new }
+  let(:artist)    { Artist.new }
 
   it { is_expected.to have_property(:name) }
   it { is_expected.to have_property(:genre) }
