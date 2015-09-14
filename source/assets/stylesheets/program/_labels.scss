@@ -1,0 +1,3 @@
+.label {
+  &.secondary { @include label-style($gray-dark); }
+}

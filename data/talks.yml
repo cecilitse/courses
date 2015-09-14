@@ -1,0 +1,19 @@
+-
+  link:     middleman
+  label:    Front-end
+  color:    warning
+  title:    'Craft everything with Middleman'
+  subtitle: 'Lightning talk for RubyCamp BE 2015'
+  audience: |
+    Everyone who code with Ruby and Ruby on Rails. If you are a front-end dev who wants to quickly jump into Ruby ? This talk is for you !
+-
+  link:     styleguide
+  label:    Gestion de projet
+  color:    success
+  title:    'Un guide qui a du style !'
+  subtitle: 'Lister les conventions, modules et éléments d’interface d’un site web'
+  audience: |
+    La notion de guide de style existe depuis très longtemps dans l’imprimerie et la typographie.<br>
+    Dans le cas d’une application web, ce document regroupe tous les composants et tous les cas d’affichages possibles
+    (Ex : Palette de couleurs, styles de titres, boutons, pagination, éléments de formulaires…)<br>
+    Le guide de style est <strong>LA référence</strong> : développeurs, designers, et même clients peuvent s'y référer tout au long du projet.

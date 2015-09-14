@@ -1,23 +1,8 @@
-middleman:
-  link:     middleman
-  title:    'Craft everything with Middleman'
-  talk:     true
-  subtitle: 'Lightning talk for RubyCamp BE 2015'
-  audience: |
-    Everyone who code with Ruby and Ruby on Rails. If you are a front-end dev who wants to quickly jump into Ruby ? This talk is for you !
-styleguide:
-  link:     styleguide
-  title:    'Un guide qui a du style !'
-  talk:     true
-  subtitle: 'Lister les conventions, modules et éléments d’interface d’un site web'
-  audience: |
-    La notion de guide de style existe depuis très longtemps dans l’imprimerie et la typographie.<br>
-    Dans le cas d’une application web, ce document regroupe tous les composants et tous les cas d’affichages possibles
-    (Ex : Palette de couleurs, styles de titres, boutons, pagination, éléments de formulaires…)<br>
-    Le guide de style est <strong>LA référence</strong> : développeurs, designers, et même clients peuvent s'y référer tout au long du projet.
 git_github:
   link:     git-github
   title:    'Git & GitHub 101'
+  label:    Git
+  color:    secondary
   subtitle: Travail collaboratif entre plusieurs développeurs
   audience: |
     Les personnes travaillant avec un outil informatique, créents des fichiers,
@@ -32,7 +17,9 @@ git_github:
 prototype:
   link:     prototype
   title:    'Concevoir un produit par itération'
-  subtitle: 'Développement évolutif et de qualité, avec une organisation productive'
+  label:    Gestion de projet
+  color:    success
+  subtitle: 'Développement évolutif & de qualité, avec une organisation productive'
   audience: |
     Designer & développeurs souhaitant travailler ensemble avec des applications web.
     Le but est de favoriser la collaboration rapide & le partage d’informations avec les autres membres de l’équipe.

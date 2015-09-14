@@ -1,5 +1,5 @@
-header
-  div class="row"
+header.header-hero
+  div class="row text-center"
     div class="small-12 columns"
       - unless current_page.url == '/'
         = link_to '/', class: 'home-icon' do
@@ -9,3 +9,7 @@ header
         - if current_page_subtitle
           br
           small = current_page_subtitle
+
+      - if current_page.url == '/'
+        .text-center
+          = link_to 'Découvrir les formations', '/programs/', class: 'button secondary large'
