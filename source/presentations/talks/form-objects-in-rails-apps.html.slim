@@ -21,9 +21,69 @@ noindex:  true
 
   ---
 
+  ## The Rails Way
+
+  (basic usage, we put everything in the controller :x)
+
+  ```
+  class Artist < ActiveRecord::Base
+    validates :name, presence: true
+  end
+  ```
+
+  ```
+  class ArtistsController < ApplicationController
+    def create
+      artist_params = params.require(:artist).permit(:name, :genre) # sick
+      @artist       = Artist.new(artist_params)
+
+      if @artist.save
+        flash[:notice] = 'Awesome band!'
+        redirect_to artist_path(artist)
+      else
+        flash.now[:alert] = 'Whoops! Unable to add your favorite artist.'
+        render :new
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## User dependent validation
+
+  ```
+  # app/models/artist.rb
+  class Artist < ActiveRecord::Base
+    attr_accessor :current_user # please don't do that
+
+    validates :name,  presence: true
+    validates :genre, prenesce: true, if: :admin_user?
+
+    private
+
+    def admin_user?
+      current_user.admin?
+    end
+  end
+  ```
+
+  ```
+  # app/controller/admin/artists_controller.rb
+  def create
+    artist_params         = params.require(:artist).permit(:name, :genre) # still sick
+    @artist               = Artist.new(artist_params)
+    @artist.current_user  = current_user
+
+    if @artist.save
+      # and so on
+  ```
+
+  ---
+
   ## Why form objects?
 
-  * First goal, keep skinny models
+  * Keep skinny models
   * Extract validations from models
   * Possibility to have a form per model, context, etc.
 
@@ -55,6 +115,7 @@ noindex:  true
   ## Defining Form
 
   ```
+  # app/forms/artist_form.rb
   class ArtistForm < Reform::Form
     property :name
     property :genre
@@ -151,6 +212,7 @@ noindex:  true
   *(with Rspec and Shoulda Matchers)*
 
   ```
+  # spec/forms/artist_form_spec.rb
   require 'rails_helper'
 
   RSpec.describe ArtistForm do
@@ -172,6 +234,7 @@ noindex:  true
 
 | ## Form matcher
   ```
+  # spec/support/matchers/form_matcher.rb
   require 'rspec/expectations'
 
   RSpec::Matchers.define :have_attr_accessor do |expected|
@@ -233,7 +296,7 @@ noindex:  true
   end
   ```
 
-  No more validatation with `if admin?` guards
+  No more validatation with `if: :admin_user?` guards
 
   --
 
