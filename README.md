@@ -8,7 +8,7 @@ This project also generates PDF course documents.
 
 ## Getting Started
 
-### Dependecies
+### Dependencies
 
 - Python & [virtualenvs](https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst)
 - NodeJS
