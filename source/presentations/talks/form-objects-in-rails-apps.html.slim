@@ -58,7 +58,7 @@ noindex:  true
     attr_accessor :current_user # please don't do that
 
     validates :name,  presence: true
-    validates :genre, prenesce: true, if: :admin_user?
+    validates :genre, presence: true, if: :admin_user?
 
     private
 
