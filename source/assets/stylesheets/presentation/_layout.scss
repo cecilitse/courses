@@ -1,6 +1,16 @@
 .reveal {
-  h1, h2, h3, h4 {
+  .progress {
+    height: 5px;
+    width: 100%;
+    bottom: inherit;
+    top: 0;
+  }
+
+  h1 {
     font-weight: $font-weight-light;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
   }
 
   a {
@@ -41,6 +51,13 @@
 
   pre code {
     color: $white;
+  }
+
+  blockquote {
+    width: inherit;
+    background: transparent;
+    box-shadow: none;
+    border-left: 5px solid $gray-dark;
   }
 
 

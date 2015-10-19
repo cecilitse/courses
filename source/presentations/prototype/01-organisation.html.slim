@@ -4,20 +4,21 @@ layout:   presentation
 noindex:  true
 ---
 
-| # Organisation
+| # Organisation agile
 
   ---
 
   ## Topics
 
+  - Cahier des charges
+  - Backlog
+  - Sprint
+  - Demo
   - Outils
-  - Versions
-  - CI Tooling
-  - État de l’art des technologies en 2015
 
-  ---
+  --
 
-  ## Mission mars climate orbiter
+  ### Mission mars climate orbiter
 
   23 Septembre 1999
 
@@ -33,30 +34,191 @@ noindex:  true
   <br>
   Coût : 120 000 000 €
 
-  ---
+  --
 
   > Créer des ponts entre designer & développeurs
   >
   > – Kaelig Deloumeau-Prigent
 
+  ---
+
+  ## Comment s’organiser pour créer des projets __évolutifs__ & de __qualité__ ?
 
   ---
 
-  ## Méthode
+  ### Petit point sur le “cahier des charges”
+
+  __Le dessin de la prairie__
 
   --
 
-  ### Réunion efficace
-
-  solid
+  > Dessinez une prairie d’été avec des fleurs bleues et rouges, de l’herbe verte, des vaches et des oiseaux sous un soleil brillant.
 
   --
+
+  > Dessinez une belle prairie d’été avec :
+
+  - 10 fleurs bleues avec 5 pétales chacune
+  - 5 fleurs bleues avec 6 pétales chacune
+  - 13 fleurs rouges avec 6 pétales chacune
+  - 2 vaches avec 3 taches noires
+
+  - 1 vache avec 5 points noirs
+  - 2 vaches avec 4 taches noires
+  - 2 oiseaux volant dans le coin supérieur gauche
+  - 3 oiseaux dans le milieu
+  - 1 soleil vers la droite avec 5 rayons de soleil
+
+  --
+
+  Quelle est la meilleure prairie ?
+
+  ![Dessin prairie cahier des charges](https://lh3.googleusercontent.com/3ElAkUVWZLcB8t5QhXQj_wdH22BiVdDNiFWbMlSsedBRGAMEkI87or1-dZyiwvJuND1xAKUum6_4KBX1LbpLlKe6tq2XRCYcG4nLFbKVApMIXoAsJ8oISRqMMGy8XLoVQnjRiVkCUmPgujeA4LzyrletWvQx9W7XIdIByeY1Z1Itq8QTyxWKEZ7EkoIamqwcLJcWt1qy_GRrt03Myoc40v5GuyJlqowRQIa1hrysS7tcqKevfXyOGg2l5YrmT253O9B2i9yoVYUvULr5kKUJ8hWJLuBpdh2avLTPRKyyvnBujH_cUjvI52LSoaOMl1q_21I7FjRrx8Qia7XnZzRGNwxagYVN_7riSu-D3RqRg_E9WYs6a7d9NV3VqJ-MLCpSJmhuuQxfA2ckh33lM0O-d1gkkFO3nHDJn2KbEGPXI5Y1wPy-KSj6bD099fCGLu_RXa89OOTF_Xq13W-Tu220qQpKlasESd7l-HcKnSvc6gwWebenEZbYCy7bB9kKywyOn0McRFfNPFLzCIpaSpB1PXmv757Q1Xv6xK-rdeCEpTk=w2558-h1910-no)
+
+  --
+
+  ### Principaux problèmes
+
+  - Évalutation quantité de travail
+  - Basé sur jugement et expérience
+  - Trop optimiste
+  - Vision incomplète
+
+  --
+
+  ### Avantages des projets agiles
+
+  - Livraison à l’heure
+  - Maîtrise du buget et meilleur ROI
+  - Applications fonctionnelles
+  - Projets de qualité
+
+  ---
+
+  ### Manifeste agile
+
+  __2001__
+
+  17 experts (_dont Ward Cunningham – inventeur du wiki_) en développement d’applications informatiques rédigent l'[agilemanifesto](http://www.agilemanifesto.org/)
+
+  4 Valeurs
+
+  12 principes
+
+  --
+
+  #### Les 4 valeurs
+
+  > Nous découvrons de meilleures approches pour faire du développement logiciel, en en faisant nous-même et en aidant les autres à en faire. Grâce à ce travail nous en sommes arrivés à préférer et favoriser
+
+  - __Les individus et leurs interactions__ plus que les processus et les outils.
+  - __Du logiciel qui fonctionne__ plus qu’une documentation exhaustive.
+  - __La collaboration avec les clients__ plus que la négociation contractuelle.
+  - __L’adaptation au changement__ plus que le suivi d’un plan.
+
+  --
+
+  #### [Les 12 principes](https://fr.wikipedia.org/wiki/Manifeste_agile#Les_12_principes)
+
+  - Satisfaire le client en livrant rapidement & régulièrement des fonctionnalités
+  - Accueillir positivement les changements de besoins
+  - Les processus agiles encouragent un rythme de développement soutenable. Ensemble, les commanditaires, les développeurs et les utilisateurs devraient être capables de maintenir indéfiniment un rythme constant.
+  - La simplicité – c’est-à-dire l’art de minimiser la quantité de travail inutile – est essentielle.
+  - À intervalles réguliers, l’équipe réfléchit aux moyens de devenir plus efficace, puis règle et modifie son comportement en conséquence.
+
+  --
+
+  #### La réalité ?
+
+  1. Backlog
+  2. Sprint
+  3. Demo
+
+  <br>
+  > Qu’est ce que l’on met dans la bouteille ?
+
+  ---
+
+  ### Backlog
+
+  Liste de fonctionnalités ou de tâches, jugées _nécessaires_ et _suffisantes_ pour la réalisation satisfaisante du projet
+
+  --
+
+  ![backlog](/assets/images/prototype/backlog.jpg)
+
+  --
+
+  #### [Fiches scénario](http://www.agilestore.fr/planification/69-bloc-de-50-fiches-scrum-format-a7.html)
+
+  _En tant que …………………… _
+
+  _Je peux ……………………………… _
+
+  _Afin de ……………………………… _
+
+
+  --
+
+  #### Fiches scénario (ou user stories)
+
+  1. Epic user story
+  2. Éclater en petits morceaux
+  3. Éliminer & prioriser
+  4. Parcours utilisateurs
+
+  --
+
+  ##### 1. Epic user story
+
+  ![backlog](/assets/images/prototype/user-story-1.png)
+
+  --
+
+  ##### 2. Éclater en petits morceaux
+
+  ![backlog](/assets/images/prototype/user-story-2.png)
+
+  --
+
+  ##### 3. Éliminer & prioriser
+
+  ![backlog](/assets/images/prototype/user-story-3.png)
+
+  --
+
+  ##### 4. Parcours utilisateurs
+
+  ![backlog](/assets/images/prototype/user-story-4.png)
+
+  ---
 
   ### Kanban
+
+
 
   --
 
   ### Priorisation
+
+  --
+
+  ### Retrospective
+
+  --
+
+  > À intervalle régulier, l’équipe réfléchit aux moyens de devenir plus efficace, puis accorde et ajuste son comportement dans ce sens
+
+  --
+
+  #### Keep Drop Start
+
+  - __Ce qui fonctionne bien__, ce qu’il faut garder (Keep)
+  - __Ce qui fonctionne moins bien__, ce qu’il faut supprimer (Drop)
+  - __Ce qui reste mystérieux__
+  - __Ce qui fonctionnerait bien si…__, ce qu’il faudrait faire (Start)
+
+  [Conseils pour animer ses rétrospectives](http://blog.octo.com/animer-des-retrospectives-diteration/)
 
   ---
 
@@ -66,6 +228,11 @@ noindex:  true
   - Slack
   - Notable
 
+  Slack is a real-time messaging tool for teams.
+
+  https://taiga.io/
+  An Agile, Open Source, Free Project Management System.
+
   https://notable.zurb.com/dashboard/projects/DlyGlNFAeYU
 
   --
@@ -74,17 +241,15 @@ noindex:  true
 
   http://getsolid.io/blog/connect-solid-zapier-integrations/
 
-  ---
+  --
 
-
-
-  ## Semantic Versioning 2.0.0
+  ### Semantic Versioning 2.0.0
 
   http://semver.org/
 
   --
 
-  ## Intégration continue <br> aka CI Tooling
+  ### Intégration continue <br> aka CI Tooling
 
   --
 
@@ -100,9 +265,11 @@ noindex:  true
 
   [![Travis build workflow](/assets/images/prototype/travis-build-flow.png)](https://travis-ci.org/)
 
-  ## The State of Front-End Tooling 2015
+  --
 
-  http://ashleynolan.co.uk/blog/frontend-tooling-survey-2015-results
+  _Start With Why Simon Sinek_
+
+  [https://www.youtube.com/watch?v=mqZyg2XAmDk](https://www.youtube.com/watch?v=mqZyg2XAmDk)
 
   ---
 
