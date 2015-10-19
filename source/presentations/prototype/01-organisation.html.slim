@@ -11,6 +11,7 @@ noindex:  true
   ## Topics
 
   - Cahier des charges
+  - Manifeste Agile
   - Backlog
   - Sprint
   - Demo
@@ -48,7 +49,7 @@ noindex:  true
 
   ### Petit point sur le “cahier des charges”
 
-  __Le dessin de la prairie__
+  2 équipes : __Le dessin de la prairie__
 
   --
 
@@ -99,7 +100,7 @@ noindex:  true
 
   __2001__
 
-  17 experts (_dont Ward Cunningham – inventeur du wiki_) en développement d’applications informatiques rédigent l'[agilemanifesto](http://www.agilemanifesto.org/)
+  17 experts (_dont Ward Cunningham – inventeur du wiki_) en développement d’applications informatiques rédigent l'[agile manifesto](http://www.agilemanifesto.org/)
 
   4 Valeurs
 
@@ -122,9 +123,8 @@ noindex:  true
 
   - Satisfaire le client en livrant rapidement & régulièrement des fonctionnalités
   - Accueillir positivement les changements de besoins
-  - Les processus agiles encouragent un rythme de développement soutenable. Ensemble, les commanditaires, les développeurs et les utilisateurs devraient être capables de maintenir indéfiniment un rythme constant.
-  - La simplicité – c’est-à-dire l’art de minimiser la quantité de travail inutile – est essentielle.
-  - À intervalles réguliers, l’équipe réfléchit aux moyens de devenir plus efficace, puis règle et modifie son comportement en conséquence.
+  - Rythme de développement soutenable indéfiniment
+  - À intervalles réguliers, l’équipe réfléchit aux moyens de devenir plus efficace
 
   --
 
@@ -135,13 +135,13 @@ noindex:  true
   3. Demo
 
   <br>
-  > Qu’est ce que l’on met dans la bouteille ?
+  > Qu’est–ce que l’on met dans la bouteille d’eau ?
 
   ---
 
   ### Backlog
 
-  Liste de fonctionnalités ou de tâches, jugées _nécessaires_ et _suffisantes_ pour la réalisation satisfaisante du projet
+  Liste de fonctionnalités ou de tâches, jugées _nécessaires_ et _suffisantes_ pour la réalisation satisfaisante du projet.
 
   --
 
@@ -225,10 +225,12 @@ noindex:  true
   #### 1. Visualiser le flux de travail
   #### 2. Limiter le WIP
   #### 3. Gérer et mesurer le flux
-  #### 4. Rendre explicite les règles
+  #### 4. Rendre explicites les règles
   #### 5. S’améliorer collaborativement
 
   --
+
+  Exemple de Kanban
 
   ![kanban](/assets/images/prototype/kanban.png)
 
@@ -262,11 +264,23 @@ noindex:  true
 
   #### 2. Limiter le WIP
 
+  ![kanban](/assets/images/prototype/kanban-wip.jpg)
+
+  --
+
+  _5 user stories par Sprint_
+
+  ![kanban](/assets/images/prototype/kanban-wip-limit.jpg)
+
+  --
+
+  Stationnement gênant ?
+
   ![kanban](/assets/images/prototype/kanban-wip-fourriere.jpg)
 
   --
 
-  Appeler la fourriere
+  _Appeler la fourriere_
 
   ![kanban](/assets/images/prototype/kanban-wip-fourriere-2.jpg)
 
@@ -286,9 +300,87 @@ noindex:  true
 
   --
 
-  ![kanban](/assets/images/prototype/kanban-wip-limit.jpg)
-  ![kanban](/assets/images/prototype/kanban-wip.jpg)
+  10 janvier 2014 : Ralentir fait avancer plus vite
 
+  ![kanban](/assets/images/prototype/kanban-slow.jpg)
+
+  <small>
+  Cette baisse a également provoqué une hausse de la vitesse moyenne de circulation, de 32,6 km/h en 2013 à 38,4 km/h en 2014, soit une progression de 18 %.
+  </small>
+
+  --
+
+  _Diminuer le nombre de personnes_
+
+  ![kanban](/assets/images/prototype/kanban.png)
+
+  --
+
+  #### 4. Rendre explicites les règles
+
+  ![kanban](/assets/images/prototype/kanban-best-practice.jpg)
+
+  --
+
+  _Pour notre Kanban_
+
+  - [ ✔ ] Investir sur les checklist et Definition Of Done
+  - [ ✔ ] Mettre à jour les liste à chaque anomalie
+
+  --
+
+  Prévenir les accidents
+
+  ![kanban](/assets/images/prototype/kanban-karl.jpg)
+
+  --
+
+  _Identifier & traiter visuellement les bugs_
+
+  ![kanban](/assets/images/prototype/kanban.png)
+
+  --
+
+  #### 5. S’améliorer collaborativement
+
+  ![kanban](/assets/images/prototype/kanban-eco.jpg)
+
+  --
+
+  _Prenez en compte les tâches transverses :_
+
+  - Performances
+  - Sécurité
+  - CNIL
+  - Accessibilité
+  - Mobilité
+  - Compatibilité
+
+  --
+
+  > Qu’aurait fait Bison futé à votre place ?
+
+  [Cyrille Deruel le kanban expliqué](http://fr.slideshare.net/CyrilleDeruel/agile-tour-lille-octo-le-kanban-expliqu-par-bison-fut)
+
+  ---
+
+  ### Sprint
+
+  --
+
+  [SCRUM](http://www.agiliste.fr/exemple-dorganisation-projet-agile/)
+
+  ![kanban](/assets/images/prototype/sprint-methode-scrum.jpg)
+
+  --
+
+  #### Daily meeting
+
+  - __Objectifs__ : coordination de l’équipe de développement, identification des obstacles qu’elle rencontre, mesure de l’avancement du Sprint.
+  - Fréquence : quotidienne.
+  - Durée maximale : 15 minutes.
+  - Documents en entrée : Sprint Backlog.
+  - Documents en sortie : Sprint Backlog et graphique d’avancement mis à jour.
 
   ---
 
@@ -313,22 +405,27 @@ noindex:  true
 
   ## Outils
 
-  - Trello
-  - Slack
-  - Notable
+  ---
 
-  Slack is a real-time messaging tool for teams.
+  ### Communication
 
-  https://taiga.io/
-  An Agile, Open Source, Free Project Management System.
+  - Slack — a real-time messaging tool for teams.
+  - [hipchat](https://www.hipchat.com/)
+  - [solid](http://getsolid.io/) — Productive and actionable meetings, every time
 
-  https://notable.zurb.com/dashboard/projects/DlyGlNFAeYU
+  --
+
+  ### Gestion de projet
+
+  - [Trello](https://trello.com/) — organiser n’importe quoi avec n’importe qui
+  - [Notable](http://zurb.com/notable) — a design platform [Real example](https://notable.zurb.com/dashboard/projects/DlyGlNFAeYU)
+  - [taiga](https://taiga.io/) — An Agile, Open Source, Free Project Management System.
 
   --
 
   ### automate EVERYTHING
 
-  http://getsolid.io/blog/connect-solid-zapier-integrations/
+  [Zapier](http://getsolid.io/blog/connect-solid-zapier-integrations/)
 
   --
 
