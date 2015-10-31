@@ -27,8 +27,32 @@
 
   .footer--contact--details { text-align: right; }
 
-  .course       { margin-bottom: 10em; }
-  .course--day3 { margin-bottom: 10em; }
-  .course--day4 { padding-top: 3em; }
-  .program      { padding-top: 5em; }
+  .program--ruby-advanced {
+    .course--day4,
+    .schedule {
+      page-break-before: always;
+    }
+
+    .course       { margin-bottom: 10em; }
+    .course--day3 { margin-bottom: 10em; }
+    .course--day4 { margin-top: 4em; }
+    .schedule     { margin-top: 5em; }
+  }
+
+  .program--working-as-team {
+    .course--day2--next,
+    .schedule {
+      page-break-before: always;
+    }
+
+    .course             { margin-bottom: 15em; }
+    .course--day2--next { margin-top: 3em; }
+    .schedule           { margin-top: 3em; }
+  }
+
+  .schedule {
+    ul {
+      margin-bottom: 1em;
+    }
+  }
 }

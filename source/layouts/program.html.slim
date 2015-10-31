@@ -19,7 +19,11 @@ html lang="fr"
     = partial 'layouts/program/header'
     main
       = partial 'layouts/program/breadcrumbs'
-      = yield
+      - if current_course?
+        div class="program--#{current_course_data.link}"
+          = yield
+      - else
+        = yield
       = partial 'layouts/program/teacher'
     = partial 'layouts/program/footer'
     = javascript_include_tag 'program'

@@ -14,3 +14,12 @@ ruby_advanced:
     03-testing:           'Testing'
     04-legacy-code:       'Legacy code'
     05-search-engine:     'Moteur de recherche'
+working_as_team:
+  link:     working-as-team
+  title:    Travailler en équipe
+  subtitle: Méthodologies, workflows et bonnes pratiques
+  audience: |
+    Cette formation s'adresse aux équipes de développement désirant découvrir
+    de nouvelles méthodologies afin de s'organiser efficacement. Divers sujets
+    seront abordés, nottament : méthodes agiles, communication, suivi de
+    projet, tests, partage d'information, bonnes pratiques, etc.
