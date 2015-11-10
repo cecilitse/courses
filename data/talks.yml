@@ -1,3 +1,6 @@
 reform:
   link:  form-objects-in-rails-apps
   title: Form Objects
+queries:
+  link: query-objects-in-rails-apps
+  title: Query Objects
