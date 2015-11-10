@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="fr"><head><title>How to use Query objects in Rails applications - Cécile Veneziani</title><meta charset="utf-8" /><meta content="noindex,nofollow" name="robots" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><link href="/assets/images/favicon.ico" rel="icon" type="image/ico" /><link href="/assets/stylesheets/presentation.css" rel="stylesheet" type="text/css" /></head><body class="presentations presentations_talks presentations_talks_query-objects-in-rails-apps"><div class="reveal"><div class="slides"><section data-markdown="" data-separator="^---" data-separator-vertical="^--"><script type="text/template"># Query Objects
+## How I use Query objects in Rails applications
+
+--
+
+## Who am I?
+
+[![Ruby on Rails freelance](/assets/images/avatar.png)](http://cecilitse.org/)
+
+Cecile
+
+Rails dev / coach<br/>
+Teacher at [Le Wagon](http://lewagon.org/)<br/>
+Remote worker
+
+---
+
+## The Rails Way
+
+(aka everything in the Model)
+
+```
+class Artist < ActiveRecord::Base
+  scope :available, -> { where(available: true) }
+  scope :by_genre,  -> (genre) { where(genre: genre) }
+end
+```
+
+--
+
+## Why Query Objects?
+
+* Keep skinny models
+* Extract queries from models
+* Possibility to have a query per model, context, etc.
+
+---
+
+## Query Objects
+
+I'm not using any new/fancy gem.
+
+--
+
+## Initializing Query Object
+
+```
+# app/queries/artist_query.rb
+class ArtistQuery
+  attr_reader :relation
+
+  def initialize(relation=Artist.all)
+    @relation = relation.extending(Scopes)
+  end
+
+  def all
+    self.relation
+  end
+
+  module Scopes
+    # where your "scopes" will go
+  end
+end
+```
+
+--
+
+## Defining Scopes
+
+```
+# app/queries/artist_query.rb
+class ArtistQuery
+  # here lies initialization code
+
+  module Scopes
+    def available
+      where(available: true)
+    end
+
+    def by_genre(genre)
+      where(genre: genre)
+    end
+  end
+end
+```
+
+--
+
+## Using Query
+
+```
+# All artists
+ArtistQuery.new.all
+
+# Available artists
+ArtistQuery.new.all.available
+
+# Metal artists
+ArtistQuery.new.all.by_genre("Metal")
+```
+
+---
+
+## Refactoring
+
+Making it generic
+
+--
+
+## Base Query Object
+
+```
+class BaseQuery
+  @model = nil
+
+  attr_reader :relation
+
+  def initialize(relation=nil)
+    relation  = self.class.model.all unless relation
+    @relation = relation.extending(self.class::Scopes)
+  end
+
+  def self.model
+    @model
+  end
+
+  def self.all(relation=nil)
+    query = new(relation)
+    query.relation
+  end
+
+  def all
+    self.relation
+  end
+
+  module Scopes
+    # any new scope should be implemented there.
+  end
+end
+```
+
+--
+
+## Inherit from base Query
+
+```
+class ArtistQuery < BaseQuery
+  @model = Artist
+
+  module Scopes
+    def available
+      where(available: true)
+    end
+
+    def by_genre(genre)
+      where(genre: genre)
+    end
+  end
+end
+```
+
+--
+
+## Usage
+
+```
+# All artists
+ArtistQuery.all
+
+# Available artists
+ArtistQuery.all.available
+
+# Metal artists
+ArtistQuery.all.by_genre("Metal")
+```
+
+--
+
+## Icing on the cake
+
+You can still **chain queries** with any kind of ActiveRecord relation.
+
+```
+ArtistQuery.all.available.limit(20)
+```
+
+---
+
+## Associations
+
+Let's say we have a Label model.
+
+```
+class Label < ActiveRecord::Base
+  has_many :artists
+end
+```
+
+--
+
+## Using Query Objects
+
+```
+label   = Label.find(params[:id])
+artists = label.artists
+
+# Available artists for a label
+ArtistQuery.all(artists).available
+```
+
+---
+
+## Pros & Cons
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Model scopes</td>
+      <td>The Rails Way</td>
+      <td>Scopes lost in the middle of your model class/instance/DSL methods</td>
+    </tr>
+    <tr>
+      <td>Query objects</td>
+      <td>Separation of concerns</td>
+      <td>More overhead</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Happy Hacking!
+
+[@cecilitse](http://twitter.com/cecilitse)</script></section></div><footer><div class="row footer--terms"><div class="small-12 columns"><p><a href="http://cecilitse.org/fr/">Cecilitse</a>- Pubilé sous <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA </a><span class="print-link">- Export <a href="?print-pdf">PDF </a></span></p></div></div><div class="banner"></div></footer></div><script src="/assets/javascripts/presentation.js" type="text/javascript"></script></body></html>
