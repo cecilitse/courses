@@ -6,24 +6,13 @@ html lang="fr"
     meta name="description" content="#{current_page.data.meta_description}"
     meta name="viewport"    content="width=device-width, initial-scale=1.0"
 
-    - if course_print_page?
-      meta name="robots" content="noindex,nofollow"
-
-    - if current_course?
-      link rel="canonical" href="/programs/#{current_course_data.link}.html"
-
     == favicon_tag        'favicon.ico'
     = stylesheet_link_tag 'default'
 
   body class=page_classes
     = partial 'layouts/default/header'
     main
-      = partial 'layouts/program/breadcrumbs'
-      - if current_course?
-        div class="program--#{current_course_data.link}"
-          = yield
-      - else
-        = yield
-      = partial 'layouts/program/teacher'
+      = yield
     = partial 'layouts/default/footer'
     = javascript_include_tag 'default'
+
