@@ -9,6 +9,8 @@ html lang="fr"
     == favicon_tag        'favicon.ico'
     = stylesheet_link_tag 'default'
 
+    = yield_content(:head)
+
   body class=page_classes
     = partial 'layouts/default/header'
     main
