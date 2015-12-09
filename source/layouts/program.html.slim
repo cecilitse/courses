@@ -1,29 +1,15 @@
-doctype html
-html lang="fr"
-  head
-    title = [current_page_title, current_page_subtitle, data.settings.name].compact.join(' - ')
-    meta charset="utf-8"
-    meta name="description" content="#{current_page.data.meta_description}"
-    meta name="viewport"    content="width=device-width, initial-scale=1.0"
+- content_for :head do
+  - if course_print_page?
+    meta name="robots" content="noindex,nofollow"
 
-    - if course_print_page?
-      meta name="robots" content="noindex,nofollow"
+  - if current_course?
+    link rel="canonical" href="/programs/#{current_course_data.link}.html"
 
-    - if current_course?
-      link rel="canonical" href="/programs/#{current_course_data.link}.html"
-
-    == favicon_tag        'favicon.ico'
-    = stylesheet_link_tag 'program'
-
-  body class=page_classes
-    = partial 'layouts/program/header'
-    main
-      = partial 'layouts/program/breadcrumbs'
-      - if current_course?
-        div class="program--#{current_course_data.link}"
-          = yield
-      - else
-        = yield
-      = partial 'layouts/program/teacher'
-    = partial 'layouts/program/footer'
-    = javascript_include_tag 'program'
+= wrap_layout :default do
+  = partial 'layouts/program/breadcrumbs'
+  - if current_course?
+    div class="program--#{current_course_data.link}"
+      = yield
+  - else
+    = yield
+  = partial 'layouts/program/teacher'

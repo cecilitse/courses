@@ -1,0 +1,20 @@
+doctype html
+html lang="fr"
+  head
+    title = [current_page_title, current_page_subtitle, data.settings.name].compact.join(' - ')
+    meta charset="utf-8"
+    meta name="description" content="#{current_page.data.meta_description}"
+    meta name="viewport"    content="width=device-width, initial-scale=1.0"
+
+    == favicon_tag        'favicon.ico'
+    = stylesheet_link_tag 'default'
+
+    = yield_content(:head)
+
+  body class=page_classes
+    = partial 'layouts/default/header'
+    main
+      = yield
+    = partial 'layouts/default/footer'
+    = javascript_include_tag 'default'
+
