@@ -1,12 +1,9 @@
 doctype html
 html lang="fr"
   head
-    title = "#{current_page.data.title} - #{data.settings.name}"
-    meta charset="utf-8"
-    meta name="robots"    content="noindex,nofollow"
-    meta name="viewport"  content="width=device-width, initial-scale=1.0"
-
-    == favicon_tag        'favicon.ico'
+    meta name="robots" content="noindex,nofollow"
+    = partial             'layouts/shared/meta_tags'
+    = favicon_tag         'favicon.ico'
     = stylesheet_link_tag 'presentation'
 
   body class=page_classes
