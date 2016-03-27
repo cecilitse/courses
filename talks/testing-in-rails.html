@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="fr"><head><meta content="noindex,nofollow" name="robots" /><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>How to start testing Rails applications with RSpec - Cécile Veneziani</title><meta content="Practical first steps on how to use RSpec in a Rails project." name="description" /><meta content="Lille, Nord" name="geo.placename" /><meta content="50.629250;3.057256" name="geo.position" /><meta content="FR-59" name="geo.region" /><meta content="Cécile Veneziani" itemprop="name" /><meta content="Practical first steps on how to use RSpec in a Rails project." itemprop="description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" itemprop="image" /><meta content="Cécile Veneziani" property="og:site_name" /><meta content="Cécile Veneziani" property="og:title" /><meta content="Practical first steps on how to use RSpec in a Rails project." property="og:description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" property="og:image" /><meta content="website" property="og:type" /><meta content="http://courses.cecilitse.org/presentations/talks/testing-in-rails.html" property="og:url" /><meta content="Cécile Veneziani" itemprop="name" /><meta content="Practical first steps on how to use RSpec in a Rails project." itemprop="description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" itemprop="image" /><meta content="summary" name="twitter:card" /><meta content="@cecilitse" name="twitter:site" /><meta content="Cécile Veneziani" name="twitter:title" /><meta content="Practical first steps on how to use RSpec in a Rails project." name="twitter:description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" name="twitter:image" /><link href="/assets/images/favicon.ico" rel="icon" type="image/ico" /><link href="/assets/stylesheets/presentation.css" rel="stylesheet" type="text/css" /></head><body class="presentations presentations_talks presentations_talks_testing-in-rails"><div class="reveal"><div class="slides"><section data-markdown="" data-separator="^---" data-separator-vertical="^--"><script type="text/template"># RSpec
+<!DOCTYPE html><html lang="fr"><head><meta content="noindex,nofollow" name="robots" /><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>How to start testing Rails applications with RSpec - Cécile Veneziani</title><meta content="Practical first steps on how to use RSpec in a Rails project." name="description" /><meta content="Lille, Nord" name="geo.placename" /><meta content="50.629250;3.057256" name="geo.position" /><meta content="FR-59" name="geo.region" /><meta content="Cécile Veneziani" itemprop="name" /><meta content="Practical first steps on how to use RSpec in a Rails project." itemprop="description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" itemprop="image" /><meta content="Cécile Veneziani" property="og:site_name" /><meta content="Cécile Veneziani" property="og:title" /><meta content="Practical first steps on how to use RSpec in a Rails project." property="og:description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" property="og:image" /><meta content="website" property="og:type" /><meta content="http://courses.cecilitse.org/talks/testing-in-rails.html" property="og:url" /><meta content="Cécile Veneziani" itemprop="name" /><meta content="Practical first steps on how to use RSpec in a Rails project." itemprop="description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" itemprop="image" /><meta content="summary" name="twitter:card" /><meta content="@cecilitse" name="twitter:site" /><meta content="Cécile Veneziani" name="twitter:title" /><meta content="Practical first steps on how to use RSpec in a Rails project." name="twitter:description" /><meta content="http://courses.cecilitse.org/assets/images/avatar.png" name="twitter:image" /><link href="/assets/images/favicon.ico" rel="icon" type="image/ico" /><link href="/assets/stylesheets/presentation.css" rel="stylesheet" type="text/css" /></head><body class="talks talks_testing-in-rails"><div class="reveal"><div class="slides"><section data-markdown="" data-separator="^---" data-separator-vertical="^--"><script type="text/template"># Intro to RSpec
 ## How to start testing Rails applications with RSpec
 
 --
@@ -64,7 +64,7 @@ Remote worker
 
 One of THE most popular testing frameworks for Ruby & Ruby on Rails
 
-*+ popular than Minitest (default testing framework)*
+*(used to be) more popular than Minitest (default testing framework)*
 
 http://rspec.info/
 
@@ -128,12 +128,14 @@ RSpec.describe Teddy, type: :model do
   # ...
 
   describe 'associations' do
+    let(:category) { Category.new(name: 'kids') }
+
     before :each do
-      teddy.category = Category.new(name: 'kids')
+      teddy.category = category
     end
 
     it 'has a category' do
-      expect(teddy.category).to be_kind_of(Category)
+      expect(teddy.category).to eq(category)
     end
   end
 end
