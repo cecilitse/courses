@@ -5,7 +5,7 @@ meta_description: Practical first steps on how to use RSpec in a Rails project.
 noindex:          true
 ---
 
-| # RSpec
+| # Intro to RSpec
   ## How to start testing Rails applications with RSpec
 
   --
@@ -71,7 +71,7 @@ noindex:          true
 
   One of THE most popular testing frameworks for Ruby & Ruby on Rails
 
-  *+ popular than Minitest (default testing framework)*
+  *(used to be) more popular than Minitest (default testing framework)*
 
   http://rspec.info/
 
@@ -135,12 +135,14 @@ noindex:          true
     # ...
 
     describe 'associations' do
+      let(:category) { Category.new(name: 'kids') }
+
       before :each do
-        teddy.category = Category.new(name: 'kids')
+        teddy.category = category
       end
 
       it 'has a category' do
-        expect(teddy.category).to be_kind_of(Category)
+        expect(teddy.category).to eq(category)
       end
     end
   end
