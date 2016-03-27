@@ -1,0 +1,369 @@
+---
+title:            How to start testing Rails applications with RSpec
+layout:           presentation
+meta_description: Practical first steps on how to use RSpec in a Rails project.
+noindex:          true
+---
+
+| # RSpec
+  ## How to start testing Rails applications with RSpec
+
+  --
+
+  ## Who am I?
+
+  [![Ruby on Rails freelance](/assets/images/avatar.png)](http://cecilitse.org/)
+
+  Cecile
+
+  Rails dev / coach<br/>
+  Teacher at [Le Wagon](http://lewagon.org/)<br/>
+  Remote worker
+
+  ---
+
+  ## Topics
+
+  * Test-Driven Development (TDD)
+  * RSpec
+  * What to test
+  * Testing legacy code
+  * Useful gems
+
+  ---
+
+  ## Test-Driven Development (TDD)
+
+  --
+
+  ## Steps (1)
+
+  * Build a prototype (in Ruby console or in a file outside of your project)
+  * Write a test
+  * Run the test + see it fail
+
+  --
+
+  ## Steps (2)
+
+  * Implement the associated feature
+  * Run the test + see it pass
+  * Refactor
+  * Rinse & repeat
+
+  --
+
+  ## Pros
+
+  * Forces you to design the feature before coding
+  * Robust
+  * Maintainable
+  * Fearless Refactoring
+  * Eeasier to Debug
+
+  ---
+
+  ## RSpec
+
+  --
+
+  ## RSpec
+
+  One of THE most popular testing frameworks for Ruby & Ruby on Rails
+
+  *+ popular than Minitest (default testing framework)*
+
+  http://rspec.info/
+
+  --
+
+  ## Let's write our first test!
+
+  --
+
+  ## Setup
+
+  ```
+  # Gemfile
+  group :test do
+    gem 'rspec-rails'
+  end
+  ```
+
+  ```
+  $ bundle install
+  $ rails g rspec:install
+  $ RAILS_ENV=test rake db:migrate
+  ```
+
+  --
+
+  ## Running specs
+
+  ```
+  $ rspec
+  ```
+
+  --
+
+  ## The basics
+
+  ```
+  # spec/models/teddy_spec.rb
+  require 'rails_helper'
+
+  RSpec.describe Teddy, type: :model do
+    subject(:teddy) { Teddy.new(...) }
+
+    describe '#awesome_method' do
+      it 'returns something really useful for my purpose' do
+        expect(teddy.awesome_method).to eq(<the something really useful>)
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## Associations
+
+  ```
+  # spec/models/teddy_spec.rb
+  require 'rails_helper'
+
+  RSpec.describe Teddy, type: :model do
+    # ...
+
+    describe 'associations' do
+      before :each do
+        teddy.category = Category.new(name: 'kids')
+      end
+
+      it 'has a category' do
+        expect(teddy.category).to be_kind_of(Category)
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## Validations
+
+  ```
+  # spec/models/teddy_spec.rb
+  require 'rails_helper'
+
+  RSpec.describe Teddy, type: :model do
+    # ...
+
+    describe 'validations' do
+      it 'requires presence of name' do
+        teddy.name = nil
+        teddy.valid?
+        expect(teddy.errors[:name]).not_to be_empty
+      end
+
+      it 'requires presence of sku' do
+        teddy.sku = nil
+        teddy.valid?
+        expect(teddy.errors[:sku]).not_to be_empty
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## Class/instance Methods
+
+  ```
+  # spec/models/teddy_spec.rb
+  require 'rails_helper'
+
+  RSpec.describe Teddy, type: :model do
+    # ...
+
+    describe '#fullname' do
+      it 'returns fullname based on sku and name' do
+        expect(teddy.fullname).to eq('[teddy-bear] Teddy bear')
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## Good practices (1)
+
+  * ONE assertion per test
+  * Name your `subject`
+  * Instantiate only what is necessary
+  * DO use `let`
+
+  --
+
+  ## Good practices (2)
+
+  * Use the ORM, mocks et stubs ONLY when necessary
+  * Sort your methods by class/instance methods
+  * ALWAYS sort by alphabetical order
+
+  ---
+
+  ## What to test?
+
+  --
+
+  ## Mandatory
+
+  * Models
+  * Policies
+  * Services
+  * Lib
+
+  --
+
+  ## Recommended
+
+  ### (advanced topics)
+
+  * Contracts
+  * Forms
+
+  --
+
+  ## Nice to have
+
+  ### (advanced topics)
+
+  * Decorators
+  * Presenters
+
+  --
+
+  ## Optional
+
+  * Helpers
+  * Controllers
+  * Integration tests
+
+  ---
+
+  ## Testing legacy code
+
+  --
+
+  * **When?**
+    * When you have to modify the existing code
+  * **What?**
+    * Only the part you're about to modify
+
+  ---
+
+  ## Useful Gems
+
+  --
+
+  ## Gems (1)
+
+  ### Basics
+
+  * [RSpec](http://rspec.info/)
+  * [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers/)
+
+  --
+
+  ## Gems (2)
+
+  ### Fixtures (alternative)
+
+  * [Factory Girl](https://github.com/thoughtbot/factory_girl/)
+
+  ### Faking data
+
+  * [Forgery](https://github.com/amatsuda/kaminari/)
+  * [Faker](https://github.com/sevenwire/forgery/)
+
+  --
+
+  ## Gems (3)
+
+  ### Continuous Testing
+
+  * [Guard](http://guardgem.org/)
+  * [Spork](http://github.com/sporkrb/spork/)
+
+  ### Web
+
+  * [Capybara](http://github.com/jnicklas/capybara/)
+
+  ---
+
+  ## Things to consider
+
+  --
+
+  ### Version 2
+
+  ```
+  require 'spec_helper'
+
+  describe Artist do
+    subject(:artist) do
+      Artist.new(first_name: 'Mikael', last_name: 'Akerfeldt', band: band)
+    end
+
+    let(:band) { Band.new(name: 'Opeth') }
+
+    describe '#band_name' do ... end
+
+    describe '#full_name' do
+      it 'returns the first name and last name' do
+        artist.full_name.should == 'Mikael Akerfeldt'
+      end
+    end
+  end
+  ```
+
+  --
+
+  ### Version 3
+
+  ```
+  require 'rails_helper'
+
+  describe Artist, type: 'model' do
+    subject(:artist) do
+      Artist.new(first_name: 'Mikael', last_name: 'Akerfeldt', band: band)
+    end
+
+    let(:band) { Band.new(name: 'Opeth') }
+
+    describe '#band_name' do ... end
+
+    describe '#full_name' do
+      it 'returns the first name and last name' do
+        expect(artist.full_name).to eq('Mikael Akerfeldt')
+      end
+    end
+  end
+  ```
+
+  --
+
+  ## False-Friends
+
+  ### RSpec 2
+
+  * be true / be false
+  * be_true / be_false
+
+  ### RSpec 3
+
+  * be_truthy / be_falsy
+  * be_true / be_false
+
+  ---
+
+  ## Happy Hacking!

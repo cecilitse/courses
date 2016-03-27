@@ -4,3 +4,6 @@ reform:
 queries:
   link: query-objects-in-rails-apps
   title: Query Objects
+testing:
+  link: testing-in-rails
+  title: Testing in Rails
