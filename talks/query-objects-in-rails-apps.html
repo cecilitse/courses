@@ -10,7 +10,7 @@
 Cecile
 
 Rails dev / coach<br/>
-Teacher at [Le Wagon](http://lewagon.org/)<br/>
+Teacher at [Le Wagon](https://www.lewagon.com/)<br/>
 Remote worker
 
 ---
@@ -49,12 +49,9 @@ I'm not using any new/fancy gem.
 class ArtistQuery
   attr_reader :relation
 
-  def initialize(relation=Artist.all)
-    @relation = relation.extending(Scopes)
-  end
-
-  def all
-    self.relation
+  def initialize(base_relation=nil)
+    base_relation = Artist.all unless base_relation
+    @relation     = base_relation.extending(Scopes)
   end
 
   module Scopes
@@ -90,13 +87,13 @@ end
 
 ```
 # All artists
-ArtistQuery.new.all
+ArtistQuery.new.relation
 
 # Available artists
-ArtistQuery.new.all.available
+ArtistQuery.new.relation.available
 
 # Metal artists
-ArtistQuery.new.all.by_genre("Metal")
+ArtistQuery.new.relation.by_genre("Metal")
 ```
 
 ---
@@ -115,22 +112,18 @@ class BaseQuery
 
   attr_reader :relation
 
-  def initialize(relation=nil)
-    relation  = self.class.model.all unless relation
-    @relation = relation.extending(self.class::Scopes)
+  def initialize(base_relation=nil)
+    base_relation = self.class.model.all unless base_relation
+    @relation     = base_relation.extending(self.class::Scopes)
   end
 
   def self.model
     @model
   end
 
-  def self.all(relation=nil)
-    query = new(relation)
+  def self.relation(base_relation=nil)
+    query = new(base_relation)
     query.relation
-  end
-
-  def all
-    self.relation
   end
 
   module Scopes
@@ -165,13 +158,13 @@ end
 
 ```
 # All artists
-ArtistQuery.all
+ArtistQuery.relation
 
 # Available artists
-ArtistQuery.all.available
+ArtistQuery.relation.available
 
 # Metal artists
-ArtistQuery.all.by_genre("Metal")
+ArtistQuery.relation.by_genre("Metal")
 ```
 
 --
@@ -181,7 +174,7 @@ ArtistQuery.all.by_genre("Metal")
 You can still **chain queries** with any kind of ActiveRecord relation.
 
 ```
-ArtistQuery.all.available.limit(20)
+ArtistQuery.relation.available.limit(20)
 ```
 
 ---
@@ -205,7 +198,98 @@ label   = Label.find(params[:id])
 artists = label.artists
 
 # Available artists for a label
-ArtistQuery.all(artists).available
+ArtistQuery.relation(artists).available
+```
+
+---
+
+## Performance
+
+But **extending** an ActiveRecord::Relation is **not performant, at all**.
+
+Each time we extend, i.e. each time we instantiate a Query Object, the Ruby global method cache is invalidated.
+
+[More info here](http://dev.mensfeld.pl/2015/04/ruby-global-method-cache-invalidation-impact-on-a-single-and-multithreaded-applications/)
+
+--
+
+## Optimization
+
+Let's delegate ActiveRecord queries to ActiveRecord::Relation by using **SimpleDelegator**.
+
+--
+
+## Base Query
+
+```
+# app/queries/base_query.rb
+require 'delegate'
+
+class BaseQuery < SimpleDelegator
+  def self.relation(base_relation, base_model)
+    base_relation ||= base_model.all
+    new(base_relation)
+  end
+
+  def self.method_added(method_name)
+    return if @redefining
+    @redefining = true
+
+    alias_method :"_#{method_name}", method_name
+
+    define_method method_name do |*args, &block|
+      result = send(:"_#{method_name}", *args, &block)
+
+      if result.class == __getobj__.class
+        self.class.new(result)
+      else
+        result
+      end
+    end
+
+    @redefining = false
+  end
+end
+```
+
+--
+
+## Artist Query
+
+```
+class ArtistQuery < BaseQuery
+  def self.relation(base_relation=nil)
+    super(base_relation, Artist)
+  end
+
+  def available
+    where(available: true)
+  end
+
+  def by_genre(genre)
+    where(genre: genre)
+  end
+end
+```
+
+--
+
+## Benchmark
+
+It's even twice faster than the extend implementation.
+
+```
+Calculating -------------------------------------
+delegator -- without model 170.047k (± 3.8%) i/s -    855.337k in   5.037890s
+delegator -- with model    169.862k (± 3.5%) i/s -    853.050k in   5.029212s
+extend -- without model     77.498k (±12.7%) i/s -    379.395k in   5.009203s
+extend -- with model        81.004k (±14.7%) i/s -    394.659k in   5.005465s
+
+Comparison:
+delegator -- without model: 170047.0 i/s
+delegator -- with model:    169862.0 i/s - same-ish: difference falls within error
+extend -- with model:        81004.4 i/s - 2.10x slower
+extend -- without model:     77497.9 i/s - 2.19x slower
 ```
 
 ---
@@ -237,5 +321,7 @@ ArtistQuery.all(artists).available
 ---
 
 ## Happy Hacking!
+
+[Query Objects example](https://github.com/cveneziani/query-objects-example/)
 
 [@cecilitse](http://twitter.com/cecilitse)</script></section></div><footer><div class="row footer--terms"><div class="small-12 columns"><p><a href="http://cecilitse.org/fr/">Cecilitse</a> - Pubilé sous <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA </a><span class="print-link">- Export <a href="?print-pdf">PDF </a></span></p></div></div><div class="banner"></div></footer></div><script src="/assets/javascripts/presentation.js" type="text/javascript"></script></body></html>
