@@ -1,4 +1,7 @@
----
+site:
+  url: 'http://courses.davidl.fr'
+  analytics_id: 'UA-46684635-1'
+
 email:  dleuliette@gmail.com
 host:   courses.davidl.fr
 name:   David Leuliette

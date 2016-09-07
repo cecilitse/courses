@@ -1,9 +1,19 @@
 activate :bower
 activate :livereload
 
+activate :google_analytics do |ga|
+  ga.tracking_id = data.settings.site.analytics_id
+  ga.anonymize_ip = true
+  ga.debug = false
+  ga.development = false
+  ga.minify = true
+end
+
 set :css_dir,    'assets/stylesheets'
 set :images_dir, 'assets/images'
 set :js_dir,     'assets/javascripts'
+
+page '/sitemap.xml',       layout: false
 
 ignore '*.tmpl.html.slim'
 
@@ -17,6 +27,11 @@ configure :build do
   compass_config do |config|
     config.sass_options = { debug_info:     false }
     config.sass_options = { line_comments:  false }
+  end
+
+  activate :sitemap, hostname: data.settings.site.url
+  activate :sitemap_ping do |config|
+    config.host = "#{data.settings.site.url}"
   end
 
   activate :gzip
