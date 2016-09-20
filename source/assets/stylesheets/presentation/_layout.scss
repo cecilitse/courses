@@ -29,6 +29,14 @@
     list-style-type: none;
   }
 
+  .presentation--avatar {
+    img {
+      border-radius: 100%;
+      border: 2px solid $white;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+
   small {
     line-height: inherit;
   }
