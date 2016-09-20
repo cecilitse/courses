@@ -24,7 +24,7 @@ noindex:  true
   ### Configurer git
 
   ```sh
-  nano .gitconfig
+  vim .gitconfig
   ```
   ```
   [user]
@@ -32,18 +32,12 @@ noindex:  true
     email = dleuliette@gmail.com
   [push]
     default = current
-  [alias]
-    poule = pull --rebase
-    co = checkout
-    br = branch
-  [color]
-    ui = auto
   ```
   --
 
   ### Associer git & GitHub
 
-  Protip: __Toujours__ cloner en `https`
+  Protip: __Toujours__ cloner en `ssh`
 
   [http://davidl.fr/git.html](http://davidl.fr/git.html)
 
@@ -52,60 +46,78 @@ noindex:  true
   ### Nouveau projet
 
   ```sh
-  git clone XXX
+  $ git clone XXX
   ```
   ```sh
-  git init
+  $ git init
   ```
 
   --
 
-  > Quand tu sais pas ... fait un `status`
-  >
-  > – Ra's al Ghul
+  > Quand tu sais pas … fait un `status`
+  > <br>
+  > — Ra’s al Ghul
 
   --
 
   ### Rappel : les bases
 
+  Quand je sais pas
   ```sh
-  git status
+  $ git status
   ```
 
   Lister les branches
   ```sh
-  git branch
+  $ git branch
   ```
+
+  Synchroniser votre travail
+  ```sh
+  $ git fetch origin master
+  ```
+
+  Fusionner les branches
+  ```sh
+  $ git pull origin master
+  ```
+  --
+
+  ### Rappel : Sauvegarder
 
   Ajouter le tracking
   ```sh
-  git add .
+  $ git add .
   ```
 
   Sauvegarde
   ```sh
-  git commit -m "commentaire"
+  $ git commit -m "commentaire"
   ```
 
-  Récupérer la dernière version
+  --
+
+  ### Rappel : Partager son travail
+
   ```sh
-  git fetch origin
+  $ git push origin master
+  ```
+
+  ```sh
+  $ git push origin branch-name
   ```
 
   --
 
   ### Alias pour les ninjas
 
-  [Télécharger oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-
   ```sh
-  git co -
-  git merge -
+  $ git co -
+  $ git merge -
   gss
   ```
-  ### Windows
 
-  [Babun](http://babun.github.io/) - a shell you will love!
+  [Télécharger oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
   ---
 
@@ -122,26 +134,26 @@ noindex:  true
   ### Nouvelle fonctionnalité
 
   ```sh
-  git checkout -b feature/add-commenting
+  $ git checkout -b feature/add-commenting
   ```
 
   --
 
   ### Travailler avec plusieurs branches
 
-  récupérer une branche distante
-  ```sh
-  git checkout -t origin/feature/update-reviews
-  ```
-
   rename branch
   ```sh
-  git branch -m feature/old-branch feature/new-branch
+  $ git branch -m feature/old-branch feature/new-branch
   ```
 
   delete branch
   ```sh
-  git branch -d feature/merged-branch
+  $ git branch -d feature/merged-branch
+  ```
+
+  récupérer une branche distante
+  ```sh
+  $ git checkout -t origin/feature/update-reviews
   ```
 
   --
@@ -150,19 +162,19 @@ noindex:  true
 
   #### Mettre à jour le projet
   ```sh
-  git stash
-  git pull --rebase
-  git stash pop
+  $ git stash
+  $ git pull --rebase
+  $ git stash pop
   ```
 
   #### Sauvegarde
   ```sh
-  git commit -am 'Update stuff'
+  $ git commit -am 'Update stuff'
   ```
 
   #### Partage
   ```sh
-  git push
+  $ git push
   ```
 
   --
@@ -170,17 +182,17 @@ noindex:  true
   ### Merge
 
   ```sh
-  git co develop
-  git pull --rebase
-  git pull --no-ff origin branche
-  git push
+  $ git co develop
+  $ git pull --rebase
+  $ git pull --no-ff origin branche
+  $ git push
   ```
 
   --
 
   ### Annuler (presque) tout avec Git
   ```sh
-  git revert <SHA>
+  $ git revert <SHA>
   ```
 
   [Voir la liste complète](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
@@ -196,6 +208,9 @@ noindex:  true
   --
 
   ![pull-request-workflow](/assets/images/git/development-workflow.jpg)
+  --
+
+  # Demo time
 
   ---
 
