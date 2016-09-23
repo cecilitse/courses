@@ -9,7 +9,7 @@ $mainColor: $gray-dark;
 // Headings
 $headingMargin: 0 0 20px 0;
 $headingFont: $font-family-sans-serif;
-$headingColor: $black;
+$headingColor: rgba($black, 0.8);
 $headingLineHeight: 0.9em;
 $headingLetterSpacing: -3px;
 $headingTextTransform: none;
@@ -18,13 +18,13 @@ $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
 $linkColor: $primary-color;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: scale-color($linkColor, $saturation: 20%);
 
 // Text selection
 $selectionBackgroundColor: #FF5E99;
 $selectionColor: #fff;
 
 @mixin bodyBackground() {
-  @include radial-gradient($gray, $white);
+  // @include radial-gradient($gray, $white);
   background-color: $gray-light;
 }

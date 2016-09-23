@@ -7,14 +7,16 @@
   }
 
   h1 {
-    font-weight: $font-weight-light;
+    letter-spacing: -10px;
   }
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
+    font-weight: $font-weight-bold;
+    text-shadow: 1px 2px 3px #DDEEFF, 0 0 0 black, -1px 1px 0 #DDEEFF, 1px 1px 0 white;
   }
 
   a {
-    padding: 0 2px;
+    padding: 3px;
 
     &:hover {
       background-color: $linkColorHover;
@@ -25,6 +27,14 @@
   .presentation--course-title {
     @extend h3;
     list-style-type: none;
+  }
+
+  .presentation--avatar {
+    img {
+      border-radius: 100%;
+      border: 2px solid $white;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    }
   }
 
   small {
@@ -57,7 +67,25 @@
     width: inherit;
     background: transparent;
     box-shadow: none;
-    border-left: 5px solid $gray-dark;
+    border: 0;
+    position: relative;
+    &:before,
+    &:after {
+      font-size: 400%;
+      opacity: 0.6;
+      position: absolute;
+      line-height: 0;
+    }
+    &:before {
+      content: '\201C';
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      content: '\201D';
+      bottom: -0.4em;
+      right: 0;
+    }
   }
 
 
