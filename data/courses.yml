@@ -12,7 +12,7 @@ git_github:
     Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu aux designers, consultants seo ou rédacteurs web.
   presentations:
     01-basics:     'Les bases'
-    02-try-github: 'Découvrir GitHub'
+    02-github: 'Découvrir GitHub'
     03-multiplayer: 'Collaborer à plusieurs'
 prototype:
   link:     prototype
