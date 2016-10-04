@@ -10,11 +10,11 @@ noindex:  true
 
   ## Topics
 
-  - `$ git init`
-  - `$ git commit`
-  - `$ git branch`
-  - `$ git remote`
-  - `$ git merge`
+  - Prerequisites
+  - Markdown EVERYTHING
+  - Project
+  - Fix issues
+  - Best practices
 
   ---
 
@@ -58,6 +58,105 @@ noindex:  true
 
   ![Documentation](/assets/images/git/contributing.png)
 
+  --
+
+  # DEMO TIME
+
+  _Build your first project with a `CONTRIBUTING.md`_
+
+  ---
+
+  ## Project
+
+  --
+
+  ### Kanban
+
+  ![agile way](/assets/images/git/project.png)
+
+  --
+
+  ## Milestones
+
+  ---
+
+  ## Fix issues
+
+  --
+
+  ## Fix & track issues
+
+  --
+
+  ## Fix, track & add automation<br> for issues
+
+  --
+
+  ### Step 1 : qualification
+
+      $ mkdir .github && cd $_
+      $ touch issue_template.md
+
+  --
+
+  #### `issue_template.md`
+
+      ### Expected behaviour
+      Tell us what should happen.
+
+      ### Actual behaviour
+      Tell us what happens instead. Provide a log message if relevant.
+
+      ### I'm seeing this behaviour on
+      _Remove this hint: these checkboxes can be checked like this: [x]_
+
+      - [ ] ionic view
+      - [ ] iOS device
+      - [ ] iOS simulator
+      - [ ] Android device
+      - [ ] Android simulator
+
+      #### Hardware models
+      Example: Samsung Galaxy S6, iPhone 6s
+
+      #### OS versions
+      Example: Android 4.4.2, iOS 9.2
+
+      #### Select our environement
+      - [ ] Developement
+      - [ ] Production
+
+      ### I'm not a dummy, so I've checked these
+      - [ ] Download the last version of the app.
+
+      ### So how can we reproduce this?
+      _Remove this hint: Pick one of these - use the Preview feature of this editor to get a sense which option we like best_
+  --
+
+  #### :tada:
+
+  ![Documentation](/assets/images/git/issue-template.gif)
+
+  --
+
+  ### Step 2 : working on it & commit
+
+  `fix(feature): change behavior close #123`
+
+  ![issue tracking](/assets/images/git/issue-tracking.png)
+
+  --
+
+  ### Step 3 : grab a coffee
+
+  __Because it’s already close__
+
+  --
+
+  # DEMO TIME
+
+  _solve & close an issue_
+
   ---
 
   ## Best practices
@@ -95,100 +194,19 @@ noindex:  true
 
   ### add a tag
 
-  need stuff
+  __Update `history.md`__
+
+      $ git changelog -n
+
+  __Follow a [semantic versioning](http://www.semver.org/)__
+
+      $ git release 1.2.0
 
   --
 
   # DEMO TIME
 
   _automatic changelog with `history.md`_
-
-  ---
-
-  ## Fix issues
-
-  --
-
-  ## Fix & track issues
-
-  --
-
-  ## Fix, track & add automation<br> for issues
-
-  --
-
-  ## Step 1 : qualification
-
-      $ mkdir .github && cd $_
-      $ touch issue_template.md
-
-  --
-
-  ### `issue_template.md`
-
-      ### Expected behaviour
-      Tell us what should happen.
-
-      ### Actual behaviour
-      Tell us what happens instead. Provide a log message if relevant.
-
-      ### I'm seeing this behaviour on
-      _Remove this hint: these checkboxes can be checked like this: [x]_
-
-      - [ ] ionic view
-      - [ ] iOS device
-      - [ ] iOS simulator
-      - [ ] Android device
-      - [ ] Android simulator
-
-      #### Hardware models
-      Example: Samsung Galaxy S6, iPhone 6s
-
-      #### OS versions
-      Example: Android 4.4.2, iOS 9.2
-
-      #### Select our environement
-      - [ ] Developement
-      - [ ] Production
-
-      ### I'm not a dummy, so I've checked these
-      - [ ] Download the last version of the app.
-
-      ### So how can we reproduce this?
-      _Remove this hint: Pick one of these - use the Preview feature of this editor to get a sense which option we like best_
-  --
-
-  ### :tada:
-
-  ![Documentation](/assets/images/git/issue-template.gif)
-
-  --
-
-  ## Step 2 : working on it & commit
-
-  `fix(feature): change behavior close #123`
-
-  ![issue tracking](/assets/images/git/issue-tracking.png)
-
-  --
-
-  ## Step 3 : grab a coffee
-
-  __Because it's already close__
-
-  ---
-
-  ## Project
-
-  --
-
-  ### Kanban
-
-  ![agile way](/assets/images/git/project.png)
-
-  --
-
-  ## Milestones
 
   ---
 

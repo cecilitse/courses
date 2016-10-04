@@ -11,9 +11,9 @@ git_github:
     Comment travailler en même temps sur ces fichiers, tout en conservant un historique ? Avec git & GitHub.
     Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu aux designers, consultants seo ou rédacteurs web.
   presentations:
-    01-basics:     'Les bases'
-    02-github: 'Découvrir GitHub'
-    03-multiplayer: 'Collaborer à plusieurs'
+    01-basics:     'Basics'
+    02-github: 'Explore GitHub'
+    03-multiplayer: 'Multiplayer mode'
 prototype:
   link:     prototype
   title:    'Concevoir un produit par itération'
