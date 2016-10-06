@@ -25,6 +25,5 @@ $selectionBackgroundColor: #FF5E99;
 $selectionColor: #fff;
 
 @mixin bodyBackground() {
-  // @include radial-gradient($gray, $white);
   background-color: $gray-light;
 }

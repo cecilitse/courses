@@ -113,32 +113,6 @@ noindex:  true
   $ git stash list
   ```
 
-  --
-
-  ### Rappel : Sauvegarder
-
-  Ajouter le tracking
-  ```sh
-  $ git add .
-  ```
-
-  Sauvegarde
-  ```sh
-  $ git commit -m "commentaire"
-  ```
-
-  --
-
-  ### Rappel : Partager son travail
-
-  ```sh
-  $ git push origin master
-  ```
-
-  ```sh
-  $ git push origin branch-name
-  ```
-
   ---
 
   ## Branch
@@ -200,7 +174,7 @@ noindex:  true
   ```sh
   $ git checkout develop
   $ git pull --rebase
-  $ git pull --no-ff origin branche
+  $ git merge --no-ff feature/branch
   $ git push
   ```
 
