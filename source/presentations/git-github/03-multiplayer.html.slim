@@ -1,10 +1,10 @@
 ---
-title:    'Git & GitHub 101 - Les Bases'
+title:    'Git & GitHub 101 - Multiplayer'
 layout:   presentation
 noindex:  true
 ---
 
-| # Workflow
+| # Multiplayer
 
   ---
 
@@ -14,7 +14,8 @@ noindex:  true
   - Using terminal
   - Branch
   - Code review
-  - Deploy
+  - Workflow
+  - Fork
 
   ---
 
@@ -139,16 +140,19 @@ noindex:  true
   ### Working with branches
 
   rename branch
+
   ```sh
   $ git branch -m feature/old-branch feature/new-branch
   ```
 
   delete branch
+
   ```sh
   $ git branch -d feature/merged-branch
   ```
 
   fetch a remote branch
+
   ```sh
   $ git checkout -t origin/feature/update-reviews
   ```
@@ -175,7 +179,7 @@ noindex:  true
   $ git checkout develop
   $ git pull --rebase
   $ git merge --no-ff feature/branch
-  $ git push
+  $ git push [alias] [branch]
   ```
 
   --
@@ -217,6 +221,80 @@ noindex:  true
   --
 
   # DEMO TIME
+
+  --
+
+  ## Workflow
+
+  --
+
+  ### [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
+
+  ![git flow](/assets/images/git/git-flow-branching-model.jpg)
+
+  --
+
+  ### [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
+
+  5 January 2010 — [Vincent Driessen](https://twitter.com/nvie)
+
+  - `master` is production with tags
+  - `develop` we work from here
+
+  <br>
+
+  - `feature` from `develop` and merge into `develop`
+  - `release` from `develop` and merge into `master` & `develop`
+  - `hotfix` from `master` and merge into `master` & `develop` / `release`
+
+  --
+
+  [git flow extension](https://github.com/nvie/gitflow)
+
+  ```sh
+  $ git flow feature
+  $ git flow feature start <name> [<base>]
+  $ git flow feature finish <name>
+  ```
+
+  --
+
+  ### [github-flow](http://scottchacon.com/2011/08/31/github-flow.html)
+
+  ![github flow](/assets/images/git/github-flow-branching-model.jpg)
+
+  --
+
+  ### [github-flow](http://scottchacon.com/2011/08/31/github-flow.html)
+
+  _31 August 2011 — [Scott Chacon](https://twitter.com/chacon)_
+
+  1. `master` is production
+  1. `feature` branch from `master`
+  1. often push on `origin`
+  1. open `pull-request` when you want
+  1. `merge` only after a pull-request review
+  1. __Deploy immediatly__ after the merge on master
+
+  --
+
+  ### [Trunk Based Development](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/) (TBD)
+
+  Fast but require more __concentration__ & __rigor__
+
+  ![trunk based development](/assets/images/git/git-trunk-based-dev.jpg)
+
+  ---
+
+  ## Fork
+
+  --
+
+  ### How it works ?
+
+  ![fork](/assets/images/git/fork.png)
+
+  [courses.cecilitse.org](http://courses.cecilitse.org/presentations/#/)
 
   ---
 
