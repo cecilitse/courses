@@ -14,6 +14,9 @@
     font-weight: $font-weight-bold;
     text-shadow: 1px 2px 3px #DDEEFF, 0 0 0 black, -1px 1px 0 #DDEEFF, 1px 1px 0 white;
   }
+  .text-left {
+    text-align: left;
+  }
 
   a {
     padding: 3px;
