@@ -4,8 +4,19 @@
   color:    warning
   title:    'Craft everything with Middleman'
   subtitle: 'Lightning talk for RubyCamp BE 2015'
-  audience: |
-    Everyone who code with Ruby and Ruby on Rails. If you are a front-end dev who wants to quickly jump into Ruby ? This talk is for you !
+-
+  link:     offthegrid
+  label:    Inspiration
+  color:    secondary
+  title:    'How to travel — 100 days — off the grid'
+  subtitle: 'Talk during Take off Talks Lille — code, design and startups about how to travel the agile way'
+-
+  link:     workflow
+  label:    Gestion de projet
+  color:    success
+  title:    'Modern wokflow for productive people'
+  subtitle: 'Comment accélérer la collaboration et automatiser certaines tâches avec Slack & Trello'
+
 -
   link:     styleguide
   label:    Gestion de projet
@@ -17,11 +28,3 @@
     Dans le cas d’une application web, ce document regroupe tous les composants et tous les cas d’affichages possibles
     (Ex : Palette de couleurs, styles de titres, boutons, pagination, éléments de formulaires…)<br>
     Le guide de style est <strong>LA référence</strong> : développeurs, designers, et même clients peuvent s'y référer tout au long du projet.
--
-  link:     offthegrid
-  label:    Inspiration
-  color:    secondary
-  title:    'How to travel — 100 days — off the grid'
-  subtitle: 'Talk during Take off Talks Lille — code, design and startups about how to travel the agile way'
-  audience: |
-
