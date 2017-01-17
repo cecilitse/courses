@@ -66,6 +66,66 @@ noindex:  true
 
   ---
 
+  ## Best practices
+
+  --
+
+  ### Respect the tree
+
+  ![Documentation](/assets/images/git/tree.png)
+
+  The reasons for these conventions:
+
+  - automatic generating of the changelog
+  - simple navigation through git history (eg. ignoring style changes)
+
+  --
+
+  ### git commit message
+
+  - __feat__: new feature for the user, not a new feature for build script
+  - __fix__: bug fix for the user, not a fix to a build script
+  - __docs__: changes to the documentation
+  - __style__: formatting, missing semi colons, etc; _no production code change_
+  - __refactor__: refactoring production code, eg. _renaming a variable_
+  - __test__: adding missing tests, refactoring tests; _no production code change_
+  - __chore__: updating grunt tasks etc; _no production code change_
+
+  --
+
+  #### Example
+
+  `docs(readme): add line to resolve libsass issue`
+
+  --
+
+  ### Add a tag
+
+  --
+
+  #### [semver](http://www.semver.org/)
+
+  Dependencies are __versioned__ & __installed__ based on semantic versioning (semver). Semver defines a versioning scheme that reflects the types of changes in each new version, whether a `change breaks an API`, adds a `new feature`, or `fixes a bug`.
+
+
+  --
+
+  __Update `history.md`__
+
+      $ git changelog -n
+
+  __Follow a [semantic versioning](http://www.semver.org/)__
+
+      $ git release 1.2.0
+
+  --
+
+  # DEMO TIME
+
+  _automatic changelog with `history.md`_
+
+  ---
+
   ## Project
 
   --
@@ -159,66 +219,6 @@ noindex:  true
 
   ---
 
-  ## Best practices
-
-  --
-
-  ### Respect the tree
-
-  ![Documentation](/assets/images/git/tree.png)
-
-  The reasons for these conventions:
-
-  - automatic generating of the changelog
-  - simple navigation through git history (eg. ignoring style changes)
-
-  --
-
-  ### git commit message
-
-  - __feat__: new feature for the user, not a new feature for build script
-  - __fix__: bug fix for the user, not a fix to a build script
-  - __docs__: changes to the documentation
-  - __style__: formatting, missing semi colons, etc; _no production code change_
-  - __refactor__: refactoring production code, eg. _renaming a variable_
-  - __test__: adding missing tests, refactoring tests; _no production code change_
-  - __chore__: updating grunt tasks etc; _no production code change_
-
-  --
-
-  #### Example
-
-  `docs(readme): add line to resolve libsass issue`
-
-  --
-
-  ### Add a tag
-
-  --
-
-  #### [semver](http://www.semver.org/)
-
-  Dependencies are __versioned__ & __installed__ based on semantic versioning (semver). Semver defines a versioning scheme that reflects the types of changes in each new version, whether a `change breaks an API`, adds a `new feature`, or `fixes a bug`.
-
-
-  --
-
-  __Update `history.md`__
-
-      $ git changelog -n
-
-  __Follow a [semantic versioning](http://www.semver.org/)__
-
-      $ git release 1.2.0
-
-  --
-
-  # DEMO TIME
-
-  _automatic changelog with `history.md`_
-
-  ---
-
   ## Git FAQ
 
   [firstaidgit.io](http://firstaidgit.io/#/)
@@ -226,3 +226,5 @@ noindex:  true
   ---
 
   ## Happy Hacking!
+
+  Download your [git-cheat-sheet](https://education.github.com/git-cheat-sheet-education.pdf)
