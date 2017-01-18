@@ -1,13 +1,13 @@
 ---
 layout:           program
 meta_description: Développeur front-end Freelance, je propose des formations HTML, CSS, front-end avec Ruby on Rails, Méthodes agiles, et Workflows de développement.
-title:            "Apprendre par la pratique"
-hero: "Formations web & développement front-end"
+title:            'Apprendre par la pratique'
+hero:             'Formations web & développement front-end'
 ---
 
 section
-  div class="row"
-    div class="medium-10 medium-centered columns"
+  .row
+    .medium-10.medium-centered.columns
       markdown:
         Vous êtes développeur web, graphiste, product owner ? Débutant ou expérimenté ?
         __Je peux vous aider__ en travaillant sur __votre projet__ le temps d’une journée, une semaine ou plus.
@@ -19,3 +19,15 @@ section
         - Mises en pratique
 
         Ce site héberge également mes slides de conférences, qui sont en libre accès.
+
+      - data.testimonials.each do |testimonial|
+        .panel
+          p = testimonial.quote
+          .row.collapse
+            .medium-6.columns
+              em
+                => testimonial.name
+                '—
+                = testimonial.job
+            .medium-6.columns.text-right
+              p = testimonial.place

@@ -1,9 +1,9 @@
 git_github:
   link:     git-github
-  title:    'Git & GitHub 101'
+  title:    'Git & GitHub'
   label:    Git
   color:    secondary
-  subtitle: Travail collaboratif entre plusieurs développeurs
+  subtitle: "Comment travailler de façon collaborative entre plusieurs personnes ? Avec une solution comme git !<br>Ce programme peut s'étaller sur 3 jours, du débutant jusqu'au problématiques avancées."
   audience: |
     Les personnes travaillant avec un outil informatique, créents des fichiers,
     sauvegardent des fichiers, éditent des fichiers…<br>
@@ -11,12 +11,12 @@ git_github:
     Comment travailler en même temps sur ces fichiers, tout en conservant un historique ? Avec git & GitHub.
     Cet outil est principalement utilisé par les developpeur web, mais il peut être étendu aux designers, consultants seo ou rédacteurs web.
   presentations:
-    01-basics:     'Basics'
-    02-github: 'Explore GitHub'
-    03-multiplayer: 'Multiplayer mode'
+    01-basics:      '101 - Basics'
+    02-github:      '102 - Explore GitHub'
+    03-multiplayer: '103 - Multiplayer mode'
 prototype:
   link:     prototype
-  title:    'Concevoir un produit par itération'
+  title:    'Concevoir un produit web par itération'
   label:    Gestion de projet
   color:    success
   subtitle: 'Développement évolutif & de qualité, avec une organisation productive'

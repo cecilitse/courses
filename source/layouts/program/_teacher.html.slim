@@ -4,7 +4,7 @@ section class="teacher"
       hr
       h2 Intervenant
   div class="row teacher--description" itemscope="" itemtype="http://schema.org/Person"
-    div class="small-8 columns"
+    .small-9.columns
       h3 itemprop="name" = data.settings.name
       p
         markdown:
@@ -12,14 +12,14 @@ section class="teacher"
 
           Il partage ses [outils en opensource](http://github.com/flexbox) & ses [bonnes pratiques front-end](http://davidl.fr).
       p
-        'Vous êtes débutant ? retrouvez le donner des formation à
+        'À la recherche d’un programme de développeur full-satck ? retrouvez le donner des formation à
         span itemprop="affiliation" itemscope="" itemtype="http://schema.org/Organization"
           = link_to 'http://www.lewagon.org/lille' do
             span> itemprop="name" lewagon
             span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
               span itemprop="addressLocality" Lille.
 
-    div class="small-4 columns text-right"
+    .small-3.columns.text-right
       = image_tag 'avatar.png', class: 'teacher--picture'
   div class="row"
     div class="small-12 columns"

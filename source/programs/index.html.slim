@@ -7,6 +7,14 @@ breadcrumbs:      ['root']
 
 section.row
   .small-12.columns
+    hr
+    h2
+      'Formation sur les technologies web
+      small Une journée ou plus
+    p
+      'Mon programme de formation est
+      strong> évolutif et modifié à chaque itération.
+      'À la fin de mon intervention les apprenants bénéficient d'un accès illimité au contenu et peuvent le télécharger au format .pdf
     ul.medium-block-grid-2
       - data.courses.each do |_code, course|
         li
@@ -14,17 +22,6 @@ section.row
             div class="label radius #{course['color']}" = course['label']
             h2 = link_to course['title'], "/programs/#{course['link']}.html"
             p = course['subtitle']
-      li
-        .panel
-          h2 Sur mesure
-          p Aucune formation ne correspond à vos besoins ? N’hésitez pas à me contacter. Nous définirons ensemble vos objectifs afin d’établir un programme adéquat.
-          ul.square
-            li HTML / CSS / JavaScript
-            li Front-end & Ruby on Rails
-            li Git / GitHub
-            li Workflows de développement
-          br
-          = mail_to data.settings.email, 'Contactez-moi', subject: 'Demande de programme de formation', class: 'button secondary small'
     hr
     h2 Talks
     p

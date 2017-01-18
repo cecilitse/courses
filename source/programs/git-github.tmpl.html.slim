@@ -8,69 +8,99 @@ breadcrumbs:      ['root', 'programs']
 section.course
   .row
     .small-12.columns
-      h2 Formation Git & GitHub 101
-      h3 Audience
       p = current_course_data.audience
-      h3 Format
-      p
-        'Formation collective d’une journée, articulée autour de modules. Chaque module comporte un cours théorique et sa mise en pratique.
       p
         'Les participants peuvent venir avec un projet sur lequel travailler afin de mettre en pratique les notions vues sur un cas concret et personnalisé.
 
   .row
     .large-6.columns
-      h3 Pré-requis
-      ul
-        li Connaissance d’un environnement Unix (Linux, OSX, …)
-        li Connaissance de l’utilisation d’un terminal
-        li Un compte GitHub
-        li Avoir vu la trilogie “Retour vers le futur”
+      markdown:
+        ### Pré-requis
+
+        - Connaissance d’un environnement Unix (Linux, OSX, …)
+        - Connaissance de l’utilisation d’un terminal
+        - Un [compte git associé à GitHub](http://davidl.fr/git)
+        - Avoir vu la trilogie “Retour vers le futur”
     .large-6.columns
-      h3 Objectifs
-      ul
-        li Connaître les outils, services et méthodologies couramment utilisés
-        li Coder de façon évolutive et respectueuse des standards
-        li Collaborer rapidement entre plusieurs développeurs
-        li Tester de nouvelles fonctionnalités à l’aide de branches
+      markdown:
+        ### Objectifs
+
+        - Connaître les outils, services et méthodologies couramment utilisés
+        - Coder de façon évolutive et respectueuse des standards
+        - Collaborer rapidement entre plusieurs développeurs
+        - Tester de nouvelles fonctionnalités à l’aide de branches
 
 section.program
   .row
     .small-12.columns
       h2 Programme
-
-  .row
-    .small-2.columns
-      h3 Module 1
-    .small-10.columns
-      h4 Introduction
       p Présentation du planning de formation, des outils et de la méthodologie qui seront employés.
-      h4 Bases
-      p Présentation générale du fonctionnement de git.
-      ul
-        li Installation
-        li Commandes
-        li Travailler avec git
-      h4 Cas pratique
-      p Session de live coding sur un projet de page web simple.
-      ul
-        li Création de la page HTML
-        li Création d’un repo sur GitHub
-        li Sauvegarde des modifications
-  .row
-    .small-2.columns
-      h3 Module 2
-    .small-10.columns
-      h4 Atelier
-      p Mise en application des notions vues précedement.
-      ul
-        li Initaliser un projet
-        li commit
-        li branch
-        li remote
-        li merge
-      h4 Rétrospective
-      p Echanges sur la formation réalisée.
-      ul
-        li Questions/Réponses sur ce qui a été vu
-        li Références, ressources et supports disponibles en ligne
-        li Pistes d'amélioration
+      .panel
+        .row
+          .small-2.columns
+            h3 Git 101
+          .small-10.columns
+            markdown:
+              #### Les Bases
+
+              Présentation générale du fonctionnement de git.
+
+              - Installation
+              - Commandes
+              - Travailler avec git
+
+              #### Cas pratique
+
+              Session de live coding sur un projet de page web simple.
+
+              - Création d’un repository
+              - Développement d’une page HTML
+              - Travail collaboratif avec la gestion des branches
+              - Sauvegarde des modifications
+              - Hébergement sur GitHub
+      .panel
+        .row
+          .small-2.columns
+            h3 Git 102
+          .small-10.columns
+            markdown:
+              #### Exploration
+
+              Vérification des notions vues précedement.
+
+              #### Automatisation
+
+              - Avoir une bonne hygiène d’historique
+              - Pourquoi avoir un archiviste est important ?
+              - Les bonnes pratiques de développement avec git
+              - Récolter et solutionner les problèmes
+              - Gérer son projet en pilote automatique
+      .panel
+        .row
+          .small-2.columns
+            h3 Git 103
+          .small-10.columns
+            markdown:
+              #### Multijoueur
+
+              Travailler efficacement avec une équipe grandissante.
+
+              #### S’organiser pour être serein
+
+              - GUI
+              - Utilisation avancée du terminal
+              - Les différentes utilisations des branches et le voyage temporel
+              - Les avantages d'une bonne revue de code
+              - Workflow avancé
+              - Fork
+      .panel
+        .row
+          .small-2.columns
+            h3 Bonus
+          .small-10.columns
+            h4 Rétrospective
+            p Echanges sur la formation réalisée.
+            ul
+              li Questions / Réponses sur ce qui a été vu
+              li Références, ressources et partage des supports
+              li Pistes d’amélioration
