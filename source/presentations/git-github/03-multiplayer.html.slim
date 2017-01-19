@@ -114,6 +114,12 @@ noindex:  true
   $ git stash list
   ```
 
+  Working with a new branch
+
+  ```sh
+  $ git stash new-branch-name
+  ```
+
   --
 
   # DEMO TIME
@@ -217,6 +223,16 @@ noindex:  true
 
   --
 
+  ### Apply a commit from another branch
+
+  `cherry-pick` can do that
+
+  ```sh
+  $ git checkout master
+  $ git cherry-pick d42c389f
+  ```
+  --
+
   ### Cancel (almost) everything with git
   ```sh
   $ git revert <SHA>
@@ -250,6 +266,25 @@ noindex:  true
   --
 
   ### `PULL_REQUEST_TEMPLATE.md`
+
+  --
+
+  ### Remember ? — Respect the tree
+
+  👌
+
+  ![Documentation](/assets/images/git/tree.png)
+
+  --
+
+  ### Replay the commits on the branch
+
+  ```sh
+  $ git rebase --interactive HEAD~6
+  ```
+  ```sh
+  $ git rebase -i d42c389f
+  ```
 
   --
 
