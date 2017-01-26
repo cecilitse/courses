@@ -16,6 +16,7 @@ noindex:  true
   - Code review
   - Workflow
   - Fork
+  - Automation
 
   ---
 
@@ -48,15 +49,19 @@ noindex:  true
   ### Configure tooling
 
   ```sh
+  $ git config --global user.name "John Doe"
+  $ git config --global user.email johndoe@example.com
+  ```
+  or
+
+  ```sh
   vim .gitconfig
   ```
 
-  ```
+  ```sh
   [user]
     name = David Leuliette
     email = dleuliette@gmail.com
-  [push]
-    default = current
   ```
   --
 
@@ -129,6 +134,24 @@ noindex:  true
   ---
 
   ## Branch
+
+  --
+
+  ### Remember the `.gitconfig` file ?
+
+  ```sh
+  $ git config --global push.default current
+  ```
+  or
+
+  ```sh
+  vim .gitconfig
+  ```
+
+  ```sh
+  [push]
+    default = current
+  ```
 
   --
 
@@ -369,6 +392,37 @@ noindex:  true
   ### Sync a fork
 
   Sync a fork of a repository to keep it [up-to-date with the upstream repository](https://help.github.com/articles/syncing-a-fork/).
+
+  --
+
+  ## Automation
+
+  Playing with `hooks`
+
+  --
+
+  ## gitshot
+
+  Hacker sa webcam et jouer avec git c’est swag
+
+  http://davidl.fr/blog/gitshot.html
+
+  --
+
+  ## npm auto install
+
+  ```sh
+  changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+
+  check_run() {
+    echo "$changed_files" | grep --quiet "$1" && eval "$2"
+  }
+  ```
+  ```sh
+  check_run package.json "npm install"
+  ```
+
+  [`npm install` if `package.json is Modified](https://davidwalsh.name/git-hook-npm-install-package-json-modified)
 
   ---
 
