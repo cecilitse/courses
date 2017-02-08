@@ -66,6 +66,10 @@
     color: $white;
   }
 
+  pre {
+    box-shadow: none;
+  }
+
   blockquote {
     width: inherit;
     background: transparent;

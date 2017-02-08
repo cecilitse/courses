@@ -27,3 +27,11 @@
     Dans le cas d’une application web, ce document regroupe tous les composants et tous les cas d’affichages possibles
     (Ex : Palette de couleurs, styles de titres, boutons, pagination, éléments de formulaires…)<br>
     Le guide de style est <strong>LA référence</strong> : développeurs, designers, et même clients peuvent s'y référer tout au long du projet.
+-
+  link:     yarn
+  label:    Front-end
+  color:    warning
+  title:    'Pray for bower'
+  subtitle: |
+    Ou l'état de l'art des gestionnaires de packets JavaScript en 2017. Qui sont-ils ? Quels sont leur réseaux ? Pourquoi et comment est ce qu'ils se livrent une guerre sans merci ?
+    Enquête.
