@@ -34,7 +34,7 @@ noindex:  true
 
   ### package manager
 
-  A package management system is a __collection of software tools that automates the process__ of installing, upgrading, configuring, and removing computer programs for a computer's operating system.
+  A package management system is a __collection of software tools that automates the process__ of installing, upgrading, and removing computer programs for a computer's operating system.
 
   ![](/assets/images/yarn/init-npm-install.gif)
 
@@ -47,7 +47,8 @@ noindex:  true
   - TypeScrip __babel__ coffeescript
   - __Webpack__ grunt gulp Brunch
   - npm bower __yarn__
-  - yeoman browserify
+  - yeoman browserify electron
+  - compile optimize minify __transpile__ _make a bundle_
   - _Typage statique_
 
   --
@@ -96,6 +97,10 @@ noindex:  true
 
   ⭐ 11 000
 
+  `$ apt-get install nodejs`
+
+  `$ brew install nodejs`
+
   --
 
   ### about:npm
@@ -106,17 +111,22 @@ noindex:  true
 
   --
 
+  ### [Getting started](https://docs.npmjs.com/)
+
+  - `$ npm init`
+  - works with `package.json`
+
+  - builds flattened dependencies trees
+  - Fetches the dependencies for each dependency
+  - Back-end stuff
+
+  --
+
   We use Package manager to __find existing code__ or __libraries__.
 
   Like we could install `jQuery`, `React`, `Redux`, `VueJS`, `Redux`… anything from the package manager and __it’s super easy__.
 
-  Just by writing :
-
   `$ npm install <packageName> --save`
-
-  --
-
-  - start with `package.json`
 
   --
 
@@ -126,17 +136,81 @@ noindex:  true
 
   --
 
-  `$ npm list -g --depth=0
+  `$ npm list --global --depth=0`
 
   --
+
+  https://github.com/720kb/ndm
+
+  ![](/assets/images/yarn/ndm.png)
+
+  --
+
+  ### Protip: know your version
 
   🚨
 
   https://github.com/creationix/nvm
 
+  ---
+
+  ## 2012 — bower
+
+  ⭐ 15 000
+
+  `$ npm install bower --global`
+
   --
 
-  ![](/assets/images/yarn/ndm.png)
+  A package manager for the web developers
+
+  ![](/assets/images/yarn/bower.jpg)
+
+  --
+
+  ![](/assets/images/yarn/bower-wikipedia.png)
+
+  --
+
+  ### [Getting started](https://bower.io/#getting-started)
+
+  - `$ bower init`
+  - works with `bower.json`
+
+  - only be one version of a library at the same time in the browser.
+  - builds flattened dependencies trees
+  - manually include sub-dependencies
+  - Front-end stuff
+
+  --
+
+  `$ bower install gulp --save`
+
+  --
+
+  ### 💀 bower ?
+
+  [Is bower dead on reddit](https://www.reddit.com/r/javascript/comments/2rrr3l/is_bowerio_dead_i_keep_being_told_not_to_to_use/)
+
+  ![](/assets/images/yarn/bower-unable-to-find-suitable1.png)
+
+  --
+
+  ### Move to npm only ?
+
+  angular-bootstrap drama
+
+  1. angular-bootstrap was on npm
+  1. silently unpublished
+  1. pushed to npm by a random developer at 0.11 and not 0.12
+
+  [issue #3021](https://github.com/angular-ui/bootstrap/issues/3021)
+
+  --
+
+  ### protip:
+
+  `$ npm search <packageName>`
 
   ---
 
@@ -144,7 +218,11 @@ noindex:  true
 
   --
 
-  ### jspm
+  ### 2013 — [jspm](http://jspm.io/)
+
+  ⭐ 3 400
+
+  `$ npm install -S jspm`
 
   --
 
@@ -165,40 +243,85 @@ noindex:  true
 
   ---
 
-  ## bower
-
-
-  `$ npm install bower --save`
-
-
-  `$ npm install -S jspm`
-  `$ npm install -S npm`
-
+  ## 23 mars 2016
 
   --
 
-  A package manager for the web developers
+  --
 
-  ![](/assets/images/yarn/bower.jpg)
-
-  ![](/assets/images/yarn/bower-wikipedia.png)
+  ##### 💥 React
 
   --
 
-  - start with `bower.json`
-  - only be one version of a library at the same time in the browser.
+  ## 💥 Babel
+
+  --
+
+  ![](/assets/images/yarn/nuke.gif)
+
+  --
+
+  ## [Lawyer](http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/) broke the web
+
+  ![](/assets/images/yarn/lawyer.gif)
+
+  > A patent lawyer sent me an e-mail asking me to unpublish “kik” module from NPM
+  >
+  > — Azer Koçulu
+
+  --
+
+  I have just [liberated my modules](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.x9llyfhns)
+
+  __Power To The People__
+
+  --
+
+  And that's how JavaScript app development works in 2016. ®
 
   ---
 
-  ## Yarn
+  ## 2016 — Yarn
 
-  `$ npm install -S yarnpkg`
+  ⭐ 22 000
+
+  `$ apt-get install yarn`
+
+  `$ brew install yarn`
 
   --
 
-  Fast, reliable, and secure dependency management for JavaScript
+  __Fast__, __reliable__, and __secure dependency__ management
 
   ![](/assets/images/yarn/yarn.jpg)
+
+  --
+
+  ### [Getting started](https://yarnpkg.com/fr/docs/getting-started)
+
+  - start with `package.json` & `yarn.lock`
+  - `$ npm init === yarn init`
+  - `$ npm publish === yarn publish`
+
+  --
+
+  `$ npm install react --save`
+
+  `$ yarn add react`
+
+  --
+
+  > This is unstable software, but Facebook uses it in production. What are you waiting for?
+
+  --
+
+  ### So what's next?
+
+  --
+
+  ### 🌴🔆
+
+  http://davidl.fr/blog/indonesia.html
 
   ---
 
@@ -208,15 +331,12 @@ noindex:  true
 
   --
 
-  ## Q&A
-
   > Good is the enemy of great, but great is the enemy of shipped
+  >
   > — Jeffrey Feldman
-
 
   --
 
-  ### Ressources
+  ## Q&A
 
-  - http://blog.angular-university.io/introduction-to-es6-modularity-the-jspm-package-manager-and-the-systemjs-loader/
-  - https://symbiotics.co.za/is-bower-dead-what-is-jspm-npm-for-client-side/
+  <span>#ChtiJS</span>
