@@ -3,7 +3,7 @@ footer
     p
       = link_to data.settings.website.name, data.settings.website.url, rel: 'nofollow'
       '- Mentions
-      = link_to data.settings.twitter, data.settings.twitter
+      = link_to data.settings.twitter, "https://twitter.com/#{data.settings.twitter}"
       span class="print-link"
         '- Export
         a href="?print-pdf"
