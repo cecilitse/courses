@@ -26,3 +26,15 @@ prototype:
   presentations:
     01-organisation: 'Organisation'
     02-development:  'Développement'
+leadmachine:
+  link:     leadmachine
+  title:    'Lead Machine'
+  label:    Gestion de projet
+  color:    success
+  subtitle: 'Build your fist leads generator website'
+  audience: |
+    Étudiants chez Efficom en 4ème et 5ème année web.
+    Le but est de de donner une vision de création d'application web de façon agile.
+  presentations:
+    01-dev: 'DEV'
+    02-design:  'DESIGN'
