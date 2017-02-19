@@ -1,0 +1,11 @@
+---
+title:    'Lead Machine'
+layout:   presentation
+noindex:  true
+---
+
+h1 Lead Machine
+
+ul
+  - data.courses.leadmachine.presentations.each do |link, name|
+    li = link_to name, "#{link}.html"
