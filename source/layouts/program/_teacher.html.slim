@@ -11,13 +11,8 @@ section class="teacher"
           <span itemprop="jobTitle">Designer & développeur front-end</span>, David accorde une attention particulière à la __qualité du code__, dans le but de créer des __produits évolutifs__ & __respectueux des standards__.
 
           Il partage ses [outils en opensource](http://github.com/flexbox) & ses [bonnes pratiques front-end](http://davidl.fr).
-      p
-        'À la recherche d’un programme de développeur full-satck ? retrouvez le donner des formation à
-        span itemprop="affiliation" itemscope="" itemtype="http://schema.org/Organization"
-          = link_to 'http://www.lewagon.org/lille' do
-            span> itemprop="name" lewagon
-            span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
-              span itemprop="addressLocality" Lille.
+
+      = mail_to "#{data.settings.email}?subject=Demande de Formation&body=Bonjour David, J'aimerais réserver votre intervention dans nos locaux.", 'Réserver une formation', class: 'button large'
 
     .small-3.columns.text-right
       = image_tag 'avatar.png', class: 'teacher--picture'

@@ -18,16 +18,18 @@ section
         - Partage d’expériences
         - Mises en pratique
 
-        Ce site héberge également mes slides de conférences, qui sont en libre accès.
+        Ce site héberge également mes [slides de conférences](/programs/), qui sont en libre accès.
 
-      - data.testimonials.each do |testimonial|
-        .panel
-          p = testimonial.quote
-          .row.collapse
-            .medium-6.columns
-              em
-                => testimonial.name
-                '—
-                = testimonial.job
-            .medium-6.columns.text-right
-              p = testimonial.place
+      .row
+        .medium-10.medium-centered.columns
+          - data.testimonials.each do |testimonial|
+            .panel
+              p = testimonial.quote
+              .row.collapse
+                .medium-6.columns
+                  em
+                    => testimonial.name
+                    '—
+                    = testimonial.job
+                .medium-6.columns.text-right
+                  p = testimonial.place

@@ -33,8 +33,9 @@ leadmachine:
   color:    success
   subtitle: 'Build your fist leads generator website'
   audience: |
-    Étudiants chez Efficom en 4ème et 5ème année web.
-    Le but est de de donner une vision de création d'application web de façon agile.
+    Semaine de spécialisation pour les étudiants chez Efficom en 4ème et 5ème année web.
+    Le but est de de donner une vision de création d'application web de façon agile. Chaque jour une nouvelle notion est abordé, la mise en pratique se fait directement dans la journée.
+    À la fin de la semaine chaque étudiant présente son projet de LEAD MACHINE réalisé pendant la semaine.
   presentations:
     01-dev:    'DEV'
     02-design: 'DESIGN'

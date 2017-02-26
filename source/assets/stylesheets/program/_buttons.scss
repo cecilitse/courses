@@ -1,22 +1,21 @@
 .button {
-  text-shadow: none;
-  &:hover {
-    text-shadow: 0px 1px 1px rgba($black, 0.2);
-  }
-}
+  text-shadow: 0px 1px 1px rgba($black, 0.2);
 
-.button {
+  &.large {
+    color: $white;
+  }
+
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
   transition-duration: 300ms;
-  transition-property: all;
+  transition-property: transform;
   &:hover,
   &:focus,
   &:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
