@@ -1,4 +1,10 @@
 -
+  link:     jquery
+  label:    Front-end
+  color:    warning
+  title:    'jQuery 101'
+  subtitle: 'Cours sur JavaScript et jQuery à destination des étudiants en DUT informatique'
+-
   link:     middleman
   label:    Front-end
   color:    warning
