@@ -1,10 +1,13 @@
-section class="teacher"
-  div class="row"
-    div class="small-12 columns"
+section.teacher
+  .row
+    .small-12.columns
       hr
-      h2 Intervenant
   div class="row teacher--description" itemscope="" itemtype="http://schema.org/Person"
+    .small-3.columns.text-right
+      = image_tag 'avatar.png', class: 'teacher--picture'
+
     .small-9.columns
+      h2 Intervenant
       h3 itemprop="name" = data.settings.name
       p
         markdown:
@@ -14,8 +17,6 @@ section class="teacher"
 
       = mail_to "#{data.settings.email}?subject=Demande de Formation&body=Bonjour David, J'aimerais réserver votre intervention dans nos locaux.", 'Réserver une formation', class: 'button large'
 
-    .small-3.columns.text-right
-      = image_tag 'avatar.png', class: 'teacher--picture'
   div class="row"
     div class="small-12 columns"
       hr

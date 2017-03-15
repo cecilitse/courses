@@ -41,3 +41,10 @@
   subtitle: |
     Ou l'état de l'art des gestionnaires de packets JavaScript en 2017. Qui sont-ils ? Quels sont leur réseaux ? Pourquoi et comment est ce qu'ils se livrent une guerre sans merci ?
     Enquête.
+-
+  link:     devtools
+  label:    Front-end
+  color:    warning
+  title:    'Debug your design likeaboss'
+  subtitle: |
+    Bonnes pratiques et Outils pour les designers Front-end. Talk donné lors d'un Meetup exclusif dans les locaux de Google à Bruxelles.
