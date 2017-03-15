@@ -1,10 +1,10 @@
 ---
-title:    'Pray for bower'
+title:    'Chrome DevTools'
 layout:   presentation
 noindex:  false
 ---
 
-| # Debug your design likeaboss
+| # Debug your Design likeaboss
 
   <span>#FE Web - Brussels - March 16th 2017</span>
 
@@ -25,10 +25,11 @@ noindex:  false
   ## Today we will be covering
 
   - Previously on FE Web
-  - Debug your Design
-  - Webperf matters
-  - DevTools enhanced edition
-  - DevTools add-ons
+  - Debug your __Design__
+  - Test your __Responsive Design__
+  - __Webperf__ matters
+  - DevTools __Enhanced Edition__
+  - DevTools __add-ons__
 
   --
 
@@ -44,23 +45,26 @@ noindex:  false
 
   --
 
-
   ![David Leuliette DevTools talk](/assets/images/devtools/elements.png)
-
 
   ---
 
   ## INTRODUCTION
 
-  Browser Development / Debug Tools
+  --
 
-  [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+  ### [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+
+  `Cmd` + `Opt` + `I` 
 
   - Device Mode
   - Elements panel
-
-
-  `Cmd` + `Opt` + `I` (Mac)
+  - Console panel
+  - Network panel
+  - Performance panel (previously Timeline panel)
+  - Memory panel (previously Profiles panel)
+  - Application panel (previously Resources panel)
+  - Security panel
 
   ---
 
@@ -68,45 +72,51 @@ noindex:  false
 
   --
 
-  __tab:__ Elements
+  Take your [descisions in the Browser](http://davidl.fr/blog/fin-psd.html)
+
+  Use Browser Development / Debug Tools
+
+  ![Photoshop is not efficient](http://farm8.staticflickr.com/7352/12809516183_ae080d369b_o.jpg)
 
   --
 
-  ### Color
+  ### __tab:__ Elements
 
-  __protip:__ Hit `SHIFT`
+  #### HTML markup
 
-  --
-
-  ### Responsive Design Mode
-
-  https://developer.mozilla.org/en-US/docs/Tools
-
-  alt + cmd + m
+  __💡 protip:__ Use the arrows keys
 
   --
 
-  ### :warn: touch != clic
+  ### __tab:__ Elements
+
+  #### Color
+
+  __💡 protip:__ Hit `SHIFT`
 
   --
 
-  ### Test on real Device
+  ### __tab:__ Elements
 
-  https://developer.apple.com/safari/tools/
-  safari devtools
-  Développement > simulator
+  #### States
 
-  ![David Leuliette DevTools talk](/assets/images/devtools/ios-simulator.png)
+  __💡 protip:__ try `:hover`, `:active`, `:before`, `:after`
 
   --
 
-  ### Next level ?
+  ### __tab:__ Elements
 
-  http://vorlonjs.com/
+  #### shadow
+
+  __💡 protip:__ works for `text-shadow` && `box-shadow`
 
   --
 
-  ### animations
+  ### __tab:__ Elements
+
+  #### transition & CSS animations
+
+  ![](/assets/images/devtools/css-animation.gif)
 
   --
 
@@ -115,39 +125,90 @@ noindex:  false
   - paint flash
   - fps metter
 
-  avoid the repaint like a plague
+  --
 
-  demo time button:hover
+  ### Avoid the reflow like a plague
 
+  [Border image reflow](https://farm3.staticflickr.com/2922/14234595522_c68157e017_o.jpg)
+
+  ---
+
+  ## RESPONSIVE DESIGN
+
+  --
+
+  ### Responsive Design Mode
+
+  😍 [FirefoxDeveloperTools](https://developer.mozilla.org/en-US/docs/Tools)
+
+  `alt` + `cmd` + `m`
+
+  --
+
+  ### 🚨 touch != clic
+
+  ![David Leuliette DevTools talk](/assets/images/devtools/touch.png)
+
+  --
+
+  ### Test on real Device
+
+  [Safari devtools](https://developer.apple.com/safari/tools/)
+
+  ![David Leuliette DevTools talk](/assets/images/devtools/ios-simulator.png)
+
+  `Développement` > `simulator`
+
+  --
+
+  <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/2NHtfp7Owxo?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+  --
+
+  ### Next level ?
+
+  [http://vorlonjs.com/](http://vorlonjs.com/)
 
   ---
 
   ## WEBPERF
 
-  Analyse et debug webperf
+  --
 
+  ### __tab:__ Network
 
+  See time to first rendering
 
-  ### Network
+  __💡 protip:__ automatic screenshots
 
-  > see time to first rendering
-  DOM Performance Tools:
+  --
+
+  ### __tab:__ Performance
+
+  DOM
 
   * Chrome DevTools Timeline
 
+  Try to start rendering time under 1 second
+
+  --
+
   ### timeline tool
 
-  start rendering time under 1 second
-
-  > screenshot
-
   https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool
+
+  --
 
   ### performance checklist
 
   Progressive Web App
 
   > Offline responsive Responsive website on steroïds + Notifications
+
+  --
+
+  https://serviceworker-rails.herokuapp.com/manifest.json
+
   https://serviceworker-rails.herokuapp.com/push-simple/
 
   https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps
@@ -159,57 +220,83 @@ noindex:  false
 
   ## DEVTOOLS ENHANCED EDITION
 
-  ### UI reference
+  --
 
-  settings
-  https://developers.google.com/web/tools/chrome-devtools/ui
+  ### [Change the DevTools UI](https://developers.google.com/web/tools/chrome-devtools/ui)
 
-  ### shortcuts
+  `more` > `settings`
 
-  https://developers.google.com/web/tools/chrome-devtools/shortcuts
+  `more` > `more`
 
+  --
 
+  - Reorder panel tabs
+
+  - Change DevTools placement
+
+  --
+
+  ### [shortcuts](https://developers.google.com/web/tools/chrome-devtools/shortcuts)
+
+  ![](/assets/images/devtools/shortcut.png)
 
   ---
 
   ## DEVTOOLS ADD-ONS
 
-  chrome://chrome-urls/
-  chrome://extensions/
+  --
 
-  ### Open Graph Preview
-  https://chrome.google.com/webstore/detail/open-graph-preview/ehaigphokkgebnmdiicabhjhddkaekgh
+  [chrome://extensions/](chrome://extensions/)
 
-  ### font face ninja
-  https://fontface.ninja/
+  <small>[chrome://chrome-urls/](chrome://chrome-urls/)</small>
 
-  Protip: allow extension on private mode
-  http://recordit.co/LDtGIvGZV3.gif
+  --
 
-  ### lighthouse
-  https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
+  ### [Open Graph Preview](https://chrome.google.com/webstore/detail/open-graph-preview/ehaigphokkgebnmdiicabhjhddkaekgh)
 
+  --
 
+  ### [font face ninja](https://fontface.ninja/)
+
+  --
+
+  __💡 protip:__ allow extension on private mode
+
+  ![](/assets/images/devtools/private-mode.gif)
+
+  --
+
+  ### [lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 
   ---
 
   ## NEXT ?
 
-  Try the hacker mode
+  --
 
-  atom
-  alt + cmd + i
+  ### Try the hacker mode
 
-  youtube.com
-  https://twitter.com/wesbos/status/827268492936114176
+  __atom__
 
+  `alt` + `cmd` + `i`
 
+  --
+
+  ### Try the hacker mode
+
+  __youtube.com__
+
+  `alt` + `cmd` + `j`
+
+      $('video').currentTime = $('video').duration
 
   ---
 
-  ## Conclusion
+  ## CONCLUSION
 
-  Know your tools and level up with them
+  --
+
+  ### Know your tools and level up with them
 
   [@ChromeDevTools](https://twitter.com/ChromeDevTools) on Twitter
 
@@ -219,4 +306,8 @@ noindex:  false
 
   ## Q&A
 
-  <span>#ChtiJS</span>
+  You can share the link
+
+  [http://courses.davidl.fr/presentations/devtools](http://courses.davidl.fr/presentations/devtools)
+
+  [@_flexbox](https://twitter.com/_flexbox)
