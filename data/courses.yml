@@ -3,7 +3,7 @@ git_github:
   title:    'Git & GitHub'
   label:    Git
   color:    secondary
-  subtitle: "Comment travailler de façon collaborative entre plusieurs personnes ? Avec une solution comme git !<br>Ce programme peut s'étaller sur 3 jours, du débutant jusqu'au problématiques avancées."
+  subtitle: "Comment travailler de façon collaborative entre plusieurs personnes ? Avec une solution comme git !"
   audience: |
     Les personnes travaillant avec un outil informatique, créents des fichiers,
     sauvegardent des fichiers, éditent des fichiers…<br>
@@ -33,7 +33,7 @@ leadmachine:
   color:    success
   subtitle: 'Build your fist leads generator website'
   audience: |
-    Semaine de spécialisation pour les étudiants chez Efficom en 4ème et 5ème année web.
+    Semaine de spécialisation pour les étudiants en 4ème et 5ème année web.
     Le but est de de donner une vision de création d'application web de façon agile. Chaque jour une nouvelle notion est abordé, la mise en pratique se fait directement dans la journée.
     À la fin de la semaine chaque étudiant présente son projet de LEAD MACHINE réalisé pendant la semaine.
   presentations:
@@ -42,3 +42,16 @@ leadmachine:
     03-api:    'API'
     04-growth: 'GROWTH'
     05-build:  'BUILD'
+robotsinmarch:
+  link:     robotsinmarch
+  title:    'Robots in March'
+  label:    chatbot
+  color:    danger
+  subtitle: 'Add traction for your product & ask customer feedback'
+  audience: ''
+  presentations:
+    01-dev:     'DEV'
+    02-design:  'DESIGN'
+    03-agile:   'AGILE'
+    04-chatbot: 'CHATBOT'
+    05-build:   'BUILD'
