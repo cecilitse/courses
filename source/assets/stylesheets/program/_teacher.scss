@@ -6,20 +6,6 @@
   li    { margin-left: 0; }
 }
 
-.teacher--description {
-  a {
-    padding: 0 2px;
-    color: $body-font-color;
-    border-bottom: 1px solid $body-font-color;
-
-    &:hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $white;
-    }
-  }
-}
-
 .teacher--picture {
   width: 10em ;
   border-radius: 100%;
