@@ -1,0 +1,507 @@
+---
+title:    'Chrome DevTools'
+layout:   presentation
+noindex:  false
+---
+
+| # How to<br> love / hate / use <br>the asset pipeline
+
+  <span>Ruby Nord - Avril 2017</span>
+
+  ---
+
+  ## /whois
+
+  #### David Leuliette <small>aka</small> [@_flexbox](https://twitter.com/_flexbox)
+
+  <small>Consultant Front-end developer</small>
+
+  <div class="presentation--avatar">
+    ![Front-end developper David Leuliette](/assets/images/avatar.png)
+  </div>
+
+  --
+
+  ## Today we will be covering
+
+  - How works the asset pipeline
+  - Sprockets & gems
+  - JavaScript & Webpack
+
+  ---
+
+  ## INTRODUCTION
+
+  --
+
+  > Where should I put my assets ?
+
+  --
+
+  ### Ruby on Rails
+
+  😍
+
+  Convention over configuration
+
+  --
+
+  ### `public/*`
+
+  --
+
+  ### Me aka the front-end guy
+
+  😭
+
+  - Corde organisation
+  - Performance
+  - Http request
+
+  --
+
+  ### Technology hype
+
+  - `CoffeeScript`
+  - `Sass`
+  - `ES6`
+
+  --
+
+  ### Rails 3.1
+
+  🌟
+
+  Sprockets as an __asset pipeline__
+
+  <small>51 000 000 downloads</small>
+
+  --
+
+  ### [Asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+
+  The asset pipeline provides a framework to __concatenate and minify__ or compress `JavaScript` and `CSS` assets.
+
+  Write these assets in other languages and __pre-processors__ such as `CoffeeScript`, `Sass` and `ERB`.
+
+  Automatically combined all assets from other gems.
+  <small>For example, `jquery-rails` includes a copy of `jquery.js` and enables AJAX features in Rails.</small>
+
+  --
+
+  ### gems
+
+  - `sprockets`
+  - `sprockets-rails`
+  - `sass-rails`
+  - `execjs`
+  - `coffee-rails`
+
+  ---
+
+  ## `gem sprockets`
+
+  --
+
+  ### Where should I put my assets ?
+
+  - `app/assets/stylesheets/*`
+  - `app/assets/javascripts/*`
+  - `app/assets/images/*`
+
+  <br>
+
+  - `lib/assets/*`
+  - `vendor/assets/*`
+
+  --
+
+  __Compiled on the fly__ in developement
+
+  Need to be __precompiled for production__
+
+  __Cache busting__ with SHA1
+
+  --
+
+  ### How it works ?
+
+  --
+
+  ### [sprockets](https://github.com/rails/sprockets)
+
+  - processors
+  - transformers
+  - compressors
+  - directives
+  - environment
+  - manifest
+  - pipeline
+
+  --
+
+  __Processors__
+
+  🎩✨
+
+  Where magic happens
+
+  --
+
+  # BREAKING NEWS
+
+  --
+
+  > You don't need semicolons in JavaScript files
+
+  --
+
+  ```ruby
+  -> (input) {
+    data = input[:data].gsub(";","")
+    { data: data }
+  }
+  ```
+
+  --
+
+  __Builtin processors__
+
+  - BabelProcessor
+  - CoffeScriptProcessor
+  - SassProcessor
+
+  --
+
+  __Stylesheet__
+  ```sass
+  @import "my-style.scss";
+  ```
+
+  __JavaScript__
+  ```coffeescript
+  //= require my-script.js
+  ```
+  --
+
+  ### Note — Sass architecture `application.scss`
+
+  ![](/assets/images/sprockets/sass-wallpaper_huge.jpg)
+
+  --
+
+  ### [sprockets](https://github.com/rails/sprockets)
+
+  - ~~processors~~
+  - __transformers__
+  - compressors
+  - directives
+  - environment
+  - manifest
+  - pipeline
+
+  --
+
+  __Transformers__
+
+  🚐 > 🚤
+
+  CoffeeScript > JavaScript
+
+  ERB > HTML
+
+  Sass > CSS
+
+  --
+
+  ### [sprockets](https://github.com/rails/sprockets)
+
+  - ~~processors~~
+  - ~~transformers~~
+  - __compressors__
+  - directives
+  - environment
+  - manifest
+  - pipeline
+
+  --
+
+  __Compressors__
+
+  ```ruby
+  env.js_compressor = :uglify
+  ```
+
+  --
+
+  ### [sprockets](https://github.com/rails/sprockets)
+
+  - ~~processors~~
+  - ~~transformers~~
+  - ~~compressors~~
+  - __directives__
+  - environment
+  - manifest
+  - pipeline
+
+  --
+
+  __Directives__
+
+  __JavaScript__
+  ```
+  // app/assets/javascript/application.js
+  ```
+  ```coffeescript
+  //= require jquery
+  //= require jquery-ui
+  //= require dashboard
+  //= require_tree .
+  ```
+
+  --
+
+  __Directives__
+
+  ```Ruby
+  # Precompile additional assets.
+  # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+  # Rails.application.config.assets.precompile += %w( search.js )
+  ```
+
+  ![](/assets/images/sprockets/website-search.png)
+
+  --
+
+  ### [sprockets](https://github.com/rails/sprockets)
+
+  - ~~processors~~
+  - ~~transformers~~
+  - ~~compressors~~
+  - ~~directives~~
+  - __environment__
+  - manifest
+  - pipeline
+
+  --
+
+  __Environment__
+
+  ```html
+  <%= javascript_include_tag 'application' %>
+  script src="/assets/application-a1353b05aac9345e989485be516716744c4a0381309afc59737ad80ea5d7310a.js"
+  ```
+  --
+
+  __Environment__
+
+  ```json
+  { "application-a1353b05aac9345e989485be516716744c4a0381309afc59737ad80ea5d7310a.js"  =>
+    { 'logical_path' =>  "application.js",
+      'mtime' =>  "2012-12-12-13T21:47:08-06:00",
+      'digest' =>  "a1353b05aac9345e989485be516716744c4a0381309afc59737ad80ea5d7310a" } }
+  ```
+
+  --
+
+  __Environment__
+
+  `dev` Test your assets with .map files
+
+  🌪 Precompile, minify, concat files
+
+  `prod` Deploy your assets on a CDN
+
+  --
+
+  There is more…
+
+  - Build your own npm directive
+  - Transform SVG to PNG files
+
+  ---
+
+  ## `gem sprockets-rails`
+
+  --
+
+  > Integrate sprockets in Rails applications
+
+  --
+
+  ### Checks the precompile list
+
+  ![](/assets/images/sprockets/asset-precompile.png)
+
+  --
+
+  ## `gem sass-rails`
+
+  Configure Sass processor
+
+  --
+
+  🤔
+
+  ~~~sass
+  @import "foo/*";
+  // bar.scss.erb;
+  @import "bar";
+  ~~~
+
+  --
+
+  ## `gem execjs`
+
+  Allow you to run JavaScript files code from Ruby
+
+  --
+
+  Use the JavaScript environment available in the machine
+
+  - therubyracer — Google v8 embedded with Ruby
+  - therubyrhino — Mozilla Rhino embedded with JRuby
+  - Node.js
+  - Duktape.rb — JavaScript interpreter
+
+  --
+
+  💥
+
+  --
+
+  ![](/assets/images/sprockets/dhh-tweet.png)
+
+  ---
+
+  ## JavaScript
+
+  --
+
+  ## JavaScript<br>in 2017
+
+  --
+
+  ![](/assets/images/sprockets/javascript-tourist.jpg)
+
+  --
+
+  __The problem__
+
+  JavaScript in a gem approach
+
+  --
+
+  ### Gemfile
+
+  gem 'jquery-rails'
+
+  😭
+
+  Slooooooooow
+
+  --
+
+  ### `vendor/assets/JavaScript`
+
+  😑
+
+  Nightmare dependency
+
+  --
+
+  ### [Rails-assets](https://rails-assets.org/)
+
+  💀
+
+  JavaScript ▶ bower ▶ Convert in a gem ▶ RubyGem
+
+  See [Pray for bower](http://courses.davidl.fr/presentations/yarn/#/)
+
+  --
+
+  ### Rails 4.1+
+
+  webpack and yarn 🚚✨
+
+  ~~~bash
+  $ brew install yarn
+  ~~~
+
+  --
+
+  ### [gem webpacker](https://github.com/rails/webpacker)
+
+  Use Webpack to manage app-like JavaScript modules in Rails
+
+  --
+
+  #### Getting started
+
+  ~~~bash
+  $ rails g controller static_pages home
+  ~~~
+
+  routes.rb
+
+  `root to: 'static_pages#home'`
+
+  --
+
+  #### Install webpacker
+
+  `gem 'webpacker'`
+
+  ~~~bash
+  $ bin/rails webpacker:install
+  ~~~
+
+  --
+
+  - binstubs for yarn, webpack and webpack watcher
+  - app/javascript folder
+  - config/webpack
+  - node_modules, package.json and yarn.lock in /vendor
+
+  --
+
+  add `<%= javascript_pack_tag 'application' %>` to `application.html.erb`
+
+
+  --
+
+  ### Next ?
+
+  ~~~bash
+  $ bin/rails webpacker:install:react
+  ~~~
+
+  ~~~bash
+  $ bin/yarn add new_package
+  ~~~
+
+  ---
+
+  ## CONCLUSION
+
+  --
+
+  ### Plumbing is complicated and takes time
+
+  --
+
+  ### DOCS
+
+  - [saving sprockets](http://schneems.com/2016/05/31/saving-sprockets.html)
+  - [integrating webpack & ES6 into an existing rails app](http://www.railsonmaui.com/blog/2014/10/03/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/)
+  - [webpacker & rails](https://medium.com/@thomasroest/modern-javascript-ruby-on-rails-with-rails-webpacker-5b1c48fa3a78)
+
+  --
+
+  ## Q&A
+
+  You can share the link
+
+  [http://courses.davidl.fr/presentations/sprockets](http://courses.davidl.fr/presentations/sprockets)
+
+  [@_flexbox](https://twitter.com/_flexbox)

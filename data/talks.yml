@@ -48,3 +48,10 @@
   title:    'Debug your design likeaboss'
   subtitle: |
     Bonnes pratiques et Outils pour les designers Front-end. Talk donné lors d'un Meetup exclusif dans les locaux de Google à Bruxelles.
+-
+  link:     sprockets
+  label:    Ruby on Rails
+  color:    alert
+  title:    'How to love / hate / use the asset pipeline'
+  subtitle: |
+    All applications have assets like CSS, JavaScript and others. That means the asset pipeline is an integral part of the Ruby on Rails framework.
