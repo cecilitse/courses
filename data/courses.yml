@@ -47,7 +47,7 @@ robotsinmarch:
   title:    'Robots in March'
   label:    chatbot
   color:    danger
-  subtitle: 'Add traction for your product & ask customer feedback'
+  subtitle: 'Add Inboud marketing strategy for your product and <strong>build a chatbot</strong> for helping your customers — <em>the hacker way</em>'
   audience: ''
   presentations:
     01-dev:     'DEV'

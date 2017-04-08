@@ -13,8 +13,8 @@ noindex:  true
   - Prerequisites
   - Markdown EVERYTHING
   - Best practices
-  - Project
   - Fix issues
+  - Automation with `hooks`
 
   ---
 
@@ -215,20 +215,44 @@ noindex:  true
 
   ---
 
-  ## Project
-
-  --
-
   ## Milestones
 
   Track the progress of issues and pull requests
 
   --
 
-  ### Kanban
+  Milestones are used to __track the progress of issues and pull requests__. They contain issues related by time, and not necessarily related by subject. The scope of work is fixed once a sprint begins.
 
-  ![agile way](/assets/images/git/project.png)
+  ---
 
+  ## Automation
+
+  Playing with `hooks`
+
+  --
+
+  ## gitshot
+
+  📸
+
+  [Hack your webcam & take picures](http://davidl.fr/blog/gitshot.html)
+
+  --
+
+  ## npm auto install
+
+  ```sh
+  changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+
+  check_run() {
+    echo "$changed_files" | grep --quiet "$1" && eval "$2"
+  }
+  ```
+  ```sh
+  check_run package.json "npm install"
+  ```
+
+  [`npm install` if `package.json is Modified](https://davidwalsh.name/git-hook-npm-install-package-json-modified)
 
   ---
 
@@ -239,5 +263,7 @@ noindex:  true
   ---
 
   ## Happy Hacking!
+
+  🎁
 
   Download your [git-cheat-sheet](https://education.github.com/git-cheat-sheet-education.pdf)

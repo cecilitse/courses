@@ -1,0 +1,11 @@
+---
+title:    'Robots in march'
+layout:   presentation
+noindex:  true
+---
+
+h1 Robots in march
+
+ul
+  - data.courses.robotsinmarch.presentations.each do |link, name|
+    li = link_to name, "#{link}.html"
