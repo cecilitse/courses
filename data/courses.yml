@@ -28,7 +28,7 @@ prototype:
     02-development:  'Développement'
 leadmachine:
   link:     leadmachine
-  title:    'Lead Machine'
+  title:    'Workshop Lead Machine'
   label:    Gestion de projet
   color:    success
   subtitle: 'Build your fist leads generator website'
@@ -44,7 +44,7 @@ leadmachine:
     05-build:  'BUILD'
 robotsinmarch:
   link:     robotsinmarch
-  title:    'Robots in March'
+  title:    'Workshop Chatbot'
   label:    chatbot
   color:    danger
   subtitle: 'Add Inboud marketing strategy for your product and <strong>build a chatbot</strong> for helping your customers — <em>the hacker way</em>'

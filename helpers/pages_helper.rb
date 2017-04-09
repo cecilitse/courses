@@ -8,6 +8,11 @@ module PagesHelper
   end
 
   def current_page_title
-    current_course? ? "Formation #{current_course_data.title}" : current_page.data.title
+    current_course? ? "#{current_course_data.title}" : current_page.data.title
   end
+
+  def host_url(url)
+    data.settings.site.url + url
+  end
+
 end
