@@ -52,6 +52,6 @@ robotsinmarch:
   presentations:
     01-dev:     'DEV'
     02-design:  'DESIGN'
-    03-agile:   'AGILE'
-    04-chatbot: 'CHATBOT'
+    03-chatbot: 'CHATBOT'
+    04-agile:   'AGILE'
     05-build:   'BUILD'
