@@ -1,0 +1,138 @@
+// SETTINGS
+
+$window-width: 600px;
+$window-height: 300px;
+
+$top-bar-height: 20px;
+
+$browser-white:      #F1F1F1;
+$browser-gray-light: #E6E6E6;
+$browser-gray:       #CCCCCC;
+
+$red: #fc635e;
+$red-dark: #dc4441;
+$yellow: #fdbc40;
+$yellow-dark: #db9c31;
+$green: #35cd4b;
+$green-dark: #24a732;
+
+
+
+// MIXINS
+
+@mixin css-triangle(
+  $triangle-size,
+  $triangle-color,
+  $triangle-direction
+) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+  position: absolute;
+  @if ($triangle-direction == right) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+    border-right-width: 0;
+    right: -$triangle-size;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+    border-left-width: 0;
+    left: -$triangle-size;
+  }
+}
+
+@mixin button-radius($bg, $border){
+  background-color: $bg;
+  border: 1px solid $border;
+}
+
+
+
+// BROWSER
+
+.browser {
+  background-color: $browser-white;
+  width: $window-width;
+  height: $window-height;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.top-bar {
+  &--buttons {
+    height: $top-bar-height;
+    background-color: $browser-gray;
+    padding-left: 5px;
+    i {
+      width: 8px;
+      height: 8px;
+      display: block;
+      margin: 5px 0 0 5px;
+      border-radius: 100%;
+      float: left;
+    }
+    .red {
+      @include button-radius($red, $red-dark);
+    }
+    .yellow {
+      @include button-radius($yellow, $yellow-dark);
+    }
+    .green {
+      @include button-radius($green, $green-dark);
+    }
+  }
+  &--tabs {
+    position: relative;
+    .tab {
+      position: absolute;
+      height: 15px;
+      background: $browser-gray-light;
+      width: 150px;
+      top: -15px;
+      left: 80px;
+      &::before {
+        @include css-triangle(16px, $browser-gray-light, left);
+      }
+      &::after {
+        @include css-triangle(16px, $browser-gray-light, right);
+      }
+    }
+  }
+  &--url {
+    background-color: $browser-gray-light;
+    height: $top-bar-height;
+  }
+}
+
+.screenshot {
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+// DECORATION
+
+.browser {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -($window-width / 2);
+  transition: bottom 300ms ease-in-out;
+  &:hover {
+    bottom: 0px;
+  }
+}
+
+.browser-container {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}

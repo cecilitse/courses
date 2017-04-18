@@ -1,7 +1,4 @@
 section.teacher
-  .row
-    .small-12.columns
-      hr
   div class="row teacher--description" itemscope="" itemtype="http://schema.org/Person"
     .small-3.columns.text-right
       = image_tag 'avatar.png', class: 'teacher--picture'
@@ -11,23 +8,8 @@ section.teacher
       h3 itemprop="name" = data.settings.name
       p
         markdown:
-          <span itemprop="jobTitle">Designer & développeur front-end</span>, David accorde une attention particulière à la __qualité du code__, dans le but de créer des __produits évolutifs__ & __respectueux des standards__.
+          <span itemprop="jobTitle">Designer & développeur front-end</span>, David accorde une attention particulière à la __qualité du code__, dans le but de créer des __produits évolutifs__ & __respectueux des standards__ du web open source.
 
           Il partage ses [outils en opensource](http://github.com/flexbox) & ses [bonnes pratiques front-end](http://davidl.fr).
 
       = mail_to "#{data.settings.email}?subject=Demande de Formation&body=Bonjour David, J'aimerais réserver votre intervention dans nos locaux.", 'Réserver une formation', class: 'button large'
-
-  div class="row"
-    div class="small-12 columns"
-      hr
-  div class="row teacher--contact"
-    div class="small-12 medium-8 columns"
-      ul class="no-bullet"
-        li David Leuliette
-
-    div class="small-12 medium-4 columns footer--contact--details"
-      ul class="no-bullet"
-        li
-          = mail_to data.settings.email, data.settings.email
-        li
-          = link_to data.settings.website.name, data.settings.website.url

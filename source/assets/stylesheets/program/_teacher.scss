@@ -1,9 +1,6 @@
-.teacher--contact {
-  font-size: 0.80em;
-
-  a     { color: $body-font-color; }
-  ul, p { font-size: 1em; }
-  li    { margin-left: 0; }
+.teacher {
+  padding-top: 40px;
+  background-color: $gray;
 }
 
 .teacher--picture {
