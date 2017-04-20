@@ -4,11 +4,12 @@ var path = require('path');
 module.exports = {
   entry: {
     default: './source/assets/javascripts/default.js',
-    presentation: './source/assets/javascripts/presentation.js'
+    presentation: './source/assets/javascripts/presentation.js',
+    reveal_plugins: './source/assets/javascripts/presentation/reveal_plugins.js'
   },
   output: {
     path: __dirname + "/.tmp/dist/",
-    filename: "javascripts/[name].bundle.js",
+    filename: "assets/javascripts/[name].bundle.js",
   },
   module: {
     loaders: [

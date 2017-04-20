@@ -3,17 +3,18 @@ import { jQuery, $ } from 'jquery';
 window.$ = $;
 window.jQuery = jQuery;
 
-// FIXME
-//= require reveal.js/lib/js/head.min
-//= require reveal.js/js/reveal
+import head from 'reveal.js/lib/js/head.min';
+import Reveal from 'reveal.js/js/reveal';
 
+// Initialization
 Reveal.initialize({
   history: true,
   dependencies: [
     {
-      src:        "<%= asset_path(:js, 'presentation/reveal_plugins.js') %>",
-      condition:  function() { return true },
-      callback:   function() { hljs.initHighlightingOnLoad(); }
+      src: "/assets/javascripts/reveal_plugins.bundle.js",
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
     }
   ]
 });
@@ -22,7 +23,7 @@ if (window.location.search.match(/print-pdf/gi)) {
   var link  = document.createElement('link');
   link.rel  = 'stylesheet';
   link.type = 'text/css';
-  link.href = "<%= asset_path(:css, 'presentation/print.css') %>";
+  link.href = "/assets/stylesheets/presentation/print.css";
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }

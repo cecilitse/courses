@@ -21,7 +21,7 @@ activate :external_pipeline,
   source: '.tmp/dist',
   latency: 1
 
-activate :livereload
+# activate :livereload
 activate :protect_emails
 
 configure :build do
