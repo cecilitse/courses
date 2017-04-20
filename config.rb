@@ -6,7 +6,6 @@ set :js_dir,     'assets/javascripts'
 
 ignore '*.tmpl.html.slim'
 
-# activate :bower
 activate :autoprefixer
 
 activate :deploy do |deploy|
