@@ -31,6 +31,7 @@ configure :build do
     config.sass_options = { line_comments:  false }
   end
 
+  activate :asset_hash
   activate :gzip
   activate :minify_css
   activate :minify_html, remove_input_attributes: false
