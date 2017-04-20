@@ -4,8 +4,9 @@
 @import "default/settings";
 
 @import "compass/layout.scss";
-@import "foundation/scss/normalize";
-@import "foundation/scss/foundation";
+
+@import "foundation-sites/scss/normalize";
+@import "foundation-sites/scss/foundation";
 
 @import "default/layout";
 @import "default/print";

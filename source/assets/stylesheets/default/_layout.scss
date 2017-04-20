@@ -34,9 +34,6 @@ header {
   }
 
   .home-icon {
-    @extend .fa;
-    @extend .fa-home;
-
     color: $title-color;
     font-size: 1.5em;
     margin-top: 1em;
