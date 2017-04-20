@@ -1,0 +1,9 @@
+{
+  "name": "courses",
+  "version": "0.1.0",
+  "description": "Yarn package for Cecilitse's courses website",
+  "main": "all.bundle.js",
+  "repository": "git@github.com:cecilitse/courses.git",
+  "author": "Cecile Veneziani <contact@cecilitse.org>",
+  "license": "GPL"
+}
