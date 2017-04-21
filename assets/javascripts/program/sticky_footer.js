@@ -1,1 +1,0 @@
-(function(){var t;t=function(){var t,i,n;return t=$("footer"),n=t.position(),i=$(window).height(),i-=n.top,i-=t.height(),i>0?t.css({"margin-top":i+"px"}):void 0},$(function(){return t()})}).call(this);
