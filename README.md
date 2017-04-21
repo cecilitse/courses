@@ -11,7 +11,7 @@ This project also generates PDF course documents.
 ### Requirements
 
 - Python & [virtualenvs](https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst)
-- NodeJS & Bower
+- NodeJS & Yarn
 - Ruby & Bundler
 
 ### Installation
@@ -20,7 +20,7 @@ Install WeasyPrint:
 
 ```sh
 $ virtualenv .venv
-$ source .env
+$ source .py-env
 $ pip install weasyprint
 ```
 
@@ -30,10 +30,10 @@ Install required gems:
 $ bundler install
 ```
 
-Install default `bower_components`:
+Install default yarn packages:
 
 ```sh
-$ bower install
+$ yarn install
 ```
 
 ### Usage

@@ -28,6 +28,6 @@ section class="teacher"
             a href="mailto:#{data.settings.email}"
               = data.settings.email
           - else
-            a href="#" class="j-contact"
+            = mail_to data.settings.email
         li
           = link_to data.settings.website.name, data.settings.website.url

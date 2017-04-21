@@ -1,0 +1,19 @@
+{
+  "name": "courses",
+  "version": "0.1.0",
+  "description": "Yarn package for Cecilitse's courses website",
+  "main": "all.bundle.js",
+  "repository": "git@github.com:cecilitse/courses.git",
+  "author": "Cecile Veneziani <contact@cecilitse.org>",
+  "license": "GPL",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "foundation-sites": "5.5.2",
+    "jquery": "^3.2.1",
+    "reveal.js": "3.1.0",
+    "script-loader": "^0.7.0",
+    "webpack": "^2.4.1"
+  }
+}

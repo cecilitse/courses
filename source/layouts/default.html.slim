@@ -1,8 +1,10 @@
 doctype html
 html lang="fr"
   head
-    = partial             'layouts/shared/meta_tags'
-    = favicon_tag         'favicon.ico'
+    = partial     'layouts/shared/meta_tags'
+    = favicon_tag 'favicon.ico'
+
+    link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     = stylesheet_link_tag 'default'
 
     = yield_content(:head)
@@ -12,5 +14,4 @@ html lang="fr"
     main
       = yield
     = partial 'layouts/default/footer'
-    = javascript_include_tag 'default'
-
+    = javascript_include_tag 'default.bundle'

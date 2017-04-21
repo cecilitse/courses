@@ -1,3 +1,3 @@
-//= require reveal.js/plugin/highlight/highlight
-//= require reveal.js/plugin/markdown/marked
-//= require reveal.js/plugin/markdown/markdown
+require('script-loader!reveal.js/plugin/highlight/highlight.js');
+require('script-loader!reveal.js/plugin/markdown/marked.js');
+require('script-loader!reveal.js/plugin/markdown/markdown.js');

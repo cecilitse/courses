@@ -1,3 +1,4 @@
 /.bundle
+/.tmp/dist
 /.venv
-/bower_components
+/node_modules
