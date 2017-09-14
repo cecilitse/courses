@@ -10,24 +10,23 @@ This project also generates PDF course documents.
 
 ### Requirements
 
-- Python & [virtualenvs](https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst)
+- Python & [pipenv](https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst)
 - NodeJS & Yarn
 - Ruby & Bundler
 
 ### Installation
 
-Install WeasyPrint:
+Install WeasyPrint via pipenv:
 
 ```sh
-$ virtualenv .venv
-$ source .py-env
-$ pip install weasyprint
+$ pipenv install
+$ pipenv shell
 ```
 
 Install required gems:
 
 ```sh
-$ bundler install
+$ bundle install
 ```
 
 Install default yarn packages:
