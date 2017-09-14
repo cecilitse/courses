@@ -28,31 +28,40 @@
   .footer--contact--details { text-align: right; }
 
   .program--ruby-advanced {
-    .course--day4,
+    .course--day3,
     .schedule {
       page-break-before: always;
     }
 
     .course       { margin-bottom: 10em; }
-    .course--day3 { margin-bottom: 10em; }
-    .course--day4 { margin-top: 4em; }
+    .course--day3 { margin-top: 4em; }
+    .course--day5 { margin-bottom: 10em; }
     .schedule     { margin-top: 5em; }
   }
 
   .program--working-as-team {
-    .course--day2--next,
+    .course--day2,
     .schedule {
       page-break-before: always;
     }
 
-    .course             { margin-bottom: 15em; }
-    .course--day2--next { margin-top: 3em; }
-    .schedule           { margin-top: 3em; }
+    .course       { margin-bottom: 15em; }
+    .course--day2 { margin-top: 3em; }
+    .course--day2--next { margin-bottom: 10em; }
+    .schedule     { margin-top: 3em; }
   }
 
   .schedule {
     ul {
       margin-bottom: 1em;
+    }
+  }
+
+  .teacher {
+    padding-top: 3em;
+
+    hr:first-child {
+      display: none;
     }
   }
 }

@@ -25,8 +25,7 @@ section class="teacher"
       ul class="no-bullet"
         li
           - if course_print_page?
-            a href="mailto:#{data.settings.email}"
-              = data.settings.email
+            = data.settings.email
           - else
             = mail_to data.settings.email
         li
