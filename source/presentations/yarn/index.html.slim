@@ -7,24 +7,25 @@ noindex:  false
 | # Pray for bower
 
   <span> #ChtiJS — February 2017 </span>
+  <span> #Smart Pension — December 2017 </span>
 
   ---
 
-  ou
+  or
 
-  ### État de l’art des gestionnaires de packets JavaScript en 2017
+  ### State of art of packages management in JavaScript in 2017
 
   --
 
   ## /whois
 
   <div class="presentation--avatar">
-    ![Ruby designer David Leuliette](/assets/images/avatar.png)
+    ![Ruby designer David Leuliette](/assets/images/avatar-rinjani.jpg)
   </div>
 
   David Leuliette <small>aka</small> [@_flexbox](https://twitter.com/_flexbox)
 
-  Consultant Front-end developer
+  Front-end developer
 
   ---
 
@@ -49,7 +50,7 @@ noindex:  false
   - npm bower __yarn__
   - yeoman browserify electron
   - compile optimize minify __transpile__ _make a bundle_
-  - _Typage statique_
+  - _Static variable_
 
   --
 
@@ -65,7 +66,7 @@ noindex:  false
 
   ### 1995 — JavaScript
 
-  Netscape Communications Corporation had a strong presence in the young web. Its browser, __Netscape Communicator__, was gaining traction as a competitor to NCSA Mosaic, the first popular web browser.
+  Netscape Communications Corporation had a strong presence in the young web. His browser, __Netscape Communicator__, was gaining traction as a competitor to NCSA Mosaic, the first popular web browser.
 
   ![](/assets/images/yarn/netscape.png)
 
@@ -77,7 +78,15 @@ noindex:  false
 
   For Debian, Slackware and other Linux distributions
 
-  `$ apt-get install <packageName>`
+  `$ apt-get install <package_name>`
+
+  --
+
+  ### 2009 — [Homebrew](https://en.wikipedia.org/wiki/Homebrew_(package_management_software))
+
+  - Simplifies installation of software on macOS
+  - Witten in Ruby
+  - Extensive use of GitHub
 
   --
 
@@ -93,9 +102,9 @@ noindex:  false
 
   ---
 
-  ## 2010 — npm
+  ## 2010 — [npm](https://github.com/npm/npm)
 
-  ⭐ 11 000
+  ⭐ 14 000
 
   `$ apt-get install nodejs`
 
@@ -114,7 +123,7 @@ noindex:  false
   ### [Getting started](https://docs.npmjs.com/)
 
   - `$ npm init`
-  - works with `package.json`
+  - works with `package.json` – _like a manifest file_
 
   - builds flattened dependencies trees
   - Fetches the dependencies for each dependency
@@ -126,21 +135,25 @@ noindex:  false
 
   Like we could install `jQuery`, `React`, `Redux`, `VueJS`, `Redux`… anything from the package manager and __it’s super easy__.
 
-  `$ npm install <packageName> --save`
+  `$ npm install <package_name>`
+
+  1. Create the folder `node_modules`
+  1. Download the whole internet
 
   --
 
   ### cli tool
 
-  `$ npm install <packageName> --global`
+  `$ npm install <package_name> --global`
 
   --
 
+  `$ npm list --global`
   `$ npm list --global --depth=0`
 
   --
 
-  https://github.com/720kb/ndm
+  [https://github.com/720kb/ndm](https://github.com/720kb/ndm)
 
   ![](/assets/images/yarn/ndm.png)
 
@@ -150,14 +163,17 @@ noindex:  false
 
   🚨
 
-  https://github.com/creationix/nvm
+  `$ node -v`
+
+  [https://github.com/creationix/nvm](https://github.com/creationix/nvm)
 
   ---
 
-  ## 2012 — bower
+  ## 2012 — [bower](https://github.com/bower/bower)
 
   ⭐ 15 000
 
+  `$ npm install bower`
   `$ npm install bower --global`
 
   --
@@ -202,9 +218,9 @@ noindex:  false
 
   ### Move to npm only ?
 
-  angular-bootstrap drama
+  `angular-bootstrap` drama
 
-  1. angular-bootstrap was on npm
+  1. `angular-bootstrap` was on npm
   1. silently unpublished
   1. pushed to npm by a random developer at 0.11 and not 0.12
 
@@ -214,7 +230,8 @@ noindex:  false
 
   ### protip:
 
-  `$ npm search <packageName>`
+  `$ npm search <package_name>`
+  `$ bower search <package_name>`
 
   ---
 
@@ -226,7 +243,8 @@ noindex:  false
 
   ⭐ 3 400
 
-  `$ npm install -S jspm`
+  `$ npm install jspm --global`
+  `$ npm i jspm -g`
 
   --
 
@@ -239,7 +257,8 @@ noindex:  false
   --
 
   - Works with SystemJs module loader
-  - Allows multiple versions of the same package and it even supports circular dependencies.
+  - Allows multiple versions of the same package at the same time
+  - Supports [circular dependencies](https://en.wikipedia.org/wiki/Mutual_recursion)
 
   --
 
@@ -291,7 +310,7 @@ noindex:  false
 
   ## 2016 — Yarn
 
-  ⭐ 22 000
+  ⭐ 30 000
 
   `$ apt-get install yarn`
 
@@ -307,11 +326,19 @@ noindex:  false
 
   --
 
-  ### [Getting started](https://yarnpkg.com/fr/docs/getting-started)
+  ### [Getting started](https://yarnpkg.com/en/docs/getting-started/)
 
-  - start with `package.json` & `yarn.lock`
+  - Start with `package.json`
+  - add a `yarn.lock` file dependency
   - `$ npm init === yarn init`
   - `$ npm publish === yarn publish`
+
+  --
+
+  > To make it more clear, your `package.json` states
+  > “what I want” for the project whereas your lockfile says
+  > “what I had” in terms of dependencies.
+  > _– Dan Abramov author of redux_
 
   --
 
@@ -329,6 +356,12 @@ noindex:  false
 
   --
 
+  https://bower.io/blog/2017/how-to-migrate-away-from-bower/
+
+  Yarn 1.x is able to install most of Bower packages
+
+  --
+
   ### 🌴🔆
 
   http://davidl.fr/blog/indonesia.html
@@ -337,7 +370,7 @@ noindex:  false
 
   ## Conclusion
 
-  https://npmcompare.com/compare/bower,npm,yarnpkg
+  [https://npmcompare.com](https://npmcompare.com/compare/bower,npm,yarnpkg)
 
   --
 
@@ -349,4 +382,4 @@ noindex:  false
 
   ## Q&A
 
-  <span>#ChtiJS</span>
+  Ask questions [@_flexbox](https://twitter.com/_flexbox)
