@@ -7,7 +7,7 @@ breadcrumbs:      ['root']
 
 section.row
   .small-12.columns
-    h2
+    h2#courses
       'Formation sur les technologies web
       small Une journée ou plus
     p
@@ -22,7 +22,7 @@ section.row
             h2 = link_to course['title'], "/programs/#{course['link']}.html"
             p = course['subtitle']
     hr
-    h2 Talks
+    h2#talks Talks
     p
       'Je participe aux évènements organisés pas la communauté Meetup et
       strong> propose des talks en conférences.

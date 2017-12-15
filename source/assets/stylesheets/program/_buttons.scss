@@ -1,19 +1,27 @@
-.button {
-  font-family: $font-family-monospace;
-  letter-spacing: -1px;
-  transition: background 150ms ease-in-out;
-  position: relative;
+@mixin button-style($color) {
+  color: $white;
+  border: 2px solid $color;
+  background-color: $color;
 
   &:hover,
   &:focus {
-    background-color: $body-bg;
-    color: $primary-color;
+    background-color: $gray-light;
+    border-color: $color;
+    color: $color;
   }
+}
+
+.button {
+  @include button-style($primary-color);
+  font-family: $font-family-monospace;
+  letter-spacing: -1px;
+  transition: background 150ms ease-in-out;
+
   &.secondary {
-    &:hover,
-    &:focus {
-      background-color: $body-bg;
-      color: $secondary-color;
-    }
+    @include button-style($secondary-color);
+  }
+
+  &.expanded {
+    width: 100%;
   }
 }

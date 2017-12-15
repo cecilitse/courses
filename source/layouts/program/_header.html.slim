@@ -1,6 +1,6 @@
 header.header-hero
-  div class="row text-center"
-    div class="small-12 columns"
+  .row.text-center
+    .medium-8.medium-centered.columns
       - unless current_page.url == '/'
         = link_to '/', class: 'home-icon' do
           '←
@@ -8,5 +8,8 @@ header.header-hero
         = current_page_title
 
       - if current_page.url == '/'
-        .text-center
-          = link_to 'Découvrir les formations', '/programs/', class: 'button secondary large'
+          .row
+            .small-6.columns.text-right
+              = link_to 'Workshop', '/programs/#courses', class: 'button secondary expanded large'
+            .small-6.columns.text-left
+              = link_to 'Talks', '/programs/#talks', class: 'button large expanded'
