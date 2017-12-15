@@ -6,8 +6,9 @@ noindex:  false
 
 | # Pray for bower
 
-  <span> #ChtiJS — February 2017 </span>
-  <span> #Smart Pension — December 2017 </span>
+  💀
+
+  <small> Smart Pension — December 2017 </small>
 
   ---
 
@@ -70,7 +71,15 @@ noindex:  false
 
   ![](/assets/images/yarn/netscape.png)
 
-  __Brendan Eich__, father of JavaScript, came into the picture. Eich was contracted by Netscape Communications to develop a “Scheme for the browser”
+  --
+
+  ### 1995 — Brendan Eich
+
+  Eich was contracted by Netscape Communications to develop a “Scheme for the browser”, 10 days later JavaScript was born.
+
+  ![](/assets/images/yarn/commitstrip.png)
+
+  > Give me 10 days for the first version
 
   --
 
@@ -82,7 +91,9 @@ noindex:  false
 
   --
 
-  ### 2009 — [Homebrew](https://en.wikipedia.org/wiki/Homebrew_(package_management_software))
+  ### 2009 — [Homebrew](https://en.wikipedia.org/wiki/Homebrew_(package_management_software)
+
+  `$ brew install <package_name>`
 
   - Simplifies installation of software on macOS
   - Witten in Ruby
@@ -101,6 +112,12 @@ noindex:  false
   ? %
 
   ---
+
+  ## We need a package manager for JavaScript
+
+  🎉
+
+  --
 
   ## 2010 — [npm](https://github.com/npm/npm)
 
@@ -125,20 +142,23 @@ noindex:  false
   - `$ npm init`
   - works with `package.json` – _like a manifest file_
 
-  - builds flattened dependencies trees
+  --
+
+  - Builds nested dependencies trees
   - Fetches the dependencies for each dependency
   - Back-end stuff
+
+  ![](/assets/images/yarn/nest.png)
 
   --
 
   We use Package manager to __find existing code__ or __libraries__.
 
-  Like we could install `jQuery`, `React`, `Redux`, `VueJS`, `Redux`… anything from the package manager and __it’s super easy__.
+  Like we could install `jQuery`, `React`, `VueJS`, `Redux`… anything from the internet and __it’s super easy__.
 
-  `$ npm install <package_name>`
-
-  1. Create the folder `node_modules`
-  1. Download the whole internet
+  - `$ npm install <package_name>`
+    - Create the folder `node_modules`
+    - Download the whole internet
 
   --
 
@@ -146,9 +166,18 @@ noindex:  false
 
   `$ npm install <package_name> --global`
 
+  Use your new command from anywhere
+
+  `$ github-email flexbox`
+
+  `$ tiny-care-terminal`
+
   --
 
+  ### cli tool
+
   `$ npm list --global`
+
   `$ npm list --global --depth=0`
 
   --
@@ -167,6 +196,12 @@ noindex:  false
 
   [https://github.com/creationix/nvm](https://github.com/creationix/nvm)
 
+  --
+
+  ### Protip: bump versions
+
+  `nvm install 8.9.1 --reinstall-packages-from=x.x.x`
+
   ---
 
   ## 2012 — [bower](https://github.com/bower/bower)
@@ -174,6 +209,7 @@ noindex:  false
   ⭐ 15 000
 
   `$ npm install bower`
+
   `$ npm install bower --global`
 
   --
@@ -195,10 +231,14 @@ noindex:  false
   - `$ bower init`
   - works with `bower.json`
 
-  - only be one version of a library at the same time in the browser.
-  - builds flattened dependencies trees
-  - manually include sub-dependencies
+  --
+
+  - One version of a library at the same time in the browser
+  - Builds flattened dependencies trees
+  - Manually include sub-dependencies
   - Front-end stuff
+
+  ![](/assets/images/yarn/flat.png)
 
   --
 
@@ -206,19 +246,26 @@ noindex:  false
 
   --
 
-  ### 💀 bower ?
-
-  [Is bower dead on reddit](https://www.reddit.com/r/javascript/comments/2rrr3l/is_bowerio_dead_i_keep_being_told_not_to_to_use/)
-
-  [npm vs bower tree](https://symbiotics.co.za/is-bower-dead-what-is-jspm-npm-for-client-side/)
+  ### Problem
+  #### _The nightmare [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell)_
 
   ![](/assets/images/yarn/bower-unable-to-find-suitable1.png)
 
   --
 
-  ### Move to npm only ?
+  ### 💀 bower?
 
-  `angular-bootstrap` drama
+  [Is bower dead on reddit](https://www.reddit.com/r/javascript/comments/2rrr3l/is_bowerio_dead_i_keep_being_told_not_to_to_use/)
+
+  [npm vs bower tree](https://symbiotics.co.za/is-bower-dead-what-is-jspm-npm-for-client-side/)
+
+  --
+
+  ### Move to npm only?
+
+  --
+
+  ### `angular-bootstrap` drama
 
   1. `angular-bootstrap` was on npm
   1. silently unpublished
@@ -230,7 +277,10 @@ noindex:  false
 
   ### protip:
 
+  #### check the sources
+
   `$ npm search <package_name>`
+
   `$ bower search <package_name>`
 
   ---
@@ -244,6 +294,7 @@ noindex:  false
   ⭐ 3 400
 
   `$ npm install jspm --global`
+
   `$ npm i jspm -g`
 
   --
@@ -269,6 +320,7 @@ noindex:  false
   ## 23 mars 2016
 
   --
+
 
   --
 
@@ -298,9 +350,11 @@ noindex:  false
 
   --
 
-  I have just [liberated my modules](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.x9llyfhns)
+  #### I have just [liberated my modules](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.x9llyfhns)
 
-  __Power To The People__
+  > This situation made me realize that NPM is someone’s private land where corporate is more powerful than the people, and I do open source because, Power To The People.
+  >
+  > – Azer Koçulu
 
   --
 
@@ -329,7 +383,7 @@ noindex:  false
   ### [Getting started](https://yarnpkg.com/en/docs/getting-started/)
 
   - Start with `package.json`
-  - add a `yarn.lock` file dependency
+  - Uses a lockfile `yarn.lock` to exactly reproduce installed packages
   - `$ npm init === yarn init`
   - `$ npm publish === yarn publish`
 
@@ -342,11 +396,31 @@ noindex:  false
 
   --
 
-  `$ npm install react --save`
+  `$ npm install`
 
-  `$ yarn add react`
+  🤔
+
+  `$ yarn`
 
   --
+
+  ### [Cheat Sheet](https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc)
+
+  `$ npm install ember-cli --save === yarn add ember-cli`
+
+  `$ npm update --save === yarn upgrade`
+
+  --
+
+  ### Why I am loving it?
+
+  `$ yarn upgrade-interactive`
+
+  ![](/assets/images/yarn/upgrade-interactive.png)
+
+  --
+
+  ### Yarn documentation — February 2017
 
   > This is unstable software, but Facebook uses it in production. What are you waiting for?
 
@@ -356,9 +430,23 @@ noindex:  false
 
   --
 
+  ### 🙏 for bower
+
   https://bower.io/blog/2017/how-to-migrate-away-from-bower/
 
+  --
+
   Yarn 1.x is able to install most of Bower packages
+
+  https://github.com/sheerun/bower-away
+
+  --
+
+  ![](/assets/images/yarn/matrix-subway.gif)
+
+  --
+
+  [![](/assets/images/yarn/turbo.png)](https://medium.com/@ericsimons/introducing-turbo-5x-faster-than-yarn-npm-and-runs-natively-in-browser-cc2c39715403)
 
   --
 
@@ -377,6 +465,12 @@ noindex:  false
   > Good is the enemy of great, but great is the enemy of shipped
   >
   > — Jeffrey Feldman
+
+  --
+
+  ## One more thing
+
+  `$ npm xmas`
 
   --
 
