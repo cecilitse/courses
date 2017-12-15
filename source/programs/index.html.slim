@@ -31,6 +31,9 @@ section.row
       - data.talks.each do |talk|
         li
           .panel
-            div class="label radius #{talk.color}" = talk.label
+            div class="label radius #{talk.color}"
+              = talk.label
+            span.text-white •
+            span = talk.flag
             h3 = link_to talk.title, "/presentations/#{talk.link}"
             p = talk.subtitle

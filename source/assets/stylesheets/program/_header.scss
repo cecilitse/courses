@@ -11,6 +11,7 @@
     display: block;
     margin-right: 20px;
   }
+
   small {
     margin-left: 50px;
   }
@@ -18,5 +19,8 @@
   .button {
     margin: rem-calc(40 0);
   }
+}
 
+.text-white {
+  color: $white;
 }

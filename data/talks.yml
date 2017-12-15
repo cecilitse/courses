@@ -1,30 +1,35 @@
 -
   link:     jquery
   label:    Front-end
+  flag:     🇫🇷
   color:    warning
   title:    'jQuery 101'
   subtitle: 'Cours sur JavaScript et jQuery à destination des étudiants en DUT informatique'
 -
   link:     middleman
   label:    Front-end
+  flag:     🇬🇧
   color:    warning
   title:    'Craft everything with Middleman'
   subtitle: 'Lightning talk for RubyCamp BE 2015'
 -
   link:     offthegrid
   label:    Inspiration
+  flag:     🇬🇧
   color:    secondary
   title:    'How to travel — 100 days — off the grid'
   subtitle: 'Talk during Take off Talks Lille — code, design and startups about how to travel the agile way'
 -
   link:     workflow
   label:    Gestion de projet
+  flag:     🇫🇷
   color:    success
   title:    'Modern wokflow for productive people'
   subtitle: 'Comment accélérer la collaboration et automatiser certaines tâches avec Slack & Trello'
 -
   link:     styleguide
   label:    Gestion de projet
+  flag:     🇫🇷
   color:    success
   title:    'Un guide qui a du style !'
   subtitle: 'Lister les conventions, modules et éléments d’interface d’un site web'
@@ -36,21 +41,23 @@
 -
   link:     yarn
   label:    Front-end
+  flag:     🇬🇧
   color:    warning
   title:    'Pray for bower'
   subtitle: |
-    Ou l'état de l'art des gestionnaires de packets JavaScript en 2017. Qui sont-ils ? Quels sont leur réseaux ? Pourquoi et comment est ce qu'ils se livrent une guerre sans merci ?
-    Enquête.
+    Or the state of art of JavaScript package managers in 2017. Who are they? What are their networks? Why and how do they wage a merciless war? Investigation.
 -
   link:     devtools
   label:    Front-end
+  flag:     🇬🇧
   color:    warning
-  title:    'Debug your design likeaboss'
+  title:    'Debug your design <em>— likeaboss</em>'
   subtitle: |
-    Bonnes pratiques et Outils pour les designers Front-end. Talk donné lors d'un Meetup exclusif dans les locaux de Google à Bruxelles.
+    Tools and Best Practices for Front-end Designers. Talk given at an exclusive Meetup at Google’s Brussels HQ.
 -
   link:     sprockets
   label:    Ruby on Rails
+  flag:     🇬🇧
   color:    alert
   title:    'How to love / hate / use the asset pipeline'
   subtitle: |

@@ -1,15 +1,15 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "colors";
-@import "custom-settings";
+@import 'colors';
+@import 'custom-settings';
 
-@import "foundation/scss/normalize";
-@import "foundation/scss/foundation";
+@import 'foundation/scss/normalize';
+@import 'foundation/scss/foundation';
 
-@import "program/layout";
-@import "program/header";
-@import "program/labels";
-@import "program/print";
-@import "program/teacher";
-@import "program/buttons";
-@import "program/browser";
+@import 'program/layout';
+@import 'program/header';
+@import 'program/labels';
+@import 'program/print';
+@import 'program/teacher';
+@import 'program/buttons';
+@import 'program/browser';
