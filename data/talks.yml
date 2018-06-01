@@ -62,3 +62,11 @@
   title:    'How to love / hate / use the asset pipeline'
   subtitle: |
     All applications have assets like CSS, JavaScript and others. That means the asset pipeline is an integral part of the Ruby on Rails framework.
+-
+  link:     automation
+  label:    Inspiration
+  flag:     🇬🇧
+  color:    secondary
+  title:    'Productivity and automation for hackers'
+  subtitle: |
+    Attention span is the amount of concentrated time a person can spend on a task without becoming distracted. How can we automate our daily tasks to become more productive?
