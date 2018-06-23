@@ -14,6 +14,7 @@ html lang="fr"
     div class="reveal"
       div class="slides"
         section data-markdown="" data-separator="^---" data-separator-vertical="^--"
-          = yield
+          script type="text/template"
+            = yield
       = partial 'layouts/presentation/footer'
     = javascript_include_tag 'presentation'
