@@ -9,7 +9,6 @@ gem 'middleman-bower',           '~> 1.0.2'
 gem 'middleman-deploy',          '~> 1.0.0'
 gem 'middleman-favicon-maker',   '~>  3.7'
 gem 'middleman-google-analytics'
-gem 'middleman-livereload',      '~> 3.4.2'
 gem 'middleman-minify-html',     '~> 3.4.1'
 
 # Linux Support

@@ -1,5 +1,5 @@
-activate :bower
-activate :livereload
+::Sass.load_paths << File.join(root, "node_modules")
+sprockets.append_path File.join "#{root}", "node_modules/"
 
 activate :google_analytics do |ga|
   ga.tracking_id = data.settings.site.analytics_id

@@ -1,12 +1,11 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "colors";
-@import "custom-settings";
-@import "presentation/reveal-settings";
+@import 'colors';
+@import 'custom-settings';
 
-@import "reveal.js/css/reveal";
-@import "reveal.js/lib/css/zenburn";
-@import "reveal.js/css/theme/template/mixins";
-@import "reveal.js/css/theme/template/theme";
+@import 'reveal.js/css/reveal';
+@import 'reveal.js/css/theme/template/mixins';
+@import 'presentation/reveal-settings';
+@import 'reveal.js/css/theme/template/theme';
 
-@import "presentation/layout";
+@import 'presentation/layout';

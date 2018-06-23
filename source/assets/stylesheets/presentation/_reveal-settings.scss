@@ -6,6 +6,9 @@ $mainFont: $font-family-sans-serif;
 $mainFontSize: 36px;
 $mainColor: $gray-dark;
 
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
 // Headings
 $headingMargin: 0 0 20px 0;
 $headingFont: $font-family-sans-serif;
@@ -14,7 +17,13 @@ $headingLineHeight: 0.9em;
 $headingLetterSpacing: -3px;
 $headingTextTransform: none;
 $headingTextShadow: none;
+$headingFontWeight: normal;
 $heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
 
 // Links and actions
 $linkColor: $primary-color;

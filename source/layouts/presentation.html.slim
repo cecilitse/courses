@@ -13,8 +13,7 @@ html lang="fr"
   body class="#{page_classes}"
     div class="reveal"
       div class="slides"
-        section data-markdown="" data-separator="^---" data-vertical="^--"
-          script type="text/template"
-            = yield
+        section data-markdown="" data-separator="^---" data-separator-vertical="^--"
+          = yield
       = partial 'layouts/presentation/footer'
     = javascript_include_tag 'presentation'
