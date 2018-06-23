@@ -1,0 +1,14 @@
+{
+  "name": "courses",
+  "version": "1.0.0",
+  "description": "Tech Talks by a Front-end developer",
+  "main": "index.js",
+  "repository": "git@github.com:flexbox/courses.git",
+  "author": "David Leuliette <dleuliette@gmail.com>",
+  "license": "GNU/GPL",
+  "private": false,
+  "dependencies": {
+    "foundation-sites": "5.5.3",
+    "reveal.js": "^3.6.0"
+  }
+}
