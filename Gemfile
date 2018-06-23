@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 # Core
 gem 'middleman',                 '~> 3.3.12'
 gem 'middleman-autoprefixer',    '~> 2.5.0'
-gem 'middleman-bower',           '~> 1.0.2'
 gem 'middleman-deploy',          '~> 1.0.0'
 gem 'middleman-favicon-maker',   '~>  3.7'
 gem 'middleman-google-analytics'
