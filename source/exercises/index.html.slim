@@ -1,0 +1,16 @@
+---
+title:            Exercices des formations proposées
+meta_description: Tous les exercices de Cécile Veneziani.
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root']
+---
+
+section
+  div class="row"
+    div class="small-12 columns"
+      div class="exercise"
+        h1 Exercises
+        - data.courses.each do |_code, course|
+          - next unless course.exercises
+          h2 = link_to course['title'], "/exercises/#{course['link']}"

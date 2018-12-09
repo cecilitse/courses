@@ -8,6 +8,7 @@ ruby_advanced:
     en mesure d’architecturer de complexes applications tout en portant une
     grande importance à la qualité de leur production (méthodologies, code,
     architectures, tests, etc.).
+  exercises: true
   presentations:
     01-basics:           'Les bases'
     02-activerecord:     'SQL & ActiveRecord'
@@ -24,3 +25,4 @@ working_as_team:
     de nouvelles méthodologies afin de s'organiser efficacement. Divers sujets
     seront abordés, nottament : méthodes agiles, communication, suivi de
     projet, tests, partage d'information, bonnes pratiques, etc.
+  exercises: false

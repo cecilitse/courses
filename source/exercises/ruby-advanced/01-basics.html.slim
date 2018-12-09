@@ -1,0 +1,62 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         Qualité de code
+meta_description: 'Qualité de code sur une application Ruby on Rails.'
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Éditeur de texte
+        p 1er objectif de la journée : s'assurer que l'éditeur de texte est correctement configuré.
+
+        h3 Exercice
+        ul
+          li Assurez vous que votre éditeur est configuré sur <strong>2 espaces</strong> lorsque l'on utilise la touche <code>Tab</code>.
+          li Lorsque vous sauvegardez un fichier, votre éditeur devrait s'assurer que vous avez toujours une ligne vide en fin de fichier.
+
+      div class="exercise"
+        h2 Rubocop
+        p Rubocop est votre compagnon vers un code de bonne qualité.
+
+        h3 Exercice
+        ul
+          li Choisissez un de vos projets
+          li
+            | Installez-y
+            a< href="https://github.com/rubocop-hq/rubocop#installation" Rubocop
+          li
+            | Choisissez un fichier à tester.
+            br
+            | Veillez à ce que le fichier soit un minimum conséquent.
+          li Lancez rubocop sur ce fichier
+          li Analysez le résultat
+          li Configurez un minimum Rubocop : retirez tout ce qui ne vous semble pas pertinent.
+          li Lancez à nouveau Rubocop
+          li Corrigez votre fichier jusqu'à ne plus avoir d'offenses
+
+      div class="exercise"
+        h2 Rubycritic
+        p Maintenant que nous avons rubocop qui nous aide au niveau macro, il est temps de prendre un peu de recul. Notre nouvel objectif est de voir l'état global de notre base de code.
+
+        h3 Exercice
+        ul
+          li Toujours sur le même projet
+          li
+            | Installez-y
+            a< href="https://github.com/whitesmith/rubycritic#rubycritic" Rubycritic
+          li
+            | Déterminez où se trouve le plus gros de votre logique métier.
+            br
+            | Listez tous les dossiers concernés.
+            ul
+              li Dans tout le dossier <code>app/</code> ?
+              li Dans uniquement quelques dossiers dans <code>app/</code> ?
+              li Dans le dossier <code>lib/</code> également ?
+              li Ailleurs ?
+          li Lancez Rubycritic sur les dossiers sélectionnés.
+          li Analisez le résultat et déterminez les zones à traiter en priorité.

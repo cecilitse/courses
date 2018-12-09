@@ -1,6 +1,14 @@
 root:
   link:   /
   title:  Accueil
+exercises:
+  link:   /exercises
+  title:  Exercises
 programs:
   link:   /programs
   title:  Programmes de Formation
+
+# courses
+ruby-advanced:
+  link: ../ruby-advanced
+  title: Ruby on Rails Avancé

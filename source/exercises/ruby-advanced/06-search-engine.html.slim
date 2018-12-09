@@ -1,0 +1,52 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         'Moteur de recherche'
+meta_description: "Mise en place d'un moteur de recherche sur une application Ruby on Rails."
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+      div class="exercise"
+        h2 Elastisearch
+        p Nous y voilà, il est temps d'installer notre 1er moteur de recherche.
+
+        h3 Exercice
+        ul
+          li Installez le paquet <code>default-jre</code> via aptitude
+          li
+            | Installez
+            a< href="http://elastic.co/" Elasticsearch
+          li
+            | Installez
+            a< href="https://github.com/ankane/searchkick" Searchkick
+
+      div class="exercise"
+        h2 Recherche fulltext
+        p L'objectif de ce module est d'ajouter une fonctionnalité de rercherche fulltext sur le listing que nous avons actuellement sur notre application.
+
+        h3 Exercice
+        ul
+          li Déterminez quel modèle indexer
+          li Déterminez les propriétés du document qui sera indexé
+          li Mettez en place l'index
+          li Mettez en place la rercherche fulltext
+
+      div class="exercise"
+        h2 Aggrégats
+        p Terminons pour la mise en place de filtres intelligents, les aggrégats.
+
+        h3 Exercice
+        ul
+          li Déterminez quels pourraient être les filtres
+          li Modifiez votre index
+          li Mettez en place ces filtres sur la page de listing
+          li Veillez à ce que les filtres fonctionnent bien avec la recherche fulltext

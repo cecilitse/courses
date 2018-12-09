@@ -1,0 +1,45 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         SQL & ActiveRecord
+meta_description: 'Optimiser ses requêtes SQL via ActiveRecord sur une application Ruby on Rails.'
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+      div class="exercise"
+        h2 Index
+        p Le 1er objectif de ce module sera la mise en place d'index.
+
+        h3 Exercice
+        ul
+          li Découvrez les fonctionnalités en place
+          li Découvrez le schéma de données
+          li Analysez les requêtes
+          li Déterminez où mettre des index
+          li Mettez-les en place
+
+      div class="exercise"
+        h2 Requêtes
+        p Après avoir posé de l'index, passons à l'optimisation des requêtes existantes.
+
+        h3 Exercice
+        ul
+          li Analysez à nouveau les fonctionnalités en place
+          li Déterminez comment les optimiser
+          li Mettez en place toute optimisation que vous jugez necessaire
+
+      div class="exercise"
+        h2 Alléger les contrôleurs
+        p Certains de nos contrôleurs se retrouvent très chargés. D'autres se retrouvent avec des requêtes dupliquées. Il est temps de nettoyer tout cela.
+
+        h3 Exercice
+        p Allégez les contrôleurs en extrayant certaines requêtes dans des <strong>scopes</strong> ou <strong>Query Objects</strong>.

@@ -1,0 +1,98 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         'Javascript & Ruby on rails'
+meta_description: "Architecturer son Javascript au sein d'une application Ruby on Rails."
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+      div class="exercise"
+        h2 Yarn & Webpack
+        p Le frontend est un univers qui évolue très vite. Aujourd'hui, Webpack est l'outil frontend defacto lorsqu'il s'agit de packager son Javascript.
+        p Il est temps de s'acclimater à ce nouvel environnement.
+
+        h3 Exercice
+        p Il nous faut d'abord installer Nodejs et Yarn.
+
+        ul
+          li Installez le packet <code>nodejs</code> via aptitude
+          li
+            | Installez
+            a< href="https://yarnpkg.com/fr/docs/install#debian-stable" Yarn
+
+        p L'application fournie vient avec le framework Bootstrap mais le javascript n'est pas installé. Nous allons corriger cela.
+
+        ul
+          li Prenez le temps de découvrir chaque fichier / dossier apporté par webpack ou webpacker
+          li Ajoutez le package <code>jquery</code>
+          li Ajoutez le package <code>bootstrap</code> ainsi que <code>popper.js</code>
+          li Configurez webpack pour que jQuery soit accessible de base dans vos packs
+          li Importez bootstrap dans votre pack
+
+        h3 Un peu d'aide
+        p Configuration de jQuery :
+        pre
+          |
+            // config/webpack/environment.js
+            const webpack = require('webpack');
+
+            environment.plugins.prepend('Provide',
+              new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+              })
+            )
+
+        p Import de bootstrap dans votre pack :
+        pre
+          |
+            // app/javascript/application.js
+            import "bootstrap";
+
+      div class="exercise"
+        h2 Premiers components
+        p Il est maintenant temps de coder notre premier composant Javascript.
+
+        h3 Exercice
+        ul
+          li Mettez en place un popover bootstrap
+          li Mettez en place un smooth scroll sur le call to action de la home page
+          li Ajouter une preview d'image sur les formulaires de création / édition
+
+        h3 Un peu d'aide
+        ul
+          li Pour le smooth scroll, vous pouvez regarder <code>scrollIntoView</code>
+
+      div class="exercise"
+        h2 Ajax in Rails
+        p Bien que nous soyons à l'ère d'un tout frontend Webpack, nous avons toujours accès à une très bonne fonctionnalité de Ruby on Rails, les éléments <code>remote</code>.
+
+        h3 Exercice
+        ul
+          li Ajaxifier la fonctionnalité de complétion d'une action depuis la page d'une plante
+          li Déterminer quelles seraient les implications de mettre en place la même ajaxification sur le dashboard
+          li Mettez en place une fonctionnalité de favoris.
+          li L'ajaxifier.
+
+      div class="exercise"
+        h2 Hackathon
+        p Il est grand temps de faire appel à votre créativité. Nous partons donc sur un exercice libre.
+
+        h3 Exercice
+        p Mettez en place une nouvelle fonctionnalité, celle de votre choix.
+
+        p Bien penser à :
+        ul
+          li Optimiser vos requêtes au besoin
+          li Mettre votre code au bon endroit (backend & frontend)
+          li Posez un minimum de frontend (CSS et pourquoi pas un peu de Javascript)
+

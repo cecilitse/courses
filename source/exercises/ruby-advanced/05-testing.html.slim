@@ -1,0 +1,78 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         'Testing'
+meta_description: 'Tests unitaires et tests système sur une application Ruby on Rails.'
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+
+      div class="exercise"
+        h2 RSpec
+        p Il nous faut d'abord installer notre framework de test.
+
+        h3 Exercice
+        ul
+          li Installer et configurer RSpec
+          li
+            | Installer
+            a< href="https://github.com/thoughtbot/factory_bot#factory_bot----" factory_bot
+          li Le configurer à minima pour le modèle <code>User</code>
+
+      div class="exercise"
+        h2 Tests unitaires
+        p 1er objectif, la mise en place de tests unitaires sur notre application existante.
+
+        h3 Exercice
+        ul
+          li Mettre en place au moins un test unitaire de modèle (méthode de classe ou d'instance)
+          li Mettre en place au moins un test unitaire de scope ou query object
+          li Mettre en place au moins un test unitaire de service
+
+      div class="exercise"
+        h2 Tests système
+        p Nous passons ensuite sur du test sytème. L'objectif est de simuler le parcours utilisateur.
+
+        h3 Exercice
+        ul
+          li Configurer RSpec pour les tests sytèmes
+          li Mettre en place au moins un test sytème sur une des fonctionnalités existantes.
+
+      div class="exercise"
+        h2 Test Driven Development (TDD)
+        p Jusqu'ici, nous avons mis en place des tests sur des fonctionnalités existantes. Passons au niveau supérieur : implémentons une nouvelle fonctionnalité.
+
+        h3 Exercice
+        ul
+          li Écrivez le test de votre nouvelle fonctionnalité
+          li Lancez votre test, regardez le planter (RED)
+          li Implémentez votre fonctionnalité
+          li Lancez votre test, regardez le retourner un succès (GREEN)
+          li Améliorez votre code (REFACTOR)
+          li Lancez votre test, vérifier que cela fonctionne toujours comme attendu
+
+      div class="exercise"
+        h2 Metrics
+        p Regardons un peu où nous en sommes concernant nos tests.
+
+        h3 Exercice
+        ul
+          li
+            | Installez
+            a< href="https://github.com/colszowka/simplecov#simplecov----" Simplecov
+          li Configurez-le
+          li
+            | Pensez à créer des
+            a<> href="https://github.com/colszowka/simplecov#groups" groupes
+            | pour vos nouveaux composants
+          li Lancez à nouveau vos tests
+          li Analysez la couverture de code

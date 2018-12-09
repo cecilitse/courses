@@ -1,0 +1,46 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         Structurer son application
+meta_description: 'Comment architecturer son application Ruby on Rails lorsque la Rails Way ne suffit plus.'
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+      div class="exercise"
+        h2 Backend
+        p Dans un premier temps, nous allons nous concentrer sur le backend et tenter d'architecturer notre logique métier.
+
+        h3 Exercice
+        ul
+          li
+            strong Modèle
+            ul
+              li Déterminez le ou les modèles avec trop de responsabilités
+              li Extraire certaines parties dans un/des services
+              li Appeler ces services
+          li
+            strong Contrôleur
+            ul
+              li Déterminez le ou les contrôleurs trop complexes
+              li Extraire certaines parties dans un/des services
+              li Appeler ces services
+
+      div class="exercise"
+        h2 Frontend
+        p L'objectif de cet exercice est d'être en mesure de déterminer quand utiliser un partial, un helper ou bien un presenteur.
+
+        h3 Exercice
+        ul
+          li Parcourez les vues de l'application
+          li Mettez en place des partials (form, components, etc.)
+          li Mettez en place des helpers (formattage, labels, etc.)
+          li Mettez en place des presenteurs (logique + complexe associée à un modèle)

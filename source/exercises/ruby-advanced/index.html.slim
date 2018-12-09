@@ -1,0 +1,15 @@
+---
+title:            Exercices Ruby on Rails Avancé
+meta_description: 'Exercises sur Ruby on Rails : requêtes ActiveRecord, Testing et moteurs de recherche.'
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 columns"
+      div class="exercise"
+        h2 Programme
+        - data.courses.ruby_advanced.presentations.each do |link, name|
+          h3 = link_to name, "/exercises/ruby-advanced/#{link}.html"
