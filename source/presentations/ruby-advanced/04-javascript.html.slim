@@ -1,0 +1,344 @@
+---
+title:            Formation Ruby on Rails Avancé - Javascript & Ruby on Rails
+layout:           presentation
+meta_description: 'Javascript et Webpack dans une application Ruby on Rails'
+noindex:          true
+---
+
+| # Javascript & Ruby on Rails
+
+  ---
+
+  ## Sujets
+
+  - Récap ES6+
+  - jQuery
+  - Yarn
+  - Webpack
+  - Ajax in Rails
+
+  ---
+
+  ## ES6+
+
+  (ie ECMAScript 2015)
+
+  Nouvelle version de Javascript venant avec une toute nouvelle syntaxe.
+
+  --
+
+  ### Variables
+
+  ```
+  const pi = 3.14;
+
+  let age = 42;
+  age = age + 1;
+  ```
+
+  --
+
+  ### Fonctions
+
+  ```
+  const sum = (a, b) => {
+    return a + b;
+  }
+  ```
+
+  --
+
+  ### String interpolation
+
+  ```
+  const sayHi = (name) => {
+    return `Hi ${name}!`
+  }
+
+  sayHi('John'); // Hi John!
+  ```
+
+  --
+
+  ## Itération
+
+  ```
+  const fruits = ['apple', 'pear', 'banana'];
+
+  fruits.forEach((fruit) => {
+    console.log(fruit);
+  });
+  ```
+
+  --
+
+  ## Chargement du DOM
+
+  ```
+  document.addEventListener("DOMContentLoaded", (event) => {
+    // DOM loaded
+  });
+  ```
+
+  --
+
+  ### Aller plus loin
+
+  [ES2015+ cheatsheet](https://devhints.io/es6)
+
+  [Learn ES2015](https://babeljs.io/docs/en/learn/)
+
+
+  ---
+
+  ## jQuery
+
+  Où en est-on ?
+
+  --
+
+  Ruby on Rails s'est libéré de sa dépendance à jQuery.
+
+  La tendance actuelle tend à revenir vers un **Javascript Vanilla**   (simple Javascript).
+
+  --
+
+  ### Sélecteurs
+
+  ```
+  document.getElementById
+  document.querySelector
+  document.querySelectorAll
+  ```
+
+  --
+
+  ### Mise en place d'un listener
+
+  ```
+  const buttons = document.querySelectorAll('.button');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      console.log('handle event');
+    });
+  });
+  ```
+
+  ---
+
+  ## [Yarn](https://yarnpkg.com/fr/)
+
+  --
+
+  Yarn est le "Bundler" du monde Javascript.
+
+  C'est le package manager front-end par défaut proposé avec Ruby on Rails
+
+  --
+
+  Il permet d'installer tout packet proposé sur http://npmjs.com/ et de gérer proprement les dépendances.
+
+  **Node.js** doit donc être installé.
+
+  --
+
+  ### Utilisation
+
+  ```
+  yarn add select2
+  ```
+
+  ---
+
+  ## [Webpack](https://webpack.js.org/)
+
+  --
+
+  Webpack permet d'empaqueter du Javascript ou tout asset (HTML, CSS, images) en modules indépendants et en isolation les uns des autres.
+
+  --
+
+  Actuellement Ruby on Rails vient avec Sprockets, composant gérant tous les assets : images, CSS et Javascript.
+
+  La prochaine version de Ruby on Rails (v6) perdra Sprockets au profit de Webpack.
+
+  ---
+
+  ## Mise en place
+
+  --
+
+  ### Nouvelle application
+
+  ```
+  rails new --webpack APP_NAME
+  ```
+
+  Mise en place sur une [application existante](https://github.com/rails/webpacker)
+
+  --
+
+  ### Nouveaux fichiers
+
+  Beaucoup.
+
+  ```
+  app_name/
+    app/
+      assets/
+      javascript/
+        packs/
+          application.js
+    config/
+      webpack/
+      webpacker.yml
+    [...]
+    node_modules/
+    package.json
+    yarn.lock
+  ```
+
+  --
+
+  ### Layout
+
+  ```
+  # app/views/layouts/application.html.erb
+  <!-- Only if you have imported some CSS in your pack -->
+  stylesheet_pack_tag 'application', media: 'all'
+
+  javascript_pack_tag 'application'
+  ```
+
+  ---
+
+  ## Organiser son javascript
+
+  --
+
+  ### Packs
+
+  Ruby on Rails vient par défaut avec un pack **application.js**.
+  On commencera à y mettre notre code javascript.
+
+  --
+
+  Un nouveau pack est à créer dès qu'on a un besoin spécifique sur une page et que le code javascript est un minimum conséquent.
+
+  --
+
+  ### Components
+
+  La tendance est à organiser le code javascript sous forme de components.
+
+  L'objectif est d'avoir un pack assez simple qui importe chaque component et l'initialise / l'utilise.
+
+  --
+
+  ```
+  // app/javascript/components/tooltips.js
+  const initTooltips = (){
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  };
+
+  export { initTooltips };
+  ```
+
+  --
+
+  ```
+  // app/javascript/application.js
+  import { initTooltips } from '../components/tooltip'
+
+  initTooltips();
+  ```
+
+  ---
+
+  ## Ajax in Rails
+
+  --
+
+  Bien avant l'avènement des frameworks et outils Javascript, Ruby on Rails proposait déjà une technique pour ajaxifier nos fonctionnalités.
+
+  --
+
+  ### Côté vue
+
+  ```
+  # app/views/artists/index.html.erb
+  <% @artists.each do |artist| %>
+    <%= render 'components/artist', artist: @artist %>
+  <% end %>
+  ```
+
+  ```
+  <!-- app/views/components/_artist.html.erb %> -->
+  <div id="artist-<%= artist.id %>">
+    <%= artist.name %>
+
+    <% if artist.available %>
+      <%= link_to 'Make unavailable', toggle_availablity_artist_path(artist),
+        method: :patch, remote: true %>
+    <% else %>
+      <%= link_to 'Make available', toggle_availablity_artist_path(artist),
+        method: :patch, remote: true %>
+    <% end %>
+  </div>
+  ```
+
+  --
+
+  Fonctionne aussi avec un **form**
+
+  ```
+  <%= simple_form_for @artist, remote: true do %>
+    [...]
+  <% end %>
+  ```
+
+  --
+
+  ### Côté Contrôleur
+
+  <pre>
+  # app/controllers/artists_controller.rb
+  def toggle_availablity
+    @artist = Artist.find(params[:id])
+    @artist.available = !@artist.available
+    @artist.save
+
+    respond_to do |format|
+      format.html { redirect_to artists_path }
+      format.js // renders app/views/artists/toggle_availability.js.erb
+    end
+  end
+  </pre>
+
+  --
+
+  ### Côté vue (bis)
+
+  ```
+  // app/views/artists/toggle_availablity.js.erb
+  // Updating the original HTML
+  function refreshComponent() {
+    const component = document.getElementById('artist-<%= @artist.id %>');
+    component.innerHTML = '<%= j render "components/artist", artist: @artist %>';
+  }
+
+  refreshComponent();
+  ```
+
+  ---
+
+  ## Aller plus loin
+
+  [Stimulus](https://stimulusjs.org/)
+
+  ---
+
+  ## Happy Hacking!

@@ -1,0 +1,279 @@
+---
+title:            Formation Ruby on Rails Avancé - Moteur de recherche
+layout:           presentation
+meta_description: 'Introduction à Elasticsearch et son intégration avec Ruby on Rails.'
+noindex:          true
+---
+
+| # Moteur de recherche
+
+  ---
+
+  ## Sujets
+
+  - Qu'est-ce qu'un moteur le recherche ?
+  - Les + utilisés
+  - Elasticsearch
+  - Intégration Ruby on Rails
+
+  ---
+
+  ## Qu'est-ce qu'un moteur de recherche ?
+
+  --
+
+  Un logiciel spécialisé et optimisé pour de la recherche fulltext.
+
+  ---
+
+  ## Les + utilisés
+
+  --
+
+  - [Elasticsearch](https://www.elastic.co/)
+  - [Algolia](http://algolia.com/)
+
+  ---
+
+  ## Elasticsearch
+
+  --
+
+  ### En résumé
+
+  - Écrit en java
+  - Basé sur Lucene
+  - License Apache
+
+  --
+
+  ### Caractéristiques
+
+  - API RESTful
+  - Format JSON
+  - Table <> Index
+  - Row <> Document
+
+  [Basic Concepts](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-concepts.html)
+
+  --
+
+  ### Base de données relationnelle
+
+  ![DB Schema](/assets/images/presentations/ruby-advanced/db-schema.png)
+
+  --
+
+  ### Document
+
+  ```
+  // album
+  {
+    "name":         "The Wall",
+    "release_date": "1979-11-30",
+    "artist":       "Pink Floyd",
+    "genre":        "Progressive Rock"
+  }
+  ```
+
+  --
+
+  ### Index
+
+  ```
+  PUT http://localhost:9200/albums?pretty
+  GET http://localhost:9200/_cat/indices?v
+  ```
+
+  --
+
+  ### Indexer
+
+  ```
+  PUT /albums/_doc/1?pretty
+    {
+      "name":         "The Wall",
+      "release_date": "1979-11-30",
+      "artist":       "Pink Floyd",
+      "genre":        "Progressive Rock"
+    }
+  ```
+
+  Document créé
+
+  ```
+  {
+    "_index" : "albums",
+    "_type" : "_doc",
+    "_id" : "1",
+    "_version" : 1,
+    "found" : true,
+    "_source" : { "name": "The Wall", "release_date": "1979-11-30", "artist": "Pink Floyd", "genre": "Progressive Rock" }
+  }
+  ```
+
+  [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-modify-data.html)
+
+  --
+
+  ### Recherche
+
+  ```
+  GET /albums/_search
+    {
+      "query": { "match_all": {} },
+      "sort": [
+        { "name": "asc" }
+      ]
+    }
+  ```
+
+  --
+
+  ### Résultat
+
+  ```
+  {
+    "took" : 20,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 2,
+      "successful" : 2,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : 1,
+      "max_score" : null,
+      "hits" : [
+        {
+          "_index" : "albums",
+          "_type" : "_doc",
+          "_id" : "1",
+          "sort": [1],
+          "_score" : null,
+          "_source" : { "name": "The Wall", "release_date": "1979-11-30", "artist": "Pink Floyd", "genre": "Progressive Rock" }
+        },
+        // ...
+      ]
+    }
+  }
+  ```
+
+  [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-explore-data.html)
+
+  --
+
+  ### Installation
+
+  1. S'assurer d'avoir Java 8
+  2. [Télécharger l'archive sur le site](https://www.elastic.co/downloads/elasticsearch)
+  3. Décompresser l'archive
+  4. Démarrer le moteur de recherche
+    ```
+    $ bin/elasticsearch
+    ```
+  5. Vérifier qu'il tourne : http://localhost:9200
+
+  --
+
+  ### Configuration
+
+  - Fichier principal : `config/elasticsearch.yml`
+  - Format YAML
+  - Permet de configurer les différents modules d'Elasticsearch
+
+  [Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html)
+
+  ---
+
+  ## Intégration Ruby on Rails
+
+  --
+
+  ### Gems
+
+  - [Searchkick](https://github.com/ankane/searchkick/)
+  - [Elasticsearch Rails](https://github.com/elasticsearch/elasticsearch-rails/) (officielle)
+
+  --
+
+  ### Installation
+
+  ```
+  # Gemfile
+  gem 'searchkick'
+  ```
+
+  --
+
+  ### Déclaration simple
+
+  ```
+  class Album < ApplicationRecord
+    searchkick
+  end
+  ```
+
+  --
+
+  ### Déclaration avancée
+
+  ```
+  class Album < ApplicationRecord
+    searchkick
+
+    belongs_to :artist
+
+    def search_data
+      {
+        name: name,
+        release_date: release_date,
+        artist: artist.name,
+        genre: artist.genre
+      }
+    end
+  end
+  ```
+
+  --
+
+  ### Indexer
+
+  ```
+  Album.reindex
+  ```
+
+  --
+
+  ### Recherche
+
+  ```
+  Album.search('Electronica')
+  ```
+
+  --
+
+  ### Recherche avancée
+
+  ```
+  Artist.search('*', where: { name: 'Daft Punk' })
+  ```
+
+  Aller plus loin
+
+  - [Searchkick Querying](https://github.com/ankane/searchkick#querying)
+  - [Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
+
+  --
+
+  ### Aggrégats
+
+  ```
+  search = Album.search('*', aggs: [:genre, :artist])
+  p search.aggregations
+  ```
+
+  ---
+
+  ## Happy Hacking!

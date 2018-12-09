@@ -9,11 +9,12 @@ ruby_advanced:
     grande importance à la qualité de leur production (méthodologies, code,
     architectures, tests, etc.).
   presentations:
-    01-basics:            'Les bases'
-    02-rails-structures:  'Structurer son application'
-    03-testing:           'Testing'
-    04-legacy-code:       'Legacy code'
-    05-search-engine:     'Moteur de recherche'
+    01-basics:           'Les bases'
+    02-activerecord:     'SQL & ActiveRecord'
+    03-rails-structures: 'Structurer son application'
+    04-javascript:       'Javascript & Rails'
+    05-testing:          'Testing'
+    06-search-engine:    'Moteur de recherche'
 working_as_team:
   link:     working-as-team
   title:    Travailler en équipe
