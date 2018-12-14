@@ -9,4 +9,4 @@ h1 Talks
 
 ul
   - data.talks.each do |_code, talk|
-    li class="presentation--course-title" = link_to talk['title'], "#{talk['link']}.html"
+    li class="presentation--course-title" = link_to talk['title'], "/talks/#{talk['link']}.html"
