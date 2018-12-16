@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang=fr><head><meta content="noindex,nofollow" name=robots /><meta charset=utf-8 /><meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1.0" name=viewport /><title>Formation Ruby on Rails Avancé - Structurer son application - Cécile Veneziani</title><meta content="The Rails Way & the Rails Other Way" name=description /><meta content="Lille, Nord" name="geo.placename"/><meta content="50.629250;3.057256" name="geo.position"/><meta content=FR-59 name="geo.region"/><meta content="Cécile Veneziani" itemprop=name /><meta content="The Rails Way & the Rails Other Way" itemprop=description /><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" itemprop=image /><meta content="Cécile Veneziani" property="og:site_name"/><meta content="Cécile Veneziani" property="og:title"/><meta content="The Rails Way & the Rails Other Way" property="og:description"/><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" property="og:image"/><meta content=website property="og:type"/><meta content="http://courses.cecilitse.org/presentations/ruby-advanced/03-rails-structures.html" property="og:url"/><meta content="Cécile Veneziani" itemprop=name /><meta content="The Rails Way & the Rails Other Way" itemprop=description /><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" itemprop=image /><meta content=summary name="twitter:card"/><meta content="@cecilitse" name="twitter:site"/><meta content="Cécile Veneziani" name="twitter:title"/><meta content="The Rails Way & the Rails Other Way" name="twitter:description"/><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" name="twitter:image"/><link href="/assets/images/favicon.ico" rel=icon type="image/ico"/><link href="/assets/stylesheets/presentation-0700ecb1.css" rel=stylesheet /></head><body class="presentations presentations_ruby-advanced presentations_ruby-advanced_03-rails-structures"><div class=reveal><div class=slides><section data-markdown="" data-separator="^---" data-separator-vertical="^--"><script type="text/template"># Structurer son application
+
+---
+
+## Sujets
+
+- Structure type (The Rails Way)
+- Structure avancée (The Rails Other Way)
+
+---
+
+## Structure type
+
+--
+
+### Composants
+
+- Modèles
+- Vues
+- Contrôleurs
+- Helpers
+- Lib
+
+--
+
+### Modèles
+
+- Persistence
+- Validations
+- Requêtes SQL
+- Logique métier
+
+--
+
+### Vues
+
+- Gestion du rendu (HTML, JSON, etc.)
+- Accompagnée de logique (souvent)
+
+--
+
+### Contrôleurs
+
+- Gestion requête web
+- Interface avec les modèles
+- Contient également beaucoup de logique métier
+
+--
+
+### Helpers
+
+- Extraction de la logique des vues
+- Modules au contenu non structuré
+
+### Lib
+
+- Modules externes à la logique métier
+
+--
+
+### The Rails Way... to a dirty code
+
+On retrouve de la **logique métier** à travers toutes les couches : modèles, vues, contrôleurs.
+
+---
+
+## Structure avancée
+
+--
+
+> "A class should have only one reason to change"
+> Robert C. Martin
+
+--
+
+### Single Responsibility Principle (SRP)
+
+- Meilleure structure de code
+- Faible couplage & Plus robuste
+- Maintenabilité & Refactoring
+- Testabilité & Debug
+
+*Source : article d'[Eyal Golan](http://eyalgo.com/2014/02/01/the-single-responsibility-principle/)*
+
+--
+
+Quels composants supplémentaires vont nous permettre d'obtenir une application respectant le SRP ?
+
+--
+
+## Nouveaux composants
+
+- Décorateurs
+- Présenteurs
+- Formulaires
+- Contrats
+- Polices
+- Services
+
+---
+
+## Décorateurs & Présenteurs
+
+--
+
+### Décorateurs
+
+Un décorateur vient ajouter une **nouvelle fonctionnalité** à un modèle.
+
+On dit qu'il vient `étendre` une classe.
+
+Dans un environnement Ruby on Rails, un décorateur peut être comparé à un `Concern`.
+
+--
+
+### Présenteurs
+
+Un présenteur vient ajouter une fonctionnalité de **présentation** à un modèle.
+
+On peut considérer un présenteur comme étant un décorateur de présentation.
+
+--
+
+Dans la plupart des cas, l'usage de décorateur est à **PROSCRIRE** lorsqu'il s'agit d'ajouter une fonctionnalité qui **relève de la logique métier**.
+
+--
+
+### Mise en place
+
+```
+# app/presenters/album_presenter.rb
+require 'delegate'
+
+class AlbumPresenter < SimpleDelegator
+  def self.wrap(albums, &block)
+    albums.map { |album| new(album) }
+  end
+
+  def total_duration
+    tracks.sum(:duration)
+  end
+end
+```
+
+--
+
+### Utilisation
+
+```
+album = Album.first
+presented_album = AlbumPresenter.new(album)
+
+puts album.name
+puts album.total_duration
+```
+
+--
+
+### Aller plus loin
+
+Un bon article sur le sujet : [Decorators Compared To Strategies, Composites, and Presenters](http://robots.thoughtbot.com/decorators-compared-to-strategies-composites-and)
+
+---
+
+## Formulaires & Contrats
+
+--
+
+### Formulaires
+
+Un formulaire **encapsule** dans un objet les champs d'un modèle et a ses propres règles de validation.
+
+Il reçoit les **données saisies** par l'utilisateur et se charge de les valider avant de les enregistrer.
+
+--
+
+Il permet donc de **découpler** la vue (saisie utilisateur) du modèle (persistence) en extrayant les validations du modèle.
+
+--
+
+Une gem est disponible : [Reform](https://github.com/apotonick/reform)
+
+#### Les plus
+
+- Agnostique niveau framework & ORM
+- S'interface avec `form_for`, `simple_form`, etc.
+
+Mais très peu active.
+
+--
+
+Alternative avec ActiveModel
+
+```
+class AlbumForm
+  include ActiveModel::Model
+
+  attr_accessor :artist, :name, :release_date
+
+  validates :artist, presence: true
+  validates :name,   presence: true
+
+  def save
+    return unless valid?
+    Album.new(artist: artist, name: name, release_date: release_date).save
+  end
+end
+```
+
+--
+
+### Contrats
+
+Un contrat permet de valider **l'état d'un modèle**.
+
+Tout comme un formulaire, il est composé de validations.
+
+--
+
+A l'inverse d'un formulaire, il ne reçoit pas des données de l'utilisateur. Il reçoit uniquement le modèle à valider.
+
+Il permet d'extraire les validations du modèle (persistence).
+
+--
+
+Une gem est disponible : [Reform](https://github.com/apotonick/reform) (oui, la même)
+
+En alternative, ActiveModel s'y prête bien aussi.
+
+--
+
+### Pourquoi formulaires et contrats ?
+
+- Permet d'avoir plus de souplesse sur les formulaires.
+- Permet d'avoir des validations propres à chaque contexte.
+- Le modèle redevient juste un ORM.
+
+---
+
+## Polices
+
+--
+
+Une police permet de déterminer si une/des opérations peut/peuvent être réalisée(s) par un utilisateur donné.
+
+--
+
+Une gem est disponible : [Pundit](https://github.com/elabs/pundit)
+
+Dans certains cas, son utilisation peut être "overkill" comparativement à une police maison (PORO).
+
+---
+
+## Services
+
+--
+
+Un service ajoute UNE opération basée sur un modèle.
+
+A l'inverse du décorateur, le service utilise un modèle mais ne vient pas l'enrichir.
+
+--
+
+### Exemple
+
+```
+# app/services/register_to_gig_service.rb
+class RegisterToGigService
+  def initialize(artist)
+    @artist = artist
+  end
+
+  def call
+    # here goes the specific code
+  end
+end
+```
+
+--
+
+### Utilisation
+
+```
+# app/controllers/gigs_controller.rb
+class GigsController < ApplicationController
+  [...]
+
+  def create
+    artist = Artist.find(params[:artist_id])
+    RegisterToGigService.new(@artist).call
+    [...]
+  end
+end
+```
+
+---
+
+## Mise en place
+
+--
+
+### Le contrôleur
+
+- Instancie un modèle
+- Instancie un formulaire avec le modèle
+- Instancie un service avec le formulaire / le modèle
+
+--
+
+### La vue : partial, présenteur & helper
+
+- Intéragit uniquement avec le formulaire / le modèle
+- Peut recevoir un modèle qui est enrichi par un présenteur
+- Utilise les methodes helper pour toute logique propre à la présentation (ex : formattage de donnée)
+- Évite toute duplication de code HTML via l'utilisation de partials
+
+--
+
+### Le service
+
+- Intéragit avec le formulaire / le modèle
+- Intéragit avec une police / un contrat
+
+--
+
+### La police
+
+- Se base sur le modèle / un contrat
+
+---
+
+## Aller plus loin
+
+[7 Patterns to Refactor Fat ActiveRecord Models](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
+
+---
+
+## Happy Hacking!</script></section></div><footer><div class="row footer--terms"><div class="small-12 columns"><p><a href="http://cecilitse.org/fr/">Cecilitse</a> - Pubilé sous <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA </a><span class=print-link>- Export <a href="?print-pdf">PDF </a></span></p></div></div><div class=banner></div></footer></div><script src="/assets/javascripts/presentation.bundle-795b8414.js"></script></body></html>

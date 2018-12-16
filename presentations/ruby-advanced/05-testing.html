@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang=fr><head><meta content="noindex,nofollow" name=robots /><meta charset=utf-8 /><meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1.0" name=viewport /><title>Formation Ruby on Rails Avancé - Testing - Cécile Veneziani</title><meta content="Test-Driven Development, RSpec, quoi tester & tester du code existant." name=description /><meta content="Lille, Nord" name="geo.placename"/><meta content="50.629250;3.057256" name="geo.position"/><meta content=FR-59 name="geo.region"/><meta content="Cécile Veneziani" itemprop=name /><meta content="Test-Driven Development, RSpec, quoi tester & tester du code existant." itemprop=description /><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" itemprop=image /><meta content="Cécile Veneziani" property="og:site_name"/><meta content="Cécile Veneziani" property="og:title"/><meta content="Test-Driven Development, RSpec, quoi tester & tester du code existant." property="og:description"/><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" property="og:image"/><meta content=website property="og:type"/><meta content="http://courses.cecilitse.org/presentations/ruby-advanced/05-testing.html" property="og:url"/><meta content="Cécile Veneziani" itemprop=name /><meta content="Test-Driven Development, RSpec, quoi tester & tester du code existant." itemprop=description /><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" itemprop=image /><meta content=summary name="twitter:card"/><meta content="@cecilitse" name="twitter:site"/><meta content="Cécile Veneziani" name="twitter:title"/><meta content="Test-Driven Development, RSpec, quoi tester & tester du code existant." name="twitter:description"/><meta content="http://courses.cecilitse.org/assets/images/avatar-dccc6af7.png" name="twitter:image"/><link href="/assets/images/favicon.ico" rel=icon type="image/ico"/><link href="/assets/stylesheets/presentation-0700ecb1.css" rel=stylesheet /></head><body class="presentations presentations_ruby-advanced presentations_ruby-advanced_05-testing"><div class=reveal><div class=slides><section data-markdown="" data-separator="^---" data-separator-vertical="^--"><script type="text/template"># Testing
+
+---
+
+## Sujets
+
+- Quoi tester ?
+- Test Driven Development (TDD)
+- Framework RSpec
+- Tests unitaires
+- Tests systèmes
+- Gems indispensables
+- Tester l'existant
+- Continuous integration (CI)
+
+---
+
+## Quoi tester ?
+
+--
+
+### Impérativement
+
+- Modèles
+- Polices
+- Services
+- Lib
+
+--
+
+### Fortement recommandé
+
+- Contrats
+- Formulaires
+
+--
+
+### De préférence
+
+- Décorateurs
+- Présenteurs
+- Tests système
+
+--
+
+### Optionnel
+
+- Helpers
+- Contrôleurs
+
+---
+
+## Test-Driven Development (TDD)
+
+--
+
+### Principes
+
+- Faire un prototype (en console ou en dehors du projet)
+- Ecrire un test
+- Lancer le test et le voir échouer
+- Développer la foncionnalité associée
+- Lancer le test et le voir passer
+- Refactorer
+- Répéter
+
+--
+
+### Avantages
+
+- Force à d'abord formaliser le comportement attendu
+- Moins fragile
+- Maintenabilité
+- Refactoring
+- Debug
+
+---
+
+## RSpec
+
+--
+
+LE framework de **référence** pour tester des projets Ruby on Rails.
+
+*Aussi populaire que Minitest*
+
+http://rspec.info/
+
+--
+
+### Syntaxe
+
+```
+# spec/models/model_name_spec.rb
+require 'rails_helper'
+
+describe ModelName, type: 'model' do
+  subject(:name) do
+    # prepare a model instance
+  end
+
+  let(:some_variable) { 'some value' }
+
+  describe '.class_method' do ... end
+  describe '#instance_method' do ... end
+
+  describe '#another_instance_method' do
+    it 'does something' do
+      expect(name.another_instance_method).to eq('expected value')
+    end
+  end
+end
+```
+
+--
+
+### Utilisation
+
+```
+rspec
+```
+
+--
+
+### Bonnes pratiques
+
+- Une SEULE assertion par test
+- Nommer ses `subject`
+- Instancier que ce qui est nécessaire
+- Utiliser `let`
+- Utiliser l'ORM, mocks et stubs à bon escient
+- Trier par méthode de classe puis d'instance
+- Trier par ordre alphabethique
+
+[Better Specs](http://www.betterspecs.org/)
+
+--
+
+## RSpec 2 vs RSpec 3
+
+Faux-amis
+
+#### RSpec 2
+
+- be true / be false
+- be_true / be_false
+
+#### RSpec 3
+
+- be_truthy / be_falsy
+- be_true / be_false
+
+---
+
+## Tests Unitaires
+
+--
+
+Tester une partie de votre application en isolation du reste.
+
+--
+
+### Configuration
+
+```
+# Gemfile
+group :development, :test do
+  gem 'rspec-rails'
+end
+```
+
+```
+bundle install
+rails g rspec:install
+```
+
+--
+
+### Exemple
+
+```
+# app/spec/models/album_spec.rb
+require 'rails_helper'
+
+describe Album, type: 'model' do
+  subject(:album) do
+    Album.new(name: 'Houses of the Holy', artist: artist, tracks: tracks)
+  end
+
+  let(:artist) { Artist.new(name: 'Led Zeppelin') }
+  let(:tracks) { [Track.new(...), Track.new(...)] }
+
+  describe '#artist_name' do ... end
+
+  describe '#duration' do
+    it 'returns the total amount of seconds based on tracks duration' do
+      expect(album.duration).to eq(2457)
+    end
+  end
+end
+```
+
+--
+
+### Utilisation
+
+```
+rspec spec/models/album_spec.rb
+rspec spec/models/album_spec.rb:14
+```
+
+---
+
+## Tests Système
+
+--
+
+Tester une fonctionnalité en simulant le parcours utilisateur.
+
+--
+
+Requiert un simulateur de navigateur web (ex : PhantomJS) ou un vrai navigateur web.
+
+--
+
+### Installation
+
+```
+# Gemfile
+group :development, :test do
+  gem 'rspec-rails'
+
+  gem 'selenium-webdriver'
+  gem 'geckodriver-helper'
+  # OU
+  # gem 'chromedriver-helper'
+  gem 'capybara'
+end
+```
+
+--
+
+### Configuration
+
+```
+# spec/rails_helper.rb
+Capybara.register_driver :firefox_headless do |app|
+  options = ::Selenium::WebDriver::Firefox::Options.new
+  options.args << '--headless'
+
+  Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
+end
+
+RSpec.configure do |config|
+  # [...]
+  config.before(:each, type: :system) do
+    driven_by :firefox_headless
+  end
+end
+```
+
+--
+
+### Exemple
+
+```
+# spec/system/home_spec.rb
+require 'rails_helper'
+
+describe 'Homepage', type: :system do
+  it 'shows top artists' do
+    visit '/'
+    expect(page).to have_content 'Discover our artists'
+  end
+end
+```
+
+--
+
+### Affiner notre test
+
+```
+describe 'Homepage', type: :system do
+  before :each do
+    Artist.create!(name: 'Moriarty')
+  end
+
+  it 'shows top artists' do
+    # [...]
+    expect(page).to have_selector('.artist', count: 1)
+    expect(page).to have_content 'Moriarty'
+  end
+end
+```
+
+--
+
+```
+rspec spec/system/home_spec.rb
+```
+
+--
+
+### Debug
+
+```
+save_and_open_screenshot
+page.html
+```
+
+--
+
+### Aller plus loin
+
+[Capybara DSL](https://github.com/teamcapybara/capybara#the-dsl)
+
+---
+
+## Gems
+
+Les indispensables
+
+--
+
+### Basiques
+
+- [RSpec](http://rspec.info/)
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers/)
+
+--
+
+### Données de test
+
+- [Factory Bot](https://github.com/thoughtbot/factory_bot/)
+- [Faker](https://github.com/stympy/faker/)
+
+--
+
+### Tests Système
+
+- [Selenium Webdriver](https://github.com/SeleniumHQ/selenium)
+- [Geckodriver](https://github.com/DevicoSolutions/geckodriver-helper)
+- [Chromedriver](https://github.com/flavorjones/chromedriver-helper)
+- [Capybara](https://github.com/teamcapybara/capybara)
+
+--
+
+### Tests continus & Web Mocking
+
+- [Guard](http://guardgem.org/)
+- [VCR](https://github.com/vcr/vcr)
+
+---
+
+## Tester l'existant
+
+--
+
+- **Quand ?**
+  - Lorsqu'un changement doit être effectué
+- **Quoi ?**
+  - Uniquement la partie concernée
+- **Comment ?**
+  - D'abord tester la partie concernée avant de faire toute modification.
+
+---
+
+## Continuous Integration (CI)
+
+--
+
+On a beau avoir des tests pour nous protéger, si on oublie de les lancer, c'est comme ne pas avoir de tests du tout.
+
+--
+
+L'humain est faillible et peut oublier.
+
+Une machine, bien moins facilement.
+
+--
+
+### Services
+
+- [Travis CI](https://travis-ci.org/)
+- [Semaphore CI](https://semaphoreci.com/)
+- [CircleCI](https://circleci.com/)
+
+---
+
+## Happy Hacking!</script></section></div><footer><div class="row footer--terms"><div class="small-12 columns"><p><a href="http://cecilitse.org/fr/">Cecilitse</a> - Pubilé sous <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA </a><span class=print-link>- Export <a href="?print-pdf">PDF </a></span></p></div></div><div class=banner></div></footer></div><script src="/assets/javascripts/presentation.bundle-795b8414.js"></script></body></html>
