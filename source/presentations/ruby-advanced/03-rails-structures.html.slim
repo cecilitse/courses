@@ -157,8 +157,8 @@ noindex:          true
   album = Album.first
   presented_album = AlbumPresenter.new(album)
 
-  puts album.name
-  puts album.total_duration
+  puts presented_album.name
+  puts presented_album.total_duration
   ```
 
   --
@@ -199,6 +199,7 @@ noindex:          true
   Alternative avec ActiveModel
 
   ```
+  # app/forms/album_form.rb
   class AlbumForm
     include ActiveModel::Model
 
@@ -208,7 +209,7 @@ noindex:          true
     validates :name,   presence: true
 
     def save
-      return unless valid?
+      return false unless valid?
       Album.new(artist: artist, name: name, release_date: release_date).save
     end
   end
@@ -271,8 +272,8 @@ noindex:          true
   ### Exemple
 
   ```
-  # app/services/register_to_gig_service.rb
-  class RegisterToGigService
+  # app/services/register_artist_to_gig_service.rb
+  class RegisterArtistToGigService
     def initialize(artist)
       @artist = artist
     end
@@ -294,7 +295,7 @@ noindex:          true
 
     def create
       artist = Artist.find(params[:artist_id])
-      RegisterToGigService.new(@artist).call
+      RegisterArtistToGigService.new(@artist).call
       [...]
     end
   end
