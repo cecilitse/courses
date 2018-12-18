@@ -150,8 +150,8 @@ end
 album = Album.first
 presented_album = AlbumPresenter.new(album)
 
-puts album.name
-puts album.total_duration
+puts presented_album.name
+puts presented_album.total_duration
 ```
 
 --
@@ -192,6 +192,7 @@ Mais très peu active.
 Alternative avec ActiveModel
 
 ```
+# app/forms/album_form.rb
 class AlbumForm
   include ActiveModel::Model
 
@@ -201,7 +202,7 @@ class AlbumForm
   validates :name,   presence: true
 
   def save
-    return unless valid?
+    return false unless valid?
     Album.new(artist: artist, name: name, release_date: release_date).save
   end
 end
@@ -264,8 +265,8 @@ A l'inverse du décorateur, le service utilise un modèle mais ne vient pas l'en
 ### Exemple
 
 ```
-# app/services/register_to_gig_service.rb
-class RegisterToGigService
+# app/services/register_artist_to_gig_service.rb
+class RegisterArtistToGigService
   def initialize(artist)
     @artist = artist
   end
@@ -287,7 +288,7 @@ class GigsController < ApplicationController
 
   def create
     artist = Artist.find(params[:artist_id])
-    RegisterToGigService.new(@artist).call
+    RegisterArtistToGigService.new(@artist).call
     [...]
   end
 end
