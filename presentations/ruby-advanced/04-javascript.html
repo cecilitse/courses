@@ -244,7 +244,7 @@ export { initTooltips };
 
 ```
 // app/javascript/application.js
-import { initTooltips } from '../components/tooltip'
+import { initTooltips } from '../components/tooltips'
 
 initTooltips();
 ```
@@ -297,7 +297,20 @@ Fonctionne aussi avec un **form**
 
 ### Côté Contrôleur
 
-<pre>%%%~COMPRESS~PRE~0~%%%</pre>
+```
+# app/controllers/artists_controller.rb
+def toggle_availablity
+  @artist = Artist.find(params[:id])
+  @artist.available = !@artist.available
+  @artist.save
+
+  # UNCOMMENT ME PLEASE!
+  # respond_to do |format|
+  #   format.html { redirect_to artists_path }
+  #   format.js // renders app/views/artists/toggle_availability.js.erb
+  # end
+end
+```
 
 --
 
