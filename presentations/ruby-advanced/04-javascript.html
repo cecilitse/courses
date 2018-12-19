@@ -230,7 +230,7 @@ L'objectif est d'avoir un pack assez simple qui importe chaque component et l'in
 --
 
 ```
-// app/javascript/components/tooltips.js
+// app/javascript/packs/components/tooltips.js
 const initTooltips = (){
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -243,8 +243,8 @@ export { initTooltips };
 --
 
 ```
-// app/javascript/application.js
-import { initTooltips } from '../components/tooltips'
+// app/javascript/packs/application.js
+import { initTooltips } from '../components/tooltips';
 
 initTooltips();
 ```
