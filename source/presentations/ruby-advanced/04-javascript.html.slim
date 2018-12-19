@@ -237,7 +237,7 @@ noindex:          true
   --
 
   ```
-  // app/javascript/components/tooltips.js
+  // app/javascript/packs/components/tooltips.js
   const initTooltips = (){
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
@@ -250,8 +250,8 @@ noindex:          true
   --
 
   ```
-  // app/javascript/application.js
-  import { initTooltips } from '../components/tooltips'
+  // app/javascript/packs/application.js
+  import { initTooltips } from '../components/tooltips';
 
   initTooltips();
   ```
