@@ -218,6 +218,8 @@ class Album < ApplicationRecord
 
   belongs_to :artist
 
+  private
+
   def search_data
     {
       name: name,
@@ -250,7 +252,7 @@ Album.search('Electronica')
 ### Recherche avancée
 
 ```
-Artist.search('*', where: { name: 'Daft Punk' })
+Album.search('*', where: { artist: 'Daft Punk' })
 ```
 
 Aller plus loin
@@ -264,7 +266,32 @@ Aller plus loin
 
 ```
 search = Album.search('*', aggs: [:genre, :artist])
+```
+
+--
+
+### Résultat
+
+```
 p search.aggregations
+
+=> {
+  "genre" => {
+    "doc_count_error_upper_bound" => 0, "sum_other_doc_count" => 0,
+    "buckets" => [
+      { "key" => "Electronica", "doc_count" => 3 },
+      { "key" => "Heavy Metal", "doc_count" => 5 }
+    ]
+  },
+  "artist" => {
+    "doc_count_error_upper_bound" => 0,"sum_other_doc_count" => 0,
+    "buckets" => [
+      { "key" => "Daft Punk",   "doc_count" => 2 },
+      { "key" => "Gold Panda",  "doc_count" => 1 },
+      { "key" => "Iron Maiden", "doc_count" => 5 }
+    ]
+  }
+}
 ```
 
 ---
