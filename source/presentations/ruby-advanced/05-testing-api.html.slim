@@ -1,0 +1,246 @@
+---
+title:            Formation Ruby on Rails Avancé - Testing d'API
+layout:           presentation
+meta_description: "Comment tester le code d'une API. Test-Driven-Development, RSpec, quoi tester, tests de requêtes et documentation"
+noindex:          true
+---
+
+| # Testing d'API
+
+  ---
+
+  ## Sujets
+
+  - Standards
+  - Quoi tester ?
+  - Test Driven Development (TDD)
+  - Framework RSpec
+  - Tests unitaires
+  - Tests de requêtes
+  - Documentation
+
+  ---
+
+  ## Standards
+
+  --
+
+  Il n'y a pas vraiment de standard.
+
+  --
+
+  ## Routing & Payloads
+
+  - REST
+  - RESTful
+  - XML (non quand même pas !)
+  - JSON
+  - JSON:API
+  - GraphQL
+
+  --
+
+  ## Versions
+
+  - Dans l'URL (ex : `/api/v1/artists/`)
+  - Dans un header (ex : `Accept: application/json;version=1`)
+
+  ---
+
+  ## Quoi tester?
+
+  --
+
+  Plus ou moins les mêmes principes que pour une app rails classique.
+
+  --
+
+  ### Impérativement
+
+  - Modèles
+  - Services
+  - Contrats
+  - Lib
+
+  --
+
+  ### Fortement recommandé
+
+  - Polices
+  - Tests de requêtes
+
+  --
+
+  ### De préférence
+
+  - Présenteurs
+
+  --
+
+  ### Optionnel
+
+  - (Helpers)
+  - Contrôleurs
+
+  ---
+
+  ## Test-Driven Development (TDD)
+
+  --
+
+  ### Principes
+
+  - Faire un prototype (en console ou en dehors du projet)
+  - Ecrire un test
+  - Lancer le test et le voir échouer
+  - Développer la fontcionnalité associée
+  - Lancer le test et le voir passer
+  - Refactorer
+  - Répéter
+
+  ---
+
+  ## RSpec
+
+  --
+
+  Rien de nouveau ici, la syntaxe reste la même, nous changeons juste de type de test.
+
+  ---
+
+  ## Tests Unitaires
+
+  --
+
+  S'appliquent toujours, on ne vient changer que les tests systèmes.
+
+  ---
+
+  ## Tests de requêtes
+
+  --
+
+  Tester un endpoint de notre API en simulant l'appel d'une app cliente.
+
+  --
+
+  ### Exemple
+
+  ```
+  # spec/requests/api/v1/artists/details_spec.rb
+  require 'rails_helper'
+
+  RSpec.describe 'Artist details', type: :request do
+    let!(:artist) do
+      Artist.create!(
+        name:      'Moderat',
+        genre:     'Electronica'
+        available: true
+      )
+    end
+
+    it 'Gets artist details' do
+      get '/api/artists/' + artist.id, headers: { 'Accept' => 'application/json;version=1' }
+
+      expect(response.status).to eq(200)
+
+      json_response = JSON.parse(response_body)
+      json_artist   = json_response.fetch('artist')
+
+      expect(json_artist['id']).to        eq(artist.id)
+      expect(json_artist['name']).to      eq('Moderat')
+      expect(json_artist['genre']).to     eq('Electronica')
+      expect(json_artist['available']).to eq(true)
+    end
+  end
+  ```
+
+  --
+
+  ```
+  rspec spec/requests/api/v1/artists/details_spec.rb
+  ```
+
+  --
+
+  ### Debug
+
+  ```
+  binding.pry
+  ```
+
+  ---
+
+  ## Documentation & Tests
+
+  --
+
+  Il peut être judicieux de générer une documentation de l'API à partir des tests.
+
+  --
+
+  ### Une gem
+
+  [RSpec API Documentation](https://github.com/zipmark/rspec_api_documentation)
+
+  --
+
+  ### Exemple
+
+  ```
+  # spec/acceptance/api/v1/artists/details_spec.rb
+  require 'rails_helper'
+  require 'rspec_api_documentation/dsl'
+
+  resource 'Artist' do
+    let!(:artist) do
+      Artist.create!(
+        name:      'Moderat',
+        genre:     'Electronica'
+        available: true
+      )
+    end
+
+    before do
+      header 'Accept', 'application/json;version=1'
+    end
+
+    get '/api/artists/:id' do
+      parameter :id, 'Artist id', required: true
+
+      let(:id) { artist.id }
+
+      example_request 'Artist details' do
+        explanation 'Returns details of one given artist.'
+
+        expect(status).to eq(200)
+
+        json_response = JSON.parse(response_body)
+        json_artist   = json_response.fetch('artist')
+
+        expect(json_artist['id']).to        eq(artist.id)
+        expect(json_artist['name']).to      eq('Moderat')
+        expect(json_artist['genre']).to     eq('Electronica')
+        expect(json_artist['available']).to eq(true)
+      end
+    end
+  end
+  ```
+
+  --
+
+  ```
+  rpsec spec/acceptance/api/v1/artists/details_spec.rb
+  ```
+
+  --
+
+  ## Aller + loin
+
+  - [OpenAPI Initiative](https://www.openapis.org/)
+  - [Swagger](https://swagger.io/)
+  - [Slate](https://github.com/lord/slate/)
+
+  ---
+
+  ## Happy Hacking!
