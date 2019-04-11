@@ -59,7 +59,7 @@
 - Faire un prototype (en console ou en dehors du projet)
 - Ecrire un test
 - Lancer le test et le voir échouer
-- Développer la fontcionnalité associée
+- Développer la fonctionnalité associée
 - Lancer le test et le voir passer
 - Refactorer
 - Répéter
@@ -94,7 +94,7 @@ http://rspec.info/
 # spec/models/model_name_spec.rb
 require 'rails_helper'
 
-describe ModelName, type: 'model' do
+RSpec.describe ModelName, type: 'model' do
   subject(:name) do
     # prepare a model instance
   end
@@ -179,10 +179,10 @@ rails g rspec:install
 ### Exemple
 
 ```
-# app/spec/models/album_spec.rb
+# spec/models/album_spec.rb
 require 'rails_helper'
 
-describe Album, type: 'model' do
+RSpec.describe Album, type: 'model' do
   subject(:album) do
     Album.new(name: 'Houses of the Holy', artist: artist, tracks: tracks)
   end
@@ -268,7 +268,7 @@ end
 # spec/system/home_spec.rb
 require 'rails_helper'
 
-describe 'Homepage', type: :system do
+RSpec.describe 'Homepage', type: :system do
   it 'shows top artists' do
     visit '/'
     expect(page).to have_content 'Discover our artists'
@@ -281,7 +281,7 @@ end
 ### Affiner notre test
 
 ```
-describe 'Homepage', type: :system do
+RSpec.describe 'Homepage', type: :system do
   before :each do
     Artist.create!(name: 'Moriarty')
   end

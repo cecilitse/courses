@@ -178,14 +178,14 @@ Il permet donc de **découpler** la vue (saisie utilisateur) du modèle (persist
 
 --
 
-Une gem est disponible : [Reform](https://github.com/apotonick/reform)
+Une gem était disponible : [Reform](https://github.com/apotonick/reform)
+
+Autre piste : [dry-validation](https://dry-rb.org/gems/dry-validation/)
 
 #### Les plus
 
 - Agnostique niveau framework & ORM
 - S'interface avec `form_for`, `simple_form`, etc.
-
-Mais très peu active.
 
 --
 
@@ -224,7 +224,7 @@ Il permet d'extraire les validations du modèle (persistence).
 
 --
 
-Une gem est disponible : [Reform](https://github.com/apotonick/reform) (oui, la même)
+Une gem était disponible : [Reform](https://github.com/apotonick/reform) (oui, la même)
 
 En alternative, ActiveModel s'y prête bien aussi.
 
@@ -305,6 +305,8 @@ end
 - Instancie un modèle
 - Instancie un formulaire avec le modèle
 - Instancie un service avec le formulaire / le modèle
+- Instancie un présenter avec le modèle
+- Intéragit avec une police
 
 --
 
@@ -320,13 +322,13 @@ end
 ### Le service
 
 - Intéragit avec le formulaire / le modèle
-- Intéragit avec une police / un contrat
+- Intéragit avec un contrat
 
 --
 
 ### La police
 
-- Se base sur le modèle / un contrat
+- Se base sur le modèle et l'utilisateur
 
 ---
 
