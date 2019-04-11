@@ -13,8 +13,9 @@ ruby_advanced:
     01-basics:           'Les bases'
     02-activerecord:     'SQL & ActiveRecord'
     03-rails-structures: 'Structurer son application'
-    04-javascript:       'Javascript & Rails'
+    # 04-javascript:       'Javascript & Rails'
     05-testing:          'Testing'
+    05-testing-api:      'Testing & API'
     06-search-engine:    'Moteur de recherche'
 working_as_team:
   link:     working-as-team
