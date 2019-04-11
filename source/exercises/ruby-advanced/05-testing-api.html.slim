@@ -1,0 +1,78 @@
+---
+title:            Exercices Ruby on Rails Avancé
+subtitle:         "Testing d'API"
+meta_description: "Tests de requêtes d'API, TDD et documentation sur une application Ruby on Rails."
+layout:           exercise
+noindex:          true
+breadcrumbs:      ['root', 'exercises', 'ruby-advanced']
+---
+
+section class="exercises-container"
+  div class="row"
+    div class="small-12 large-10 columns"
+      div class="exercise"
+        h2 Pré-requis
+        p Vous avez à disposition une application Ruby on Rails. Nous ferons nos exercises sur celle-ci.
+        p Cette application contient un certain nombre de fonctionnalités déjà mises en place.
+
+      div class="exercise"
+        h2 Setup API
+        p Il nous faut d'abord mettre en place la structure de base de notre API.
+
+        h3 Exercice
+        ul
+          li Définir votre système de routing d'API
+          li Définir comment les versions seront gérées (header, URL, etc.)
+          li Mettre en place cette base : routing + gestion des versions
+
+      div class="exercise"
+        h2 Tests d'endpoints publics
+        p Nous allons d'abord nous concentrer sur la mise en place d'endpoints publics. Pour se faire, nous allons faire du <strong>TDD</strong> bien sûr !
+
+        h3 Exercice
+        ul
+          li Écrire le test d'un endpoint de listing (index)
+          li L'implémenter
+          li Écrire le test d'un endpoint de détails (show)
+          li L'implémenter
+
+      div class="exercise"
+        h2 Tests d'endpoints avec authorisation
+        p Nous allons maintenant mettre en place des endpoints qui seraient réservés à un utilisateur "connecté".
+        p Malheureusement nous n'avons pas accès aux fonctionnalités de Devise quant à la mise en place d'un sign in. Il va falloir mettre en place une autre stratégie.
+        p Bien sûr, nous continuons sur du <strong>TDD</strong>.
+
+        h3 Exercice
+        ul
+          li Définir une stratégie de connexion
+          li Écrire le test d'un endpoint d'ajout (create)
+          li L'implémenter
+          li Écrire le test d'un endpoint de mise à jour (update)
+          li L'implémenter
+
+      div class="exercise"
+        h2 RSpec API Documentation
+        p Tentons de générer une documentation à partir de nos tests.
+
+        h3 Exercice
+        ul
+          li
+            | Installer
+            a< href="https://github.com/zipmark/rspec_api_documentation" RSpec API Doc
+          li Dupliquer vos tests de requêtes en tests d'acceptance
+          li Les convertir en tests RSpec API Doc
+          li Apporter des précisions sur chaque endpoint : description, paramètres attendus, etc.
+          li Générer la documentation
+
+      div class="exercise"
+        h2
+          | [BONUS] Payload JSON
+        p Jusqu'ici, nous avons fourni un payload JSON basé sur notre modèle. L'objectif est maintenant de fournir un JSON construit spécialement pour le payload.
+
+        h3 Exercice
+        ul
+          li Choisir une gem et l'installer : Blueprinter, fast_jsonapi, etc.
+          li Définir les serializers nécessaires
+          li Mettre en place chaque serializer et définir ses propriétés
+          li Remplacer le rendering précédent par vos serializers
+          li Relancer vos tests, tout devrait encore passer
