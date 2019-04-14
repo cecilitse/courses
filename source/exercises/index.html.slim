@@ -10,7 +10,7 @@ section
   div class="row"
     div class="small-12 columns"
       div class="exercise"
-        h1 Exercises
+        h1 Exercices
         - data.courses.each do |_code, course|
           - next unless course.exercises
           h2 = link_to course['title'], "/exercises/#{course['link']}"
