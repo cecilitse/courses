@@ -3,8 +3,8 @@ import { jQuery, $ } from 'jquery';
 window.$ = $;
 window.jQuery = jQuery;
 
-import head from 'reveal.js/lib/js/head.min';
-import Reveal from 'reveal.js/js/reveal';
+import Reveal from 'reveal.js';
+window.Reveal = Reveal; // really?
 
 // Initialization
 Reveal.initialize({
