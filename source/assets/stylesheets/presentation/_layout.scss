@@ -58,6 +58,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
   }
 
+  pre {
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 3px;
+  }
+
   code {
     font-family: $font-family-monospace;
     color: $secondary-color;
