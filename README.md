@@ -1,4 +1,4 @@
-# Courses website
+# Courses website • [![Netlify Status](https://api.netlify.com/api/v1/badges/4bb12b5a-04f3-47e3-9c34-bf9297035d99/deploy-status)](https://app.netlify.com/sites/courses-flexbox/deploys)
 
 Made with [Foundation](http://foundation.zurb.com/), [Middleman](http://middlemanapp.com/) & [courses.cecilitse.org](http://courses.cecilitse.org/)
 
@@ -12,14 +12,6 @@ This project also generates PDF course documents.
 - NodeJS
 
 ### Installation
-
-Install WeasyPrint:
-
-```sh
-$ virtualenv .venv
-$ source .env
-$ pip install weasyprint
-```
 
 Install required gems:
 
@@ -38,10 +30,20 @@ $ bower install
 Start the server:
 
 ```sh
-$ middleman server
+$ bundle exec middleman server
 ```
 
-Generate a course PDF:
+### Generate a course PDF
+
+Install WeasyPrint:
+
+```sh
+$ virtualenv .venv
+$ source .env
+$ pip install weasyprint
+```
+
+Generate a course:
 
 ```sh
 $ bin/courses generate COURSE_NAME [BASE_URL]
@@ -49,39 +51,17 @@ $ bin/courses generate COURSE_NAME [BASE_URL]
 
 This generates a PDF at the root directory of Courses. Filename is based on the course name.
 
-### Preview
-
 Before generating a course PDF, you can have a preview of the document in a web browser.
 
 Open a web browser and go to `http://localhost:4567/programs/COURSE_NAME.html`. That's it!
 
 ### Deployment
 
-Filst time, initialize the submodule:
+Trigger Netlify build
 
 ```sh
-$ git submodule init
+$ pit push
 ```
-
-Build the application:
-
-```sh
-$ middleman build --no-clean
-```
-
-Deploy on GitHub pages:
-
-```sh
-$ middleman deploy
-```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
 
 ## License
 
