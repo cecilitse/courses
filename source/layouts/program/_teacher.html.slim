@@ -1,7 +1,7 @@
 section.teacher
   div class="row teacher--description" itemscope="" itemtype="http://schema.org/Person"
     .small-3.columns.text-right
-      = image_tag 'avatar-rinjani.jpg', class: 'teacher--picture'
+      = image_tag data.settings.gravatar_img, class: 'teacher--picture'
 
     .small-9.columns
       h2 Intervenant
