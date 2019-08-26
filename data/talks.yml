@@ -1,4 +1,44 @@
 -
+  link:     gatsby
+  label:    Front-end
+  flag:     🇬🇧
+  color:    warning
+  title:    'Static websites in the era of Headless CMS'
+  subtitle: |
+    Static sites rebuild on every change, but that’s actually far less often than a classic web application. With a JAMstack you can use JavaScript, APIs, and Markup to deploy website.
+-
+  link:     automation
+  label:    Inspiration
+  flag:     🇬🇧
+  color:    secondary
+  title:    'Productivity and automation for hackers'
+  subtitle: |
+    Attention span is the amount of concentrated time a person can spend on a task without becoming distracted. How can we automate our daily tasks to become more productive?
+-
+  link:     yarn
+  label:    Front-end
+  flag:     🇬🇧
+  color:    warning
+  title:    'Pray for bower'
+  subtitle: |
+    Or the state of art of JavaScript package managers in 2017. Who are they? What are their networks? Why and how do they wage a merciless war? Investigation.
+-
+  link:     devtools
+  label:    Front-end
+  flag:     🇬🇧
+  color:    warning
+  title:    'Debug your design <em>— likeaboss</em>'
+  subtitle: |
+    Tools and Best Practices for Front-end Designers. Talk given at an exclusive Meetup at Google’s Brussels HQ.
+-
+  link:     sprockets
+  label:    Ruby on Rails
+  flag:     🇬🇧
+  color:    alert
+  title:    'How to love / hate / use the asset pipeline'
+  subtitle: |
+    All applications have assets like CSS, JavaScript and others. That means the asset pipeline is an integral part of the Ruby on Rails framework.
+-
   link:     jquery
   label:    Front-end
   flag:     🇫🇷
@@ -38,35 +78,3 @@
     Dans le cas d’une application web, ce document regroupe tous les composants et tous les cas d’affichages possibles
     (Ex : Palette de couleurs, styles de titres, boutons, pagination, éléments de formulaires…)<br>
     Le guide de style est <strong>LA référence</strong> : développeurs, designers, et même clients peuvent s'y référer tout au long du projet.
--
-  link:     yarn
-  label:    Front-end
-  flag:     🇬🇧
-  color:    warning
-  title:    'Pray for bower'
-  subtitle: |
-    Or the state of art of JavaScript package managers in 2017. Who are they? What are their networks? Why and how do they wage a merciless war? Investigation.
--
-  link:     devtools
-  label:    Front-end
-  flag:     🇬🇧
-  color:    warning
-  title:    'Debug your design <em>— likeaboss</em>'
-  subtitle: |
-    Tools and Best Practices for Front-end Designers. Talk given at an exclusive Meetup at Google’s Brussels HQ.
--
-  link:     sprockets
-  label:    Ruby on Rails
-  flag:     🇬🇧
-  color:    alert
-  title:    'How to love / hate / use the asset pipeline'
-  subtitle: |
-    All applications have assets like CSS, JavaScript and others. That means the asset pipeline is an integral part of the Ruby on Rails framework.
--
-  link:     automation
-  label:    Inspiration
-  flag:     🇬🇧
-  color:    secondary
-  title:    'Productivity and automation for hackers'
-  subtitle: |
-    Attention span is the amount of concentrated time a person can spend on a task without becoming distracted. How can we automate our daily tasks to become more productive?
