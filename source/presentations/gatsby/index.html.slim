@@ -1,0 +1,183 @@
+---
+title:    'Static websites in the era of Headless CMS'
+layout:   presentation
+noindex:  false
+---
+
+| # Static websites in the era of Headless CMS
+
+  React GraphQL Academy - September 2019
+
+  ---
+= partial 'layouts/presentation/speaker'
+| <div></div>
+  ---
+
+  ## Today we will be covering
+
+  - JAMStack
+  - ...
+  - Full Stack plumbing
+
+  ---
+
+  ## All of this started with a website
+
+  Flashback to 2000's
+
+  --
+
+  ![](/assets/images/gatsby/pokemon.png)
+
+  --
+
+  ### LAMP Stack
+
+  - Linux
+  - Apache
+  - MySQL
+  - Php
+
+  --
+
+  ## Being a web developer
+
+  Back to 2019
+
+  --
+
+  ![](/assets/images/gatsby/pokemon.png)
+
+  --
+
+  😩
+
+  Getting started overwhelming
+
+  Hard to puzzle together because of demands of infrastructure
+
+  --
+
+  Managing data also a challenge, especially as data moves away from monolithic sets of data to more broken-down sources
+
+  --
+
+  Hard enough to be a T-shaped developer, let alone for a single person or small team to understand and handle all aspects of the build
+
+  Before coding: Webpack, Babel, styled-components, Node, Kubernetes, Nginx, CDNs.
+
+  --
+
+  ## Gatsby and JAMStack offers a shortcut allowing developers to quickly iterate
+
+
+
+  ---
+
+  --
+
+  ## Contentful
+
+  --
+
+  > Content infrastructure for your Stack
+
+  --
+
+  ![](/assets/images/gatsby/contentful.png)
+
+  --
+
+  🚫 Think in terms of pages
+  ✅ It's React think in "content components"
+
+  --
+
+  👫
+
+  What makes a landing page?
+
+  --
+
+  ## Space
+
+  --
+
+  ## Content Model
+
+  screenshot of my app
+
+  --
+
+  ## Content Model
+
+  Text
+  Rich Text
+  Reference for SEO
+  Slug
+
+  --
+
+  ## Content Model
+
+  Create
+  Crete and configure
+
+  --
+
+  ## Content Model
+
+  Validations
+
+  --
+
+  ## Content
+
+  --
+
+  ## Adding gatsby to a new website
+
+  ```
+  $ gatsby new gatsby/gatsby-starter-hello-world
+  $ yarn add gatsby-source-contentful
+  ```
+
+  --
+
+  ## Adding gatsby to a new website
+
+  ```
+  spaceId:
+  accessToken:
+  ```
+
+  --
+
+  ## Draft content
+
+  ![](/assets/images/gatsby/contentful-token.png)
+
+  --
+
+  ## Fetch Data
+
+  ![](/assets/images/gatsby/backlog.png)
+
+  --
+
+  ## Fetch Data
+
+  ```javascript
+  import { graphql } from 'gatsby'
+
+
+  ```
+
+
+  --
+
+  😎 Tips from the pro
+
+  nodes
+
+  0:39
