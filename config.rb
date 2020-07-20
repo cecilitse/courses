@@ -1,4 +1,4 @@
-::Sass.load_paths << File.join(root, 'node_modules')
+::SassC.load_paths << File.join(root, 'node_modules')
 
 set :css_dir,    'assets/stylesheets'
 set :images_dir, 'assets/images'
@@ -21,15 +21,7 @@ activate :external_pipeline,
   source: '.tmp/dist',
   latency: 1
 
-# activate :livereload
-activate :protect_emails
-
 configure :build do
-  compass_config do |config|
-    config.sass_options = { debug_info:     false }
-    config.sass_options = { line_comments:  false }
-  end
-
   activate :asset_hash
   activate :gzip
   activate :minify_css

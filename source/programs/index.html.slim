@@ -22,4 +22,4 @@ section
         li Workflows de développement
         li Méthodes agiles
       p N'hésitez pas à me contacter. Nous définirons ensemble vos objectifs afin d'établir un programme adéquat.
-      = mail_to data.settings.email, 'CONTACTEZ-MOI', class: 'button tiny'
+      = link_to 'CONTACTEZ-MOI', protect_email(data.settings.email), class: 'button tiny'

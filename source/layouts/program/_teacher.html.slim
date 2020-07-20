@@ -27,6 +27,6 @@ section class="teacher"
           - if course_print_page?
             = data.settings.email
           - else
-            = mail_to data.settings.email
+            = link_to protect_email(data.settings.email), protect_email(data.settings.email)
         li
           = link_to data.settings.website.name, data.settings.website.url
