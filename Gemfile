@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'slim',     '~> 3.0.6'
 gem 'thor',     '~> 0.19.4'
 
-gem 'middleman',              '~> 4.3.7'
+gem 'middleman',              '~> 4.3.11'
 gem 'middleman-autoprefixer', '~> 2.10.1'
 gem 'middleman-minify-html',  '~> 3.4.1'
 gem 'middleman-robots',       '~> 1.2.3'
